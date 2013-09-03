@@ -10,7 +10,7 @@
 		
 		<p class="cadastro"> Cadastro </p>
 		<br />
-		Ei ! 
+		oi gente !
 		
 		Nome
 		<input type="text" name="nome" id="nome" class="nome" />
