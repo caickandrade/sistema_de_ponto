@@ -27,13 +27,8 @@
 				<p><label for='j'>Data de Nascimento</label>
 					<input type="string" name='nascimento' id='j'/></p>
 					
-				<p><label for='k'>CEP</label>
-					<input type="string" name='cep' id='k'/></p>
-				
-				<p><label for='l'>Função</label>
-					<input type="string" name='funcao' id='l'/></p>
 										
-															
+					
 					<p><label for='e'>Endereço</label></p> 
 					
 				<p><label for='e'>Rua </label>
