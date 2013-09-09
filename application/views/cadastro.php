@@ -15,8 +15,8 @@
 				<p><label for='b'>Email </label>
 					<input type='email' name='email' id='b'/></p>	
 				
-				<p><label for='l'>Senha </label>
-					<input type='password' name='senha' id='l'/></p>
+				<p><label for='L'>Senha </label>
+					<input type='password' name='senha' id='L'/></p>
 					
 				<p><label for='c'>Phone</label>
 					<input type='string' name='phone' id='c'/></p>
