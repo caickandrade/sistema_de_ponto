@@ -4,21 +4,9 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view("home");
+		$this->load->view("pagina-inicial");
 	}
 	
-	public function save()
-	{
-		
-		$algo = json_decode($this->input->post("data"));
-		$response = array
-		(
-			"Msg"=>$algo->nome 
-		);
-		
-		
-		echo json_encode($response);
-	}
 }
 
 /* End of file welcome.php */
