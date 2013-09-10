@@ -9,6 +9,9 @@ class Cadastro extends CI_Controller {
 	
 	public function save()
 	{
+		$address = (Object) array();
+		$user = (Object) array();
+		
 		$address->rua = "Santa Rita de Cassia";
 		$address->numero = 827;
 		$address->bairro = "Sao Jose";
@@ -17,12 +20,15 @@ class Cadastro extends CI_Controller {
 		$address->complemento = " ";
 		$address->cep = "39400344";
 		
-		$user->nome = "Caick Andrade Dias";
+		$user->nome = "Caick Andrade";
 		$user->tel1 = "3891280415";
 		$user->tel2 = "3891280416";
 		$user->email = "caila@ig.com.br";
 		$user->senha = "teste123";
 		$user->datanasc = "1994-9-1";
+		
+		echo var_dump($address);
+		echo var_dump($user);
 		
 		
 //////////////////////////////////////////////////////////////////////////////////////////////////////
