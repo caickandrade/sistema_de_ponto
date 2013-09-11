@@ -12,18 +12,16 @@
 		<?php $this->load->view('header') ?>
 		
 		
-	<body>
-		
 				<p><label for= 'a' >Cadastro</label></p>
 				
 				<p><label for='a'>Name </label>
-					<input type='text' name='Name' id='a'/></p>
+					<input type='text' name='Name' id='a' class="isBlanck" /></p>
 					
 				<p><label for='b'>Email </label>
-					<input type='email' name='email' id='b'/></p>	
+					<input type='email' name='email' id='b' class="isBlanck" /></p>	
 				
 				<p><label for='L'>Senha </label>
-					<input type='password' name='senha' id='L'/></p>
+					<input type='password' name='senha' id='L' class="isBlanck" /></p>
 					
 				<p><label for='c'>Phone</label>
 					<input type='string' name='phone' id='c'/></p>
@@ -32,13 +30,13 @@
 					<input type='string' name='phone2' id='d'/></p>
 					
 				<p><label for='j'>Data de Nascimento</label>
-					<input type="string" name='nascimento' id='j'/></p>
+					<input type="string" name='nascimento' id='j' class="isBlanck" /></p>
 					
 				<p><label for='k'>CEP</label>
 					<input type="string" name='cep' id='k'/></p>
 				
 				<p><label for='l'>Função</label>
-					<input type="string" name='funcao' id='l'/></p>
+					<input type="string" name='funcao' id='l' class="isBlanck" /></p>
 										
 															
 					<p><label for='e'>Endereço</label></p> 
@@ -96,7 +94,7 @@
 					<input type= 'text'  name= 'cep' id= 'cep'/></p>
 				
 				<p><label for='cargo'>Cargo</label>
-					<input type= 'text'  name= 'cargo' id= 'cargo'/></p>
+					<input type= 'text'  name= 'cargo' id= 'cargo' class="isBlanck" /></p>
 				
 				<input type='submit' value='Salvar' id='salvar'/>	
 		

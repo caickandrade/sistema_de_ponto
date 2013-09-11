@@ -7,32 +7,6 @@ class Cadastro extends CI_Controller {
 		$this->load->view("cadastro");
 	}
 	
-
-	function valida(){
-		$data = json_decode($this->input->post('dados'));
-		
-		if(empty($data->nome)){
-			$data->mensagem = "nome requerido";
-		}
-		elseif (empty($data->email)) {
-			$data->mensagem = "email requerido";
-		}
-		elseif (empty($data->senha)) {
-			$data->mensagem = "senha requerida";
-		}
-		elseif (empty($data->aniversario)) {
-			$data->mensagem = "aniversario requerido";
-		}
-		elseif (empty($data->cargo)) {
-			$data->mensagem = "cargo requerido";
-		}
-		else {
-			$data->mensagem = "cadastro bem sucedido";
-		}
-		$resposta = array ('dados'=>$data);
-		echo json_encode($resposta);
-	}
-	
 	 function save()
 	{
 		$address = (Object) array();
