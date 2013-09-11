@@ -2,18 +2,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Dados Pessoais</title>
-
-		<script src="<?php echo base_url("assets/js/jquery.js"); ?>" ></script>
-		<script src="<?php echo base_url("assets/js/cadastro.js"); ?>" ></script>
 	</head>
-		
+	<?php $this->load->view('header') ?>	
 
 	<body>
-		<?php $this->load->view('header') ?>
-		
-		
-	<body>
-		
+		<form>
 				<p><label for= 'a' >Cadastro</label></p>
 				
 				<p><label for='a'>Name </label>
@@ -22,8 +15,8 @@
 				<p><label for='b'>Email </label>
 					<input type='email' name='email' id='b'/></p>	
 				
-				<p><label for='L'>Senha </label>
-					<input type='password' name='senha' id='L'/></p>
+				<p><label for='l'>Senha </label>
+					<input type='password' name='senha' id='l'/></p>
 					
 				<p><label for='c'>Phone</label>
 					<input type='string' name='phone' id='c'/></p>
@@ -34,13 +27,8 @@
 				<p><label for='j'>Data de Nascimento</label>
 					<input type="string" name='nascimento' id='j'/></p>
 					
-				<p><label for='k'>CEP</label>
-					<input type="string" name='cep' id='k'/></p>
-				
-				<p><label for='l'>Função</label>
-					<input type="string" name='funcao' id='l'/></p>
 										
-															
+					
 					<p><label for='e'>Endereço</label></p> 
 					
 				<p><label for='e'>Rua </label>
@@ -60,7 +48,6 @@
 				
 				<p><label for='s'>Estado</label>
 					<select id='s'>
-
 							
 							<option value="MG">Minas Gerais</option>
 							<option value="AC">Acre</option>
@@ -90,16 +77,8 @@
 							<option value="SE">Sergipe</option>
 							<option value="TO">Tocantins</option>
 					</select></p>
-
-				
-				<p><label for='cep'>Cep</label>
-					<input type= 'text'  name= 'cep' id= 'cep'/></p>
-				
-				<p><label for='cargo'>Cargo</label>
-					<input type= 'text'  name= 'cargo' id= 'cargo'/></p>
-				
 				<input type='submit' value='Salvar' id='salvar'/>	
-		
+		</form>
 		<?php $this->load->view('footer') ?>		
 	</body>
 	

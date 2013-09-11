@@ -4,7 +4,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view("pagina-inicial");
+		$this->load->view("cadastro");
 	}
 	
 }
