@@ -38,31 +38,25 @@ class Cadastro extends CI_Controller {
 		
 ////////////////////////////////////////////////////////////////////////////////////////////////////// 		
 		
-		$newaddress = new Address();
-		$newuser = new User();
-		$newposition = new Position();
 		
-		$newaddress->street = $address->rua;
-		$newaddress->number = $address->numero;
-		$newaddress->neighborhood = $address->bairro;
-		$newaddress->city = $address->cidade;
-		$newaddress->state = $address->estado;
-		$newaddress->complement = $address->complemento;
-		$newaddress->zip_code = $address->cep;
+		$newAddress = new Address();
+		$newUser = new User();
+		$retornoEmail = $newUser->emailExiste($user->email);
 		
-		$newaddress->save();
-		
-		$newuser->name = $user->nome;
-		$newuser->addresses_id = $newaddress->id;
-		$newuser->phone1 = $user->tel1;
-		$newuser->phone2 = $user->tel2;
-		$newuser->email = $user->email;
-		$newuser->password = $user->senha;
-		$newuser->birthday = $user->datanasc;
-		$newuser->id_position = "1";
-		
-		$newuser->save(); 
-		
+		if($retornoEmail == TRUE)
+		{
+			$response = array
+			(
+				"Msg"=>"Email existente" 
+			);
+			
+			echo json_encode($response);
+		}
+		else
+		{
+			$newUser->salvarUser($user, $address);	
+		}
+				
 	}
 	
 }
