@@ -7,7 +7,33 @@ class Cadastro extends CI_Controller {
 		$this->load->view("cadastro");
 	}
 	
-	public function save()
+
+	function valida(){
+		$data = json_decode($this->input->post('dados'));
+		
+		if(empty($data->nome)){
+			$data->mensagem = "nome requerido";
+		}
+		elseif (empty($data->email)) {
+			$data->mensagem = "email requerido";
+		}
+		elseif (empty($data->senha)) {
+			$data->mensagem = "senha requerida";
+		}
+		elseif (empty($data->aniversario)) {
+			$data->mensagem = "aniversario requerido";
+		}
+		elseif (empty($data->cargo)) {
+			$data->mensagem = "cargo requerido";
+		}
+		else {
+			$data->mensagem = "cadastro bem sucedido";
+		}
+		$resposta = array ('dados'=>$data);
+		echo json_encode($resposta);
+	}
+	
+	 function save()
 	{
 		$address = (Object) array();
 		$user = (Object) array();
@@ -43,6 +69,7 @@ class Cadastro extends CI_Controller {
 		$newUser = new User();
 		$retornoEmail = $newUser->emailExiste($user->email);
 		
+<<<<<<< HEAD
 		if($retornoEmail == TRUE)
 		{
 			$response = array
@@ -57,6 +84,9 @@ class Cadastro extends CI_Controller {
 			$newUser->salvarUser($user, $address);	
 		}
 				
+=======
+
+>>>>>>> 5f45269b12710d1ed8e737e658f0f2f375ae4965
 	}
 	
 }
