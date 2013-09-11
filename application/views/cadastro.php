@@ -48,89 +48,158 @@
 				<div class="control-group">
 					<label class="control-label">Data de Nascimento</label>
 					<div class="controls">
-				<input type="text" name='nascimento' id='j' placeholder="12/12/1990"/>
+						<input type="text" name='nascimento' id='j' placeholder="12/12/1990"/>
+					</div>
 				</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label">CEP</label>
-					<div class="controls">
-					<input type="text" name='cep' id='k' placeholder="39.440-000"/>
-				</div>
-				</div>
+
 				<div class="control-group">
 					<label class="control-label">Função</label>
 					<div class="controls">
-					<input type="string" name='funcao' id='l' placeholder="Diretor de marketing"/>
-				</div>
+						<input type="string" name='funcao' id='l' placeholder="Diretor de marketing"/>
+					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Endereço</label>
 				</div>
 				<div class="control-group">
+					<label class="control-label">Estado</label>
+					<div class="controls">
+						<div class="input-append">
+							<input id="estado" name="estado" class="span2" placeholder="Escolha uma opção" type="text">
+							<div class="btn-group">
+								<button class="btn dropdown-toggle" data-toggle="dropdown">
+									Escolha
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+
+									<li class="estado">
+										<a href="javascript:void(0)">Minas Gerais</a>
+									</li>
+									<li>
+										<a href="#">Acre</a>
+									</li>
+									<li>
+										<a href="#">Alagoas</a>
+									</li>
+									<li>
+										<a href="#">Amapá</a>
+									</li>
+									<li>
+										<a href="#">Amazonas</a>
+									</li>
+									<li>
+										<a href="#">Bahia</a>
+									</li>
+									<li>
+										<a href="#">Ceará</a>
+									</li>
+									<li>
+										<a href="#">Distrito Federal</a>
+									</li>
+									<li>
+										<a href="#">Espírito Santo</a>
+									</li>
+									<li>
+										<a href="#">Goiás</a>
+									</li>
+									<li>
+										<a href="#">Maranhão</a>
+									</li>
+									<li>
+										<a href="#">Mato Grosso</a>
+									</li>
+									<li>
+										<a href="#">Mato Grosso do Sul</a>
+									</li>
+									<li>
+										<a href="#">Pará</a>
+									</li>
+									<li>
+										<a href="#">Paraíba</a>
+									</li>
+									<li>
+										<a href="#">Paraná</a>
+									</li>
+									<li>
+										<a href="#">Pernambuco</a>
+									</li>
+									<li>
+										<a href="#">Piauí</a>
+									</li>
+									<li>
+										<a href="#">Roraima</a>
+									</li>
+									<li>
+										<a href="#">Rio de Janeiro</a>
+									</li>
+									<li>
+										<a href="#">Rio Grande do Norte</a>
+									</li>
+									<li>
+										<a href="#">Rio Grande do Sul</a>
+									</li>
+									<li>
+										<a href="#">Santa Catarina</a>
+									</li>
+									<li>
+										<a href="#">São Paulo</a>
+									</li>
+									<li>
+										<a href="#">Sergipe</a>
+									</li>
+									<li>
+										<a href="#">Tocantis</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">CEP</label>
+					<div class="controls">
+						<input type="text" name='cep' id='k' placeholder="39.440-000"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Cidade</label>
+					<div class="controls">
+						<input type= 'text'  name= 'cidade' id= 'i' placeholder="Cidade"/>
+					</div>
+				</div>
+				<div class="control-group">
 					<label class="control-label">Rua</label>
 					<div class="controls">
-					<input type='text' name='rua' id='e' placeholder="Rua"/>
-				</div>
+						<input type='text' name='rua' id='e' placeholder="Rua"/>
+					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Número</label>
 					<div class="controls">
-					<input type='text' name= 'numero' id='numero' placeholder="Número"/>
-				</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label">Complemento</label>
-					<div class="controls">
-					<input type='text' name= 'complemento' id='g' placeholder="Complemento"/>
-				</div>
+						<input type='text' name= 'numero' id='numero' placeholder="Número"/>
+					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Bairro</label>
 					<div class="controls">
-					<input type='text' name= 'bairro' id='h' placeholder="Bairro"/>
-				</div>
-				</div>
-					<div class="control-group">
-					<label class="control-label">Cidade</label>
-					<div class="controls">
-					<input type= 'text'  name= 'cidade' id= 'i' placeholder="Cidade"/>
-				</div>
+						<input type='text' name= 'bairro' id='h' placeholder="Bairro"/>
+					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Estado</label>
+					<label class="control-label">Complemento</label>
 					<div class="controls">
-					<select id='s'>
+						<input type='text' name= 'complemento' id='g' placeholder="Complemento"/>
+					</div>
+				</div>
 
-						<option value="MG">Minas Gerais</option>
-						<option value="AC">Acre</option>
-						<option value="AL">Alagoas</option>
-						<option value="AP">Amapá</option>
-						<option value="AM">Amazonas</option>
-						<option value="BA">Bahia</option>
-						<option value="CE">Ceará</option>
-						<option value="DF">Distrito Federal</option>
-						<option value="ES">Espírito Santo</option>
-						<option value="GO">Goiás</option>
-						<option value="MA">Maranhão</option>
-						<option value="MT">Mato Grosso</option>
-						<option value="MS">Mato Grosso do Sul</option>
-						<option value="PA">Pará</option>
-						<option value="PB">Paraíba</option>
-						<option value="PR">Paraná</option>
-						<option value="PE">Pernambuco</option>
-						<option value="PI">Piauí</option>
-						<option value="RR">Roraima</option>
-						<option value="RO">Rondônia</option>
-						<option value="RJ">Rio de Janeiro</option>
-						<option value="RN">Rio Grande do Norte</option>
-						<option value="RS">Rio Grande do Sul</option>
-						<option value="SC">Santa Catarina</option>
-						<option value="SP">São Paulo</option>
-						<option value="SE">Sergipe</option>
-						<option value="TO">Tocantins</option>
-					</select>
-				</p>
-				<input type='submit' value='Salvar' id='salvar'/>
+				<div class="control-group">
+					<label class="control-label">Cadastrar</label>
+					<div class="controls">
+						<button id="confirme" name="confirme" class="btn btn-info">
+							Confirme
+						</button>
+
 			</fieldset>
 		</form>
 		<?php $this->load->view('footer') ?>
