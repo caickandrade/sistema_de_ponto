@@ -8,6 +8,7 @@
 	<?php $this->load->view('header') ?>
 
 	<body>
+
 		<form class="form-horizontal">
 			<fieldset>
 				<legend>
@@ -16,14 +17,16 @@
 				<div class="control-group">
 					<label class="control-label">Nome</label>
 					<div class="controls">
-						<input type='text' name='Name' id='a' placeholder="Nome Completo"/>
+						<input type='text' name='Name' id='a' placeholder="Nome Completo" class="isBlanck" />
 					</div>
 				</div>
+
 
 				<div class="control-group">
 					<label class="control-label">Email</label>
 					<div class="controls">
-						<input type='email' name='email' id='b' placeholder="Email"/>
+						<input type='email' name='email' id='b' placeholder="Email" class="isBlanck" />
+
 
 					</div>
 				</div>
@@ -134,6 +137,7 @@
 			</fieldset>
 		</form>
 		<?php $this->load->view('footer') ?>
+
 	</body>
 
 </html>

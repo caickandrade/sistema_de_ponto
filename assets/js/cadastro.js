@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function X(){
 	$("#salvar").click(function(){
-		alert "teste";
+		
 		var obj = {};
 		obj.nome = $("#nome").val();
 		obj.senha = $("#senha").val();
@@ -22,27 +22,8 @@ function X(){
 		obj.complemento = $("#complemento").val();
 		obj.cep = $("#cep").val();
 		obj.cargo = $("#cargo").val();
-		var mensagem;
 		
-		if(empty(obj.nome)){
-			mensagem = "nome requerido";
-		}
-		elseif (empty(obj.email)) {
-			mensagem = "email requerido";
-		}
-		elseif (empty(obj.senha)) {
-			mensagem = "senha requerida";
-		}
-		elseif (empty($data.aniversario)) {
-			mensagem = "aniversario requerido";
-		}
-		elseif (empty($data.cargo)) {
-			mensagem = "cargo requerido";
-		}
-		else {
-			mensagem = "cadastro bem sucedido";
-		}
-		alert mensagem;
+		
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/valida";
 		var dados =  JSON.stringify(obj);
 		$.post(url, {'dados':dados},function(retorno){
@@ -63,4 +44,12 @@ function X(){
 								});
 	});
 	
+}
+
+$(".isBlanck").blur(function()){
+	if($(this).val()==""){
+		<stile>
+			document.getElementById('TextBox1').style.backgroundColor="red";
+		</stile>
+	}
 }

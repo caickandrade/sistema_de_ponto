@@ -7,7 +7,9 @@ class Cadastro extends CI_Controller {
 		$this->load->view("cadastro");
 	}
 	
+
 	public function save()
+
 	{
 		$address = (Object) array();
 		$user = (Object) array();
