@@ -1,11 +1,13 @@
-<html>
-	<head>
-		<meta charset="UTF-8" />
+<?php $this->load->view('header') ?>
+		
+		
+		
 		<title>Dados Pessoais</title>
 		<!-- <link href="C:/wamp/www/sistema_de_ponto/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 
-	</head>
-	<?php $this->load->view('header') ?>
+
+	
+	<script src = "<?php echo base_url('/assets/js/cadastro.js')?>"> </script>
 
 	<body>
 
@@ -76,83 +78,83 @@
 								</button>
 								<ul class="dropdown-menu">
 
-									<li class="estado">
-										<a href="javascript:void(0)">Minas Gerais</a>
+									<li>
+										<a href="javascript:void(0)" class="estado">Minas Gerais</a>
 									</li>
 									<li>
-										<a href="#">Acre</a>
+										<a href="javascript:void(0)" class="estado">Acre</a>
 									</li>
 									<li>
-										<a href="#">Alagoas</a>
+										<a href="javascript:void(0)" class="estado">Alagoas</a>
 									</li>
 									<li>
-										<a href="#">Amapá</a>
+										<a href="javascript:void(0)" class="estado">Amapá</a>
 									</li>
 									<li>
-										<a href="#">Amazonas</a>
+										<a href="javascript:void(0)" class="estado">Amazonas</a>
 									</li>
 									<li>
-										<a href="#">Bahia</a>
+										<a href="javascript:void(0)" class="estado">Bahia</a>
 									</li>
 									<li>
-										<a href="#">Ceará</a>
+										<a href="javascript:void(0)" class="estado">Ceará</a>
 									</li>
 									<li>
-										<a href="#">Distrito Federal</a>
+										<a href="javascript:void(0)" class="estado">Distrito Federal</a>
 									</li>
 									<li>
-										<a href="#">Espírito Santo</a>
+										<a href="javascript:void(0)" class="estado">Espírito Santo</a>
 									</li>
 									<li>
-										<a href="#">Goiás</a>
+										<a href="javascript:void(0)" class="estado">Goiás</a>
 									</li>
 									<li>
-										<a href="#">Maranhão</a>
+										<a href="javascript:void(0)" class="estado">Maranhão</a>
 									</li>
 									<li>
-										<a href="#">Mato Grosso</a>
+										<a href="javascript:void(0)" class="estado">Mato Grosso</a>
 									</li>
 									<li>
-										<a href="#">Mato Grosso do Sul</a>
+										<a href="javascript:void(0)" class="estado">Mato Grosso do Sul</a>
 									</li>
 									<li>
-										<a href="#">Pará</a>
+										<a href="javascript:void(0)" class="estado">Pará</a>
 									</li>
 									<li>
-										<a href="#">Paraíba</a>
+										<a href="javascript:void(0)" class="estado">Paraíba</a>
 									</li>
 									<li>
-										<a href="#">Paraná</a>
+										<a href="javascript:void(0)" class="estado">Paraná</a>
 									</li>
 									<li>
-										<a href="#">Pernambuco</a>
+										<a href="javascript:void(0)" class="estado">Pernambuco</a>
 									</li>
 									<li>
-										<a href="#">Piauí</a>
+										<a href="javascript:void(0)" class="estado">Piauí</a>
 									</li>
 									<li>
-										<a href="#">Roraima</a>
+										<a href="javascript:void(0)" class="estado">Roraima</a>
 									</li>
 									<li>
-										<a href="#">Rio de Janeiro</a>
+										<a href="javascript:void(0)" class="estado">Rio de Janeiro</a>
 									</li>
 									<li>
-										<a href="#">Rio Grande do Norte</a>
+										<a href="javascript:void(0)" class="estado">Rio Grande do Norte</a>
 									</li>
 									<li>
-										<a href="#">Rio Grande do Sul</a>
+										<a href="javascript:void(0)" class="estado">Rio Grande do Sul</a>
 									</li>
 									<li>
-										<a href="#">Santa Catarina</a>
+										<a href="javascript:void(0)" class="estado">Santa Catarina</a>
 									</li>
 									<li>
-										<a href="#">São Paulo</a>
+										<a href="javascript:void(0)" class="estado">São Paulo</a>
 									</li>
 									<li>
-										<a href="#">Sergipe</a>
+										<a href="javascript:void(0)" class="estado">Sergipe</a>
 									</li>
 									<li>
-										<a href="#">Tocantis</a>
+										<a href="javascript:void(0)" class="estado">Tocantis</a>
 									</li>
 								</ul>
 							</div>
