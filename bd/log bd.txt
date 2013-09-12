@@ -1,0 +1,25 @@
+alteração tabelas
+
+login -> logins
+logout -> logouts
+function -> positions
+
+mudança variável number da tabela users, antes type char[50] agora int[11]
+
+mudança variável neighborhood da tabela addresses, antes char[100] agora char[25]
+
+mudança variável city da tabela addresses, antes char[100] agora char[30]
+
+mudança variável state da tabela addresses, antes char[100] agora char[30]
+
+mudança variável complement da tabela addresses, antes char[100] agora char[11]
+
+mudança variável description tabela positions, antes char[100] agora char[30]
+
+mudança variável name tabela users, antes char[100] agora char[50]
+
+mudança variável email tabela users, antes char[100] agora char[50]
+
+mudança variável password tabela users, antes char[150] agora char[30]
+
+variável email tabela users é chave única
