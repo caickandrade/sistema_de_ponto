@@ -10,6 +10,23 @@ class Address extends DataMapper {
         parent::__construct($id);
     }
 	
+	function salvarAddress($address)
+	{
+		$newAddress = new Address();
+			
+		$newAddress->street = $address->rua;
+		$newAddress->number = $address->numero;
+		$newAddress->neighborhood = $address->bairro;
+		$newAddress->city = $address->cidade;
+		$newAddress->state = $address->estado;
+		$newAddress->complement = $address->complemento;
+		$newAddress->zip_code = $address->cep;
+		
+		$newAddress->save();
+		
+		return $newAddress->id;
+	}
+	
 }
 
 /* End of file adress.php */

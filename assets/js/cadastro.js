@@ -1,55 +1,52 @@
 $(document).ready(function(){
-	X();
+	actions();
 	
 });
 
-
-function X(){
-	$("#salvar").click(function(){
-		
-		var obj = {};
-		obj.nome = $("#nome").val();
-		obj.senha = $("#senha").val();
-		obj.telefone1 = $("#telefone1").val();
-		obj.telefone2 = $("#telefone2").val();
-		obj.email = $("#email").val();
-		obj.aniversario = $("#aniversario").val();
-		obj.rua = $("#rua").val();
-		obj.numero = $("#numero").val();
-		obj.bairro = $("#bairro").val();
-		obj.estado = $("#estado").val();
-		obj.cidade = $("#cidade").val();
-		obj.complemento = $("#complemento").val();
-		obj.cep = $("#cep").val();
-		obj.cargo = $("#cargo").val();
-		
-		
-		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/valida";
-		var dados =  JSON.stringify(obj);
-		$.post(url, {'dados':dados},function(retorno){
-									/*retorno = $.parseJSON(retorno);*/
-									
-								});
+function actions(){
+	$('.estado').click(function(){
+		console.log('vish');
+		var estado = $.trim($(this).text());
+		$('#estado').val(estado);
 	});
 	
-	
-	$("#botaoDeletar").click(function(){
-		var obj = {};
-		obj.identificador = $("#ident").val();
-		var url = "http://localhost/sistema_de_ponto/index.php/teste/delete";
-		var dados =  JSON.stringify(obj);
-		$.post(url, {'dados':dados},function(retorno){
-									/*retorno = $.parseJSON(retorno);*/
-									
-								});
+	/*$(".isBlanck").blur(function(){
+	alert("outroVishh");
+		if($(this).val()==""){
+			
+			//Perera: Tava errado. Utilize Jquery.
+			
+		}
+	});*/
+	$(".isBlanck").validate({
+		rules: {
+			Name: {
+				required: true,
+				minlength: 5
+			},
+			Senha: {
+				required: true,
+				minlength: 5
+			},
+			Email: {
+				required: true
+			}
+		},
+		
+		messages: {
+			Name: {
+				required: "Este campo é obrigatório",
+				minlength: "Você deve digitar no mínimo {0} caracteres"
+			},
+			Senha: {
+				required: "Este campo é obrigatório",
+				minlength: "Você deve digitar no mínimo {0} caracteres"
+			},
+			Email: {
+				required: "Este campo é obrigatório"
+			}
+		}
 	});
-	
 }
 
-$(".isBlanck").OnBlur(function()){
-	if($(this).val()==""){
-		
-			document.getElementById($(this)).style.backgroundColor="red";
-		
-	}
-}
+
