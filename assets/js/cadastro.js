@@ -46,10 +46,10 @@ function X(){
 	
 }
 
-$(".isBlanck").blur(function()){
+$(".isBlanck").OnBlur(function()){
 	if($(this).val()==""){
-		<stile>
-			document.getElementById('TextBox1').style.backgroundColor="red";
-		</stile>
+		
+			document.getElementById($(this)).style.backgroundColor="red";
+		
 	}
 }
