@@ -1,4 +1,4 @@
-<<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Save extends CI_Controller {
     
