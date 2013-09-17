@@ -12,7 +12,7 @@
 
 	<body>
 
-		<form class="form-horizontal" id="formu">
+		<form class="form-horizontal formCadastro" id="formu" method="post" >
 			<fieldset>
 				<legend>
 					Cadastro
@@ -20,7 +20,7 @@
 				<div class="control-group">
 					<label class="control-label">Nome</label>
 					<div class="controls">
-						<input type='text' name='Name' id='Name' placeholder="Nome Completo" class="isBlanck" />
+						<input type='text' name='Name' id='Name' placeholder="Nome Completo" class="required isBlanck" />
 					</div>
 				</div>
 
@@ -28,7 +28,7 @@
 				<div class="control-group">
 					<label class="control-label">Email</label>
 					<div class="controls">
-						<input type='email' name='email' id='b' placeholder="Email" class="isBlanck" />
+						<input type='email' name='email' id='email' placeholder="Email" class="required isBlanck" />
 
 
 					</div>
@@ -36,7 +36,7 @@
 				<div class="control-group">
 					<label class="control-label">Senha</label>
 					<div class="controls">
-						<input type='password' name='senha' id='L' placeholder="Senha"/>
+						<input type='password' name='senha' id='senha' placeholder="Senha" class="required isBlanck" />
 					</div>
 				</div>
 				<div class="control-group">
@@ -61,7 +61,7 @@
 				<div class="control-group">
 					<label class="control-label">Função</label>
 					<div class="controls">
-						<input type="string" name='funcao' id='l' placeholder="Diretor de marketing"/>
+						<input type="string" name='funcao' id='funcao' placeholder="Diretor de marketing" class="required isBlanck" />
 					</div>
 				</div>
 				<div class="control-group">

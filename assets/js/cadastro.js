@@ -18,17 +18,20 @@ function actions(){
 			
 		}
 	});*/
-	$(".isBlanck").validate({
+	$("#formu").validate({
 		rules: {
 			Name: {
 				required: true,
 				minlength: 5
 			},
-			Senha: {
+			senha: {
 				required: true,
 				minlength: 5
 			},
-			Email: {
+			email: {
+				required: true
+			},
+			funcao: {
 				required: true
 			}
 		},
@@ -38,11 +41,14 @@ function actions(){
 				required: "Este campo é obrigatório",
 				minlength: "Você deve digitar no mínimo {0} caracteres"
 			},
-			Senha: {
+			senha: {
 				required: "Este campo é obrigatório",
 				minlength: "Você deve digitar no mínimo {0} caracteres"
 			},
-			Email: {
+			email: {
+				required: "Este campo é obrigatório"
+			},
+			funcao: {
 				required: "Este campo é obrigatório"
 			}
 		}
