@@ -25,9 +25,10 @@ class Cadastro extends CI_Controller {
 		$user->nome = "Caick Andrade";
 		$user->tel1 = "3891280415";
 		$user->tel2 = "3891280416";
-		$user->email = "caila@ig.com.br";
+		$user->email = "caila2@ig.com.br";
 		$user->senha = "teste123";
 		$user->datanasc = "1994-9-1";
+		$user->id_cargo = 1;
 		
 		//echo var_dump($address);
 		//echo var_dump($user);
@@ -63,6 +64,5 @@ class Cadastro extends CI_Controller {
 	}
 	
 }
-
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
