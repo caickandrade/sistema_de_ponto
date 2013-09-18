@@ -19,13 +19,13 @@ class Cadastro extends CI_Controller {
 		$address->bairro = "Sao Jose";
 		$address->cidade = "Montes Claros";
 		$address->estado = "Minas Gerais";
-		$address->complemento = " ";
+		$address->complemento = "";
 		$address->cep = "39400344";
 		
-		$user->nome = "Caick Andrade";
+		$user->nome = " ";
 		$user->tel1 = "3891280415";
 		$user->tel2 = "3891280416";
-		$user->email = "caila2@ig.com.br";
+		$user->email = "outro@testando.com.br";
 		$user->senha = "teste123";
 		$user->datanasc = "1994-9-1";
 		$user->id_cargo = 1;
@@ -44,23 +44,53 @@ class Cadastro extends CI_Controller {
 		
 		$newAddress = new Address();
 		$newUser = new User();
-		$retornoEmail = $newUser->emailExiste($user->email);
 		
-		if($retornoEmail == TRUE)
+		$this->load->model('ValidacaoUtil');
+		
+		$retornoValidacaoUser = $this->ValidacaoUtil->validaCamposUser($user);
+		
+		if(($retornoValidacaoUser == TRUE))
 		{
 			$response = array
 			(
-				"Msg"=>"Email existente" 
+				"ERRO"=>"Campos obrigatorios usuario nao preenchidos"
 			);
 			
 			echo json_encode($response);
 		}
-		else
-		{
-			$idEnd = $newAddress->salvarAddress($address);
-			$newUser->salvarUser($user, $idEnd);	
-		}
+			else 
+			{
+				$retornoValidacaoAddress = $this->ValidacaoUtil->validaCamposAddress($address);
 				
+				if(($retornoValidacaoAddress == TRUE))
+				{
+					$response = array
+					(
+						"ERRO"=>"Campos obrigatorios endereco nao preenchidos"
+					);
+					echo json_encode($response);
+				}	
+	
+				else 
+				{
+					$retornoEmail = $newUser->emailExiste($user->email);
+					
+					if($retornoEmail == TRUE)
+					{
+						$response = array
+						(
+							"ERRO"=>"Email existente" 
+						);
+						
+						echo json_encode($response);
+					}
+					else
+					{
+						$idEnd = $newAddress->salvarAddress($address);
+						$newUser->salvarUser($user, $idEnd);	
+					}
+				}
+			}	
 	}
 	
 }
