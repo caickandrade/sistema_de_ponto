@@ -9,7 +9,6 @@
 	
 	<script src = "<?php echo base_url('/assets/js/cadastro.js')?>" type="text/javascript"> </script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js" type="text/javascript"></script>
-
 	<body>
 
 		<form class="form-horizontal formCadastro" id="formu" method="post" >
@@ -42,13 +41,13 @@
 				<div class="control-group">
 					<label class="control-label">Telefone</label>
 					<div class="controls">
-						<input type='text' name='phone' id='c' placeholder="(38)9121-1232"/>
+						<input type='text' name='phone' id='phone' placeholder="(38)9121-1232"/>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Telefone 2</label>
 					<div class="controls">
-						<input type='text' name='phone2' id='d' placeholder="(38)9121-1232"/>
+						<input type='text' name='phone2' id='phone2' placeholder="(38)9121-1232"/>
 					</div>
 				</div>
 				<div class="control-group">
@@ -165,7 +164,7 @@
 				<div class="control-group">
 					<label class="control-label">CEP</label>
 					<div class="controls">
-						<input type="text" name='cep' id='k' placeholder="39.440-000"/>
+						<input type="text" name='cep' id='cep' placeholder="39.440-000"/>
 					</div>
 				</div>
 				<div class="control-group">
