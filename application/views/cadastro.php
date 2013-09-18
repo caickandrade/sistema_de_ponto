@@ -1,10 +1,40 @@
-<?php $this->load->view('header')
-?>
+
+<?php $this->load->view('header') ?>
+		
+		
+		
+		<title>Dados Pessoais</title>
+		<!-- <link href="C:/wamp/www/sistema_de_ponto/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+
+
+	
+	<script src = "<?php echo base_url('/assets/js/cadastro.js')?>" type="text/javascript"> </script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js" type="text/javascript"></script>
+	<body>
+
+		<form class="form-horizontal formCadastro" id="formu" method="post" >
+			<fieldset>
+				<legend>
+					Cadastro
+				</legend>
+				<div class="control-group">
+					<label class="control-label" for="Name">Nome</label>
+					<div class="controls">
+						<input type='text' name='Name' id='Name' placeholder="Nome Completo" class="required isBlanck" />
+					</div>
+				</div>
 
 <title>Dados Pessoais</title>
 <!-- <link href="C:/wamp/www/sistema_de_ponto/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 
+
 <script src = "<?php echo base_url('/assets/js/cadastro.js')?>"></script>
+
+				<div class="control-group">
+					<label class="control-label" for="email">Email</label>
+					<div class="controls">
+						<input type='email' name='email' id='email' placeholder="Email" class="required isBlanck" />
+
 
 <body>
 <div class="container">
@@ -17,6 +47,7 @@
 			</legend>
 			<div class="control-group ">
 				<label class="control-label">Nome</label>
+
 
 				<input class="span4" type='text' name='Name' id='a' placeholder="Nome Completo" class="isBlanck" />
 				&nbsp &nbsp<label class="control-label">Email</label>
@@ -143,10 +174,12 @@
 								<a href="javascript:void(0)" class="estado">Tocantis</a>
 							</li>
 						</ul>
+
 					</div>
 
 				</div>
 				<label class="control-label">CEP</label>
+
 
 				<input type="text" name='cep' id='k' placeholder="39.440-000"/>
 
