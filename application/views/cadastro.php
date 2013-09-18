@@ -42,19 +42,19 @@
 				<div class="control-group">
 					<label class="control-label">Telefone</label>
 					<div class="controls">
-						<input type='text' name='phone' id='c' placeholder="(38)9121-1232"/>
+						<input type='text' name='phone' id='phone' placeholder="(38)9121-1232"/>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Telefone 2</label>
 					<div class="controls">
-						<input type='text' name='phone2' id='d' placeholder="(38)9121-1232"/>
+						<input type='text' name='phone2' id='<?php  ?>one' placeholder="(38)9121-1232"/>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Data de Nascimento</label>
 					<div class="controls">
-						<input type="text" name='nascimento' id='j' placeholder="12/12/1990"/>
+						<input type="text" name='nascimento' id='nascimento' placeholder="12/12/1990"/>
 					</div>
 				</div>
 
@@ -165,19 +165,19 @@
 				<div class="control-group">
 					<label class="control-label">CEP</label>
 					<div class="controls">
-						<input type="text" name='cep' id='k' placeholder="39.440-000"/>
+						<input type="text" name='cep' id='cep' placeholder="39.440-000"/>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Cidade</label>
 					<div class="controls">
-						<input type= 'text'  name= 'cidade' id= 'i' placeholder="Cidade"/>
+						<input type= 'text'  name= 'cidade' id= 'cidade' placeholder="Cidade"/>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Rua</label>
 					<div class="controls">
-						<input type='text' name='rua' id='e' placeholder="Rua"/>
+						<input type='text' name='rua' id='rua' placeholder="Rua"/>
 					</div>
 				</div>
 				<div class="control-group">
@@ -189,18 +189,18 @@
 				<div class="control-group">
 					<label class="control-label">Bairro</label>
 					<div class="controls">
-						<input type='text' name= 'bairro' id='h' placeholder="Bairro"/>
+						<input type='text' name= 'bairro' id='bairro' placeholder="Bairro"/>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">Complemento</label>
 					<div class="controls">
-						<input type='text' name= 'complemento' id='g' placeholder="Complemento"/>
+						<input type='text' name= 'complemento' id='complemento' placeholder="Complemento"/>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">Cadastrar</label>
+					
 					<div class="controls">
 						<button id="confirme" name="confirme" class="btn btn-info">
 							Confirme
