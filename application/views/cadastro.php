@@ -17,7 +17,7 @@
 					Cadastro
 				</legend>
 				<div class="control-group">
-					<label class="control-label">Nome</label>
+					<label class="control-label" for="Name">Nome</label>
 					<div class="controls">
 						<input type='text' name='Name' id='Name' placeholder="Nome Completo" class="required isBlanck" />
 					</div>
@@ -25,7 +25,7 @@
 
 
 				<div class="control-group">
-					<label class="control-label">Email</label>
+					<label class="control-label" for="email">Email</label>
 					<div class="controls">
 						<input type='email' name='email' id='email' placeholder="Email" class="required isBlanck" />
 
@@ -33,32 +33,32 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Senha</label>
+					<label class="control-label" for="senha">Senha</label>
 					<div class="controls">
 						<input type='password' name='senha' id='senha' placeholder="Senha" class="required isBlanck" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Telefone</label>
+					<label class="control-label" for="phone">Telefone</label>
 					<div class="controls">
 						<input type='text' name='phone' id='phone' placeholder="(38)9121-1232"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Telefone 2</label>
+					<label class="control-label" for="phone2">Telefone 2</label>
 					<div class="controls">
 						<input type='text' name='phone2' id='phone2' placeholder="(38)9121-1232"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Data de Nascimento</label>
+					<label class="control-label" for="nascimento">Data de Nascimento</label>
 					<div class="controls">
-						<input type="text" name='nascimento' id='j' placeholder="12/12/1990"/>
+						<input type="text" name='nascimento' id='nascimento' placeholder="12/12/1990"/>
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label">Função</label>
+					<label class="control-label" for="funcao">Função</label>
 					<div class="controls">
 						<input type="string" name='funcao' id='funcao' placeholder="Diretor de marketing" class="required isBlanck" />
 					</div>
@@ -162,39 +162,39 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">CEP</label>
+					<label class="control-label" for="cep">CEP</label>
 					<div class="controls">
 						<input type="text" name='cep' id='cep' placeholder="39.440-000"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Cidade</label>
+					<label class="control-label" for="cidade">Cidade</label>
 					<div class="controls">
-						<input type= 'text'  name= 'cidade' id= 'i' placeholder="Cidade"/>
+						<input type= 'text'  name= 'cidade' id= 'cidade' placeholder="Cidade"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Rua</label>
+					<label class="control-label" for="rua">Rua</label>
 					<div class="controls">
-						<input type='text' name='rua' id='e' placeholder="Rua"/>
+						<input type='text' name='rua' id='rua' placeholder="Rua"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Número</label>
+					<label class="control-label" for="numero">Número</label>
 					<div class="controls">
 						<input type='text' name= 'numero' id='numero' placeholder="Número"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Bairro</label>
+					<label class="control-label" for="bairro">Bairro</label>
 					<div class="controls">
-						<input type='text' name= 'bairro' id='h' placeholder="Bairro"/>
+						<input type='text' name= 'bairro' id='bairro' placeholder="Bairro"/>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Complemento</label>
+					<label class="control-label" for="complemento">Complemento</label>
 					<div class="controls">
-						<input type='text' name= 'complemento' id='g' placeholder="Complemento"/>
+						<input type='text' name= 'complemento' id='complemento' placeholder="Complemento"/>
 					</div>
 				</div>
 
