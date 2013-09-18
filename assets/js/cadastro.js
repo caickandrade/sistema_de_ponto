@@ -31,6 +31,15 @@ function actions(){
 			email: {
 				required: true
 			},
+			phone: {
+				number: true
+			},
+			phone2: {
+				number: true
+			},
+			cep: {
+				number: true
+			},
 			funcao: {
 				required: true
 			}
@@ -47,6 +56,15 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
+			},
+			phone: {
+				number: "Este campo aceita somente números"
+			},
+			phone2: {
+				number: "Este campo aceita somente números"
+			},
+			cep: {
+				number: "Este campo aceita somente números"
 			},
 			funcao: {
 				required: "Este campo é obrigatório"
