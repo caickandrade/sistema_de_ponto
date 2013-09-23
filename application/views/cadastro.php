@@ -20,19 +20,19 @@
 					<div class="span5">
 						<label class="control-label">Nome</label>
 						<div class="controls">
-							<input class="span10" type='text' name='Name' id='a' placeholder="Nome Completo" />
+							<input class="span10" type='text' name='Name' id='Name' placeholder="Nome Completo" />
 						</div>
 					</div>
 					<div class="span4">
 						<label class="control-label">Email</label>
 						<div class="controls">
-							<input class="span10" type='email' name='email' id='b' placeholder="Email" />
+							<input class="span10" type='email' name='email' id='email' placeholder="Email" />
 						</div>
 					</div>
 					<div class="span3">
 						<label class="control-label">Senha</label>
 						<div class="controls">
-							<input class="span10" type='password' name='senha' id='L' placeholder="Senha"/>
+							<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
 						</div>
 					</div>
 				</div>
@@ -41,28 +41,28 @@
 						<br/>
 						<label class="control-label">Data de Nascimento</label>
 						<div class="controls">
-							<input class="span10" type="date" name='nascimento' id='j' placeholder="12/12/1990"/>
+							<input class="span10" type="date" name='nascimento' id='nascimento' placeholder="12/12/1990"/>
 						</div>
 					</div>
 					<div class="span3">
 						<br/>
 						<label class="control-label">Telefone</label>
 						<div class="controls">
-							<input class="span10" type='tel' name='phone' id='c' placeholder="(38)9121-1232"/>
+							<input class="span10" type='tel' name='phone' id='phone' placeholder="(38)9121-1232"/>
 						</div>
 					</div>
 					<div class="span3">
 						<br/>
 						<label class="control-label">Telefone 2</label>
 						<div class="controls">
-							<input class="span10" type='tel' name='phone2' id='d' placeholder="(38)9121-1232"/>
+							<input class="span10" type='tel' name='phone2' id='phone2' placeholder="(38)9121-1232"/>
 						</div>
 					</div>
 					<div class="span3">
 						<br/>
 						<label class="control-label">Função</label>
 						<div class="controls">
-							<input class="span10" type="text" name='funcao' id='l' placeholder="Diretor de marketing"/>
+							<input class="span10" type="text" name='funcao' id='funcao' placeholder="Diretor de marketing"/>
 						</div>
 					</div>
 				</div>
@@ -172,21 +172,21 @@
 						<br/>
 						<label class="control-label">CEP</label>
 						<div class="controls">
-							<input class="span10" type="number" name='cep' id='k' placeholder="39.440-000"/>
+							<input class="span10" type="number" name='cep' id='cep' placeholder="39.440-000"/>
 						</div>
 					</div>
 					<div class="span3">
 						<br/>
 						<label class="control-label">Bairro</label>
 						<div class="controls">
-							<input class="span10" type='text' name= 'bairro' id='h' placeholder="Bairro"/>
+							<input class="span10" type='text' name= 'bairro' id='bairro' placeholder="Bairro"/>
 						</div>
 					</div>
 					<div class="span3">
 						<br/>
 						<label class="control-label">Cidade</label>
 						<div class="controls">
-							<input class="span10" type= 'text'  name= 'cidade' id= 'i' placeholder="Cidade"/>
+							<input class="span10" type= 'text'  name= 'cidade' id= 'cidade' placeholder="Cidade"/>
 						</div>
 					</div>
 				</div>
@@ -195,7 +195,7 @@
 						<br/>
 						<label class="control-label">Rua</label>
 						<div class="controls">
-							<input class="span10" type='text' name='rua' id='e' placeholder="Rua"/>
+							<input class="span10" type='text' name='rua' id='rua' placeholder="Rua"/>
 						</div>
 					</div>
 					<div class="span4">
@@ -209,7 +209,7 @@
 						<br/>
 						<label class="control-label">Complemento</label>
 						<div class="controls">
-							<input class="span10" type='text' name= 'complemento' id='g' placeholder="Complemento"/>
+							<input class="span10" type='text' name= 'complemento' id='complemento' placeholder="Complemento"/>
 						</div>
 					</div>
 				</div>
