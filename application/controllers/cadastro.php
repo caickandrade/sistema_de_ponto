@@ -22,10 +22,10 @@ class Cadastro extends CI_Controller {
 		$address->complemento = "";
 		$address->cep = "39400344";
 		
-		$user->nome = " ";
+		$user->nome = "Caick Andrade";
 		$user->tel1 = "3891280415";
 		$user->tel2 = "3891280416";
-		$user->email = "outro@testando.com.br";
+		$user->email = "caila3@ig.com.br";
 		$user->senha = "teste123";
 		$user->datanasc = "1994-9-1";
 		$user->id_cargo = 1;
