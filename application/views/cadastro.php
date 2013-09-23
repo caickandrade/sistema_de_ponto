@@ -11,7 +11,7 @@
 <body>
 	<div class="container">
 
-		<form class="form-inline">
+		<form class="form-inline" id="formu">
 			<fieldset>
 				<legend>
 					Cadastro
