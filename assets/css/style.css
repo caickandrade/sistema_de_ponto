@@ -1,7 +1,21 @@
 body{
 
-background: url(/assets/img/info.jpg);
+background: #012049;/*url(assets/img/infobits.png);*/
 
+}
+.container-fluid{
+	margin-top:3%;
+
+}
+.imagem{
+	width: 90%;
+	height: 90%;
+	margin-left: 3%;
+}
+.form{
+	padding-left:1%;
+	background: white;
+	border-radius:2%; 
 }
 #centro {
 width:100px;

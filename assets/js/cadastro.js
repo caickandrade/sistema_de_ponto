@@ -1,6 +1,10 @@
 $(document).ready(function(){
 	actions();
-	alert("Vishh");
+
+	$("#phone").mask("(99)9999-9999");
+	$("#phone2").mask("(99)9999-9999");
+	
+
 });
 
 function actions(){
@@ -59,12 +63,6 @@ function actions(){
 			email: {
 				required: true
 			},
-			phone: {
-				number: true
-			},
-			phone2: {
-				number: true
-			},
 			cep: {
 				number: true
 			},
@@ -84,12 +82,6 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
-			},
-			phone: {
-				number: "Este campo aceita somente números"
-			},
-			phone2: {
-				number: "Este campo aceita somente números"
 			},
 			cep: {
 				number: "Este campo aceita somente números"
