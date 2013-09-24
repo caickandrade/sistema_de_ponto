@@ -6,7 +6,7 @@
 
 <script src = "<?php echo base_url('/assets/js/cadastro.js')?>" type="text/javascript"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js" type="text/javascript"></script>
-
+</head>
 <body>
 
 
@@ -75,7 +75,7 @@
 			</div>
 			<div class="span9">
 				<div class="form">
-					<form class="form-inline" id="formu">
+					<!--<form class="form-inline" id="formu">-->
 
 						<fieldset>
 							<legend>
@@ -297,7 +297,7 @@
 								<br/>
 							</div>
 						</fieldset>
-					</form>
+					<!--</form>-->
 
 				</div>
 			</div>
