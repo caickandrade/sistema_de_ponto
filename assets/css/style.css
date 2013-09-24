@@ -4,7 +4,7 @@ background: #012049;/*url(assets/img/infobits.png);*/
 
 }
 .container-fluid{
-	margin-top:40px;
+	margin-top:3%;
 
 }
 .imagem{
@@ -15,6 +15,7 @@ background: #012049;/*url(assets/img/infobits.png);*/
 .form{
 	padding-left:1%;
 	background: white;
+	border-radius:2%; 
 }
 #centro {
 width:100px;

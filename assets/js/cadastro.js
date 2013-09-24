@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	actions();
+	$("#phone").mask("(99)9999-9999");
+	$("#phone2").mask("(99)9999-9999");
 	
 });
 
