@@ -11,35 +11,35 @@ class Cadastro extends CI_Controller {
 	public function save()
 
 	{
-		$address = (Object) array();
-		$user = (Object) array();
-		
-		$address->rua = "Santa Rita de Cassia";
-		$address->numero = 827;
-		$address->bairro = "Sao Jose";
-		$address->cidade = "Montes Claros";
-		$address->estado = "Minas Gerais";
-		$address->complemento = "";
-		$address->cep = "39400344";
-		
-		$user->nome = "Caick Andrade";
-		$user->tel1 = "3891280415";
-		$user->tel2 = "3891280416";
-		$user->email = "caila3@ig.com.br";
-		$user->senha = "teste123";
-		$user->datanasc = "1994-9-1";
-		$user->id_cargo = 1;
-		
+		// $address = (Object) array();
+		// $user = (Object) array();
+// 		
+		// $address->rua = "Santa Rita de Cassia";
+		// $address->numero = 827;
+		// $address->bairro = "Sao Jose";
+		// $address->cidade = "Montes Claros";
+		// $address->estado = "Minas Gerais";
+		// $address->complemento = "";
+		// $address->cep = "39400344";
+// 		
+		// $user->nome = "Caick Andrade";
+		// $user->tel1 = "3891280415";
+		// $user->tel2 = "3891280416";
+		// $user->email = "caila3@ig.com.br";
+		// $user->senha = "teste123";
+		// $user->datanasc = "1994-9-1";
+		// $user->id_cargo = 1;
+// 		
 		//echo var_dump($address);
 		//echo var_dump($user);
 		
 		
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		
-		// $address = json_decode($this->input->$post("address"));
-		// $user = json_decode($this->input->$post("user"));
+		$address = json_decode($this->input->$post("address"));
+		$user = json_decode($this->input->$post("user"));
 		
-////////////////////////////////////////////////////////////////////////////////////////////////////// 		
+	
 		
 		
 		$newAddress = new Address();
