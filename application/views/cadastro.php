@@ -11,7 +11,7 @@
 <body>
 	<div class="container">
 
-		<form class="form-inline" id="formu">
+		<!--<form class="form-inline" id="formu" method="post" action="">-->
 			<fieldset>
 				<legend>
 					Cadastro
@@ -216,9 +216,10 @@
 
 				<div class="row-fluid">
 					<br/>
-					<button id="confirme" name="confirme" class="btn btn-success">
+					<!--<button id="confirme" name="confirme" class="btn btn-success">
 						Cadastrar
-					</button>
+					</button>-->
+					<input type="submit" id="confirme" value="Cadastrar" name="confirme" class="btn btn-success" />
 				</div>
 			</fieldset>
 		</form>
