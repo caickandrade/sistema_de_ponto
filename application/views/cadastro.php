@@ -6,11 +6,20 @@
 
 <script src = "<?php echo base_url('/assets/js/cadastro.js')?>" type="text/javascript"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js" type="text/javascript"></script>
-<body>
+
 
 <body>
-	<div class="container">
-
+	
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+    		<div class="span2">
+    			<div class="imagem">
+					<img src="assets/img/teste.jpg" class="img-rounded">
+				</div>
+    		</div>
+		<div class="span9">
+			<div class="form">
 		<form class="form-inline">
 			<fieldset>
 				<legend>
@@ -220,12 +229,17 @@
 						Cadastrar
 					</button>
 				</div>
+				<div class="row-fluid">
+					<br/>
+				</div>
 			</fieldset>
 		</form>
-
+		</div>
+		</div>
 		<!--<?php $this->load->view('footer') ?> -->
 
 	</div>
+	
 </body>
 
 </html>
