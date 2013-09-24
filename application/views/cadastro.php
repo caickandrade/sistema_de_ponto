@@ -9,11 +9,68 @@
 
 <body>
 
+
+		<!--<form class="form-inline" id="formu" method="post" action="">
+			<fieldset>
+				<legend>
+					Cadastro
+				</legend>
+				<div class="row-fluid">
+					<div class="span5">
+						<label class="control-label">Nome</label>
+						<div class="controls">
+							<input class="span10" type='text' name='Name' id='Name' placeholder="Nome Completo" />
+						</div>
+					</div>
+					<div class="span4">
+						<label class="control-label">Email</label>
+						<div class="controls">
+							<input class="span10" type='email' name='email' id='email' placeholder="Email" />
+						</div>
+					</div>
+					<div class="span3">
+						<label class="control-label">Senha</label>
+						<div class="controls">
+							<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3">
+						<br/>
+						<label class="control-label">Data de Nascimento</label>
+						<div class="controls">
+							<input class="span10" type="date" name='nascimento' id='nascimento' placeholder="12/12/1990"/>
+						</div>
+					</div>
+					<div class="span3">
+						<br/>
+						<label class="control-label">Telefone</label>
+						<div class="controls">
+							<input class="span10" type='tel' name='phone' id='phone' placeholder="(38)9121-1232"/>
+						</div>
+					</div>
+					<div class="span3">
+						<br/>
+						<label class="control-label">Telefone 2</label>
+						<div class="controls">
+							<input class="span10" type='tel' name='phone2' id='phone2' placeholder="(38)9121-1232"/>
+						</div>
+					</div>
+					<div class="span3">
+						<br/>
+						<label class="control-label">Função</label>
+						<div class="controls">
+							<input class="span10" type="text" name='funcao' id='funcao' placeholder="Diretor de marketing"/>
+						</div>
+					</div>
+-->
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span2">
 				<div class="imagem">
 					<img src="assets/img/teste.jpg" class="img-rounded">
+
 				</div>
 			</div>
 			<div class="span9">
@@ -222,6 +279,14 @@
 								</div>
 							</div>
 
+
+				<!--<div class="row-fluid">
+					<br/>
+					<button id="confirme" name="confirme" class="btn btn-success">
+						Cadastrar
+					</button>
+					<input type="submit" id="confirme" value="Cadastrar" name="confirme" class="btn btn-success" />
+-->
 							<div class="row-fluid">
 								<br/>
 								<button id="confirme" name="confirme" class="btn btn-success">
@@ -233,6 +298,7 @@
 							</div>
 						</fieldset>
 					</form>
+
 				</div>
 			</div>
 			<!--<?php $this->load->view('footer') ?> -->

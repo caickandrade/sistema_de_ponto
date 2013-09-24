@@ -1,8 +1,10 @@
 $(document).ready(function(){
 	actions();
+
 	$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
 	
+
 });
 
 function actions(){
@@ -21,22 +23,23 @@ function actions(){
 		}
 	});*/
 	$('#confirme').click(function(){
+		console.log('outroVishh');
 		var usuario = {};
 		var endereco = {};
-		usuario.nome = $("#Name").val;
-		usuario.email = $("#email").val;
-		usuario.senha = $("#senha").val;
-		usuario.telefone = $("#phone").val;
-		usuario.telefone2 = $("#phone2").val;
-		usuario.nascimento = $("#nascimento").val;
-		usuario.funcao = $("#funcao").val;
-		endereco.estado = $("#estado").val;
-		endereco.cep = $("#cep").val;
-		endereco.bairro = $("#bairro").val;
-		endereco.cidade = $("#cidade").val;
-		endereco.rua = $("#rua").val;
-		endereco.numero = $("#numero").val;
-		endereco.complemento = $("#complemento").val;
+		usuario.nome = $("#Name").val();
+		usuario.email = $("#email").val();
+		usuario.senha = $("#senha").val();
+		usuario.telefone = $("#phone").val();
+		usuario.telefone2 = $("#phone2").val();
+		usuario.nascimento = $("#nascimento").val();
+		usuario.funcao = $("#funcao").val();
+		endereco.estado = $("#estado").val();
+		endereco.cep = $("#cep").val();
+		endereco.bairro = $("#bairro").val();
+		endereco.cidade = $("#cidade").val();
+		endereco.rua = $("#rua").val();
+		endereco.numero = $("#numero").val();
+		endereco.complemento = $("#complemento").val();
 		
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
 		var user =  JSON.stringify(usuario);
@@ -73,12 +76,6 @@ function actions(){
 			email: {
 				required: true
 			},
-			phone: {
-				number: true
-			},
-			phone2: {
-				number: true
-			},
 			cep: {
 				number: true
 			},
@@ -98,12 +95,6 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
-			},
-			phone: {
-				number: "Este campo aceita somente números"
-			},
-			phone2: {
-				number: "Este campo aceita somente números"
 			},
 			cep: {
 				number: "Este campo aceita somente números"
