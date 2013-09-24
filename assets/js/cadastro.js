@@ -52,6 +52,18 @@ function actions(){
 			Name: {
 				required: true,
 				minlength: 5							
+				function letras(campo){
+					L = campo.value;
+					i = 0;
+					for (i=0;i<L.length;i++){
+  						l = L[i]; 
+   						if (((l < "A") || (l > "Z")) && ((l < "a") || (l > "z"))){
+   							alert("não e letra");
+   						return false;
+  						}
+					}
+				}
+				
 				}
 			},
 			senha: {
