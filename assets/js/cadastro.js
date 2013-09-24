@@ -18,6 +18,33 @@ function actions(){
 			
 		}
 	});*/
+	$('#confirme').click(function(){
+		var usuario = {};
+		var endereco = {};
+		usuario.nome = $("#Name").val;
+		usuario.email = $("#email").val;
+		usuario.senha = $("#senha").val;
+		usuario.telefone = $("#phone").val;
+		usuario.telefone2 = $("#phone2").val;
+		usuario.nascimento = $("#nascimento").val;
+		usuario.funcao = $("#funcao").val;
+		endereco.estado = $("#estado").val;
+		endereco.cep = $("#cep").val;
+		endereco.bairro = $("#bairro").val;
+		endereco.cidade = $("#cidade").val;
+		endereco.rua = $("#rua").val;
+		endereco.numero = $("#numero").val;
+		endereco.complemento = $("#complemento").val;
+		
+		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
+		var user =  JSON.stringify(usuario);
+		var address =  JSON.stringify(endereco);
+		$.post(url, {'user':user,'adress':adress},function(retorno){
+									/*retorno = $.parseJSON(retorno);*/
+									
+								});
+		
+	});
 	$("#formu").validate({
 		rules: {
 			Name: {
