@@ -10,6 +10,7 @@ class User extends DataMapper {
         parent::__construct($id);
     }
 	
+	
 	function emailExiste($email)
 	{
 			$validate = new User();
@@ -23,6 +24,7 @@ class User extends DataMapper {
 			
 	}
 	
+	
 	function salvarUser($user, $idEnd)
 	{
 		$newUser = new User();
@@ -34,17 +36,14 @@ class User extends DataMapper {
 		$newUser->email = $user->email;
 		$newUser->password = $user->senha;
 		$newUser->birthday = $user->datanasc;
-		$newUser->id_position = "1";
+		$newUser->id_position = $user->id_cargo;
 		
 		$newUser->save(); 
 				
 	}
 	
-	function validaCampos($user)
-	{
-
-	}
 	
+		
 }
 
 /* End of file user.php */
