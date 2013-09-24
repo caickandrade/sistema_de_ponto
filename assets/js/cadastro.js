@@ -50,6 +50,17 @@ function actions(){
 			Name: {
 				required: true,
 				minlength: 5
+				function Vnome(){
+					var valid = "abcdefghijklmnopqrstuvwxyz";
+					var Notvalid = "0123456789";
+					
+					for (valid == false && Notvalid == true)
+					{
+						alert("Campo nome com caracteres Incorretos");	
+      				}
+   				
+					
+				}
 			},
 			senha: {
 				required: true,
