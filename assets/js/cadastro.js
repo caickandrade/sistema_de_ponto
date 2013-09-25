@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	actions();
-	
 });
 
 function actions(){
@@ -22,27 +21,28 @@ function actions(){
 		}
 	});*/
 	$('#confirme').click(function(){
+		console.log('outroVishh');
 		var usuario = {};
 		var endereco = {};
-		usuario.nome = $("#Name").val;
-		usuario.email = $("#email").val;
-		usuario.senha = $("#senha").val;
-		usuario.telefone = $("#phone").val;
-		usuario.telefone2 = $("#phone2").val;
-		usuario.nascimento = $("#nascimento").val;
-		usuario.funcao = $("#funcao").val;
-		endereco.estado = $("#estado").val;
-		endereco.cep = $("#cep").val;
-		endereco.bairro = $("#bairro").val;
-		endereco.cidade = $("#cidade").val;
-		endereco.rua = $("#rua").val;
-		endereco.numero = $("#numero").val;
-		endereco.complemento = $("#complemento").val;
+		usuario.nome = $("#Name").val();
+		usuario.email = $("#email").val();
+		usuario.senha = $("#senha").val();
+		usuario.tel1 = $("#phone").val();
+		usuario.tel2 = $("#phone2").val();
+		usuario.datanasc = $("#nascimento").val();
+		usuario.id_cargo = $("#funcao").val();
+		endereco.estado = $("#estado").val();
+		endereco.cep = $("#cep").val();
+		endereco.bairro = $("#bairro").val();
+		endereco.cidade = $("#cidade").val();
+		endereco.rua = $("#rua").val();
+		endereco.numero = $("#numero").val();
+		endereco.complemento = $("#complemento").val();
 		
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
 		var user =  JSON.stringify(usuario);
 		var address =  JSON.stringify(endereco);
-		$.post(url, {'user':user,'adress':adress},function(retorno){
+		$.post(url, {'user':user,'address':address},function(retorno){
 									/*retorno = $.parseJSON(retorno);*/
 									
 								});
@@ -61,6 +61,7 @@ function actions(){
 			email: {
 				required: true
 			},
+
 			/*phone: {
 				number: true
 			},
@@ -86,12 +87,6 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
-			},
-			phone: {
-				number: "Este campo aceita somente números"
-			},
-			phone2: {
-				number: "Este campo aceita somente números"
 			},
 			cep: {
 				number: "Este campo aceita somente números"
