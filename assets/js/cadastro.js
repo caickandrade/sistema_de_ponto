@@ -1,8 +1,10 @@
 $(document).ready(function(){
 	actions();
+
 	$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
 	
+
 });
 
 function actions(){
@@ -21,9 +23,10 @@ function actions(){
 		}
 	});*/
 	$('#confirme').click(function(){
+		console.log('outroVishh');
 		var usuario = {};
 		var endereco = {};
-		
+
 		usuario.nome = $("#Name").val();
 		usuario.email = $("#email").val();
 		usuario.senha = $("#senha").val();
@@ -32,6 +35,7 @@ function actions(){
 		usuario.datanasc = $("#nascimento").val();
 		usuario.id_cargo = $("#funcao").val();
 		
+
 		endereco.estado = $("#estado").val();
 		endereco.cep = $("#cep").val();
 		endereco.bairro = $("#bairro").val();
@@ -43,7 +47,8 @@ function actions(){
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
 		var user =  JSON.stringify(usuario);
 		var address =  JSON.stringify(endereco);
-		$.post(url, {'user':user,'address':address},function(/*retorno*/){
+
+		$.post(url, {'user':user,'address':address},function(retorno){
 									/*retorno = $.parseJSON(retorno);*/
 									
 								});
@@ -62,12 +67,14 @@ function actions(){
 			email: {
 				required: true
 			},
+
 			// phone: {
 				// number: true
 			// },
 			// phone2: {
 				// number: true
 			// },
+
 			cep: {
 				number: true
 			},
@@ -87,12 +94,6 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
-			},
-			phone: {
-				number: "Este campo aceita somente números"
-			},
-			phone2: {
-				number: "Este campo aceita somente números"
 			},
 			cep: {
 				number: "Este campo aceita somente números"
