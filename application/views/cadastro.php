@@ -180,7 +180,7 @@
 									<br/>
 									<label class="control-label">CEP</label>
 									<div class="controls">
-										<input class="span10" type="number" name='cep' id='cep' placeholder="39.440-000"/>
+										<input class="span10" type="tel" name='cep' id='cep' placeholder="39.440-000"/>
 									</div>
 								</div>
 								<div class="span3">

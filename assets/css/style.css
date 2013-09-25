@@ -17,6 +17,9 @@ background: #012049;/*url(assets/img/infobits.png);*/
 	background: white;
 	border-radius:2%; 
 }
+.error{
+	color: red;
+}
 #centro {
 width:100px;
 height:100px;

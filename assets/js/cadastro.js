@@ -1,7 +1,5 @@
 $(document).ready(function(){
 	actions();
-	$("#phone").mask("(99)9999-9999");
-	$("#phone2").mask("(99)9999-9999");
 	
 });
 
@@ -11,6 +9,9 @@ function actions(){
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
+	$("#phone").mask("(99)9999-9999");
+	$("#phone2").mask("(99)9999-9999");
+	$("#cep").mask("99.999-999");
 	
 	/*$(".isBlanck").blur(function(){
 	alert("outroVishh");
@@ -60,7 +61,7 @@ function actions(){
 			email: {
 				required: true
 			},
-			phone: {
+			/*phone: {
 				number: true
 			},
 			phone2: {
@@ -68,7 +69,7 @@ function actions(){
 			},
 			cep: {
 				number: true
-			},
+			},*/
 			funcao: {
 				required: true
 			}
