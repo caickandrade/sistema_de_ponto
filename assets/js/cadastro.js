@@ -32,7 +32,7 @@ function actions(){
 		usuario.tel1 = $("#phone").val();
 		usuario.tel2 = $("#phone2").val();
 		usuario.datanasc = $("#nascimento").val();
-		usuario.funcao = $("#funcao").val();
+		usuario.id_cargo = $("#funcao").val();
 		endereco.estado = $("#estado").val();
 		endereco.cep = $("#cep").val();
 		endereco.bairro = $("#bairro").val();

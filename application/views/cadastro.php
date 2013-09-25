@@ -76,6 +76,7 @@
 			<div class="span9">
 				<div class="form">
 					<!--<form class="form-inline" id="formu">-->
+						<form class="form-inline" id="formu" method="post" action="">
 
 						<fieldset>
 							<legend>
@@ -297,7 +298,7 @@
 								<br/>
 							</div>
 						</fieldset>
-					<!--</form>-->
+					</form>
 
 				</div>
 			</div>
