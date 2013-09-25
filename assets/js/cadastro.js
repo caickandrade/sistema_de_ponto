@@ -62,12 +62,12 @@ function actions(){
 			email: {
 				required: true
 			},
-			phone: {
-				number: true
-			},
-			phone2: {
-				number: true
-			},
+			// phone: {
+				// number: true
+			// },
+			// phone2: {
+				// number: true
+			// },
 			cep: {
 				number: true
 			},
