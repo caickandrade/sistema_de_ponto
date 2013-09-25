@@ -34,7 +34,7 @@ class User extends DataMapper {
 		$newUser->email = $user->email;
 		$newUser->password = $user->senha;
 		$newUser->birthday = $user->datanasc;
-		$newUser->id_position = "1";
+		$newUser->id_position = $user->id_cargo;
 		
 		$newUser->save(); 
 				

@@ -38,7 +38,6 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
-		
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
 		var user =  JSON.stringify(usuario);
 		var address =  JSON.stringify(endereco);
@@ -62,15 +61,6 @@ function actions(){
 				required: true
 			},
 
-			/*phone: {
-				number: true
-			},
-			phone2: {
-				number: true
-			},
-			cep: {
-				number: true
-			},*/
 			funcao: {
 				required: true
 			}
@@ -87,9 +77,6 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
-			},
-			cep: {
-				number: "Este campo aceita somente números"
 			},
 			funcao: {
 				required: "Este campo é obrigatório"
