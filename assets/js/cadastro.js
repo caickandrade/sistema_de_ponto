@@ -22,6 +22,7 @@ function actions(){
 	});*/
 	$('#confirme').click(function(){
 		console.log('outroVishh');
+		alert ("eita");
 		var usuario = {};
 		var endereco = {};
 		usuario.nome = $("#Name").val();
@@ -38,9 +39,14 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
+		alert("eita");
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
+		alert("eita");
 		var user =  JSON.stringify(usuario);
+		alert("eita2");
 		var address =  JSON.stringify(endereco);
+		alert(user);
+		alert(address);
 		$.post(url, {'user':user,'address':address},function(retorno){
 									/*retorno = $.parseJSON(retorno);*/
 									
