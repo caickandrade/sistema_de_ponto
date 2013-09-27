@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	actions();
+	
 });
 
 function actions(){
@@ -12,14 +13,6 @@ function actions(){
 	$("#phone2").mask("(99)9999-9999");
 	$("#cep").mask("99.999-999");
 	
-	/*$(".isBlanck").blur(function(){
-	alert("outroVishh");
-		if($(this).val()==""){
-			
-			//Perera: Tava errado. Utilize Jquery.
-			
-		}
-	});*/
 	$('#confirme').click(function(){
 		console.log('outroVishh');
 		alert ("eita");
