@@ -100,7 +100,7 @@
 									<div class="controls">
 										<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
 									</div>
-								</div>
+								</div> 
 							</div>
 							<div class="row-fluid">
 								<div class="span3">
