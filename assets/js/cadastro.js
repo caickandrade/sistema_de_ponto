@@ -22,6 +22,7 @@ function actions(){
 			
 		}
 	});*/
+	
 	$('#confirme').click(function(){
 		console.log('outroVishh');
 		var usuario = {};
@@ -50,10 +51,10 @@ function actions(){
 
 		$.post(url, {'user':user,'address':address},function(retorno){
 									/*retorno = $.parseJSON(retorno);*/
-									
+								
 								});
-		
 	});
+	
 	$("#formu").validate({
 		rules: {
 			Name: {

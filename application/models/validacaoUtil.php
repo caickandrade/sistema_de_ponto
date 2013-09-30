@@ -7,7 +7,7 @@ class ValidacaoUtil extends CI_Model
 	{
 		$campoBlank = trim($campo);
 		if(empty($campoBlank))
-		{
+		{	
 			return TRUE;
 		}
 		else
