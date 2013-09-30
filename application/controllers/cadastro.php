@@ -51,6 +51,7 @@ class Cadastro extends CI_Controller {
 		
 		if(($retornoValidacaoUser == TRUE))
 		{
+			
 			$response = array
 			(
 				"ERRO"=>"Campos obrigatorios usuario nao preenchidos"
@@ -87,7 +88,8 @@ class Cadastro extends CI_Controller {
 					else
 					{
 						$idEnd = $newAddress->salvarAddress($address);
-						$newUser->salvarUser($user, $idEnd);	
+						$newUser->salvarUser($user, $idEnd);
+					
 					}
 				}
 			}	
