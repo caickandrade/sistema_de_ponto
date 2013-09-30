@@ -1,10 +1,6 @@
 $(document).ready(function(){
 	actions();
-
-	$("#phone").mask("(99)9999-9999");
-	$("#phone2").mask("(99)9999-9999");
 	
-
 });
 
 function actions(){
@@ -13,18 +9,15 @@ function actions(){
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
+	$("#phone").mask("(99)9999-9999");
+	$("#phone2").mask("(99)9999-9999");
+	$("#cep").mask("99.999-999");
 	
-	/*$(".isBlanck").blur(function(){
-	alert("outroVishh");
-		if($(this).val()==""){
-			
-			//Perera: Tava errado. Utilize Jquery.
-			
-		}
-	});*/
+
 	
 	$('#confirme').click(function(){
 		console.log('outroVishh');
+		alert ("eita");
 		var usuario = {};
 		var endereco = {};
 
@@ -35,7 +28,6 @@ function actions(){
 		usuario.tel2 = $("#phone2").val();
 		usuario.datanasc = $("#nascimento").val();
 		usuario.id_cargo = $("#funcao").val();
-		
 
 		endereco.estado = $("#estado").val();
 		endereco.cep = $("#cep").val();
@@ -44,10 +36,18 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
-		
+
+		alert("eita");
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
+		alert("eita");
 		var user =  JSON.stringify(usuario);
+		alert("eita2");
 		var address =  JSON.stringify(endereco);
+
+
+
+		alert(user);
+		alert(address);
 
 		$.post(url, {'user':user,'address':address},function(retorno){
 									/*retorno = $.parseJSON(retorno);*/
@@ -68,14 +68,6 @@ function actions(){
 			email: {
 				required: true
 			},
-
-			// phone: {
-				// number: true
-			// },
-			// phone2: {
-				// number: true
-			// },
-
 			cep: {
 				number: true
 			},
@@ -95,9 +87,6 @@ function actions(){
 			},
 			email: {
 				required: "Este campo é obrigatório"
-			},
-			cep: {
-				number: "Este campo aceita somente números"
 			},
 			funcao: {
 				required: "Este campo é obrigatório"

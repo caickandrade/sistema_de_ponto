@@ -32,18 +32,14 @@ class Cadastro extends CI_Controller {
 // 		
 		//echo var_dump($address);
 		//echo var_dump($user);
-		
-		
 
-		
 		$address = json_decode($this->input->$post("address"));
 		$user = json_decode($this->input->$post("user"));
 		
-	
-		
-		
 		$newAddress = new Address();
 		$newUser = new User();
+		
+		
 		
 		$this->load->model('ValidacaoUtil');
 		
@@ -51,24 +47,25 @@ class Cadastro extends CI_Controller {
 		
 		if(($retornoValidacaoUser == TRUE))
 		{
+<<<<<<< HEAD
 			
 			$response = array
 			(
 				"ERRO"=>"Campos obrigatorios usuario nao preenchidos"
 			);
+=======
+			$response = array ("ERRO"=>"Campos obrigatorios usuario nao preenchidos");
+>>>>>>> db5b6413cba9bca7fc84c94dba19281c50af0391
 			
 			echo json_encode($response);
 		}
-			else 
-			{
+		else 
+		{
 				$retornoValidacaoAddress = $this->ValidacaoUtil->validaCamposAddress($address);
 				
 				if(($retornoValidacaoAddress == TRUE))
 				{
-					$response = array
-					(
-						"ERRO"=>"Campos obrigatorios endereco nao preenchidos"
-					);
+					$response = array ("ERRO"=>"Campos obrigatorios endereco nao preenchidos");
 					echo json_encode($response);
 				}	
 	
@@ -78,10 +75,7 @@ class Cadastro extends CI_Controller {
 					
 					if($retornoEmail == TRUE)
 					{
-						$response = array
-						(
-							"ERRO"=>"Email existente" 
-						);
+						$response = array("ERRO"=>"Email existente");
 						
 						echo json_encode($response);
 					}
@@ -92,7 +86,7 @@ class Cadastro extends CI_Controller {
 					
 					}
 				}
-			}	
+		}	
 	}
 	
 }

@@ -27,7 +27,7 @@
 						<div class="controls">
 							<input class="span10" type='email' name='email' id='email' placeholder="Email" />
 						</div>
-					</div>
+					</div> 
 					<div class="span3">
 						<label class="control-label">Senha</label>
 						<div class="controls">
@@ -76,6 +76,7 @@
 			<div class="span9">
 				<div class="form">
 					<!--<form class="form-inline" id="formu">-->
+						<form class="form-inline" id="formu" method="post" action="">
 
 						<fieldset>
 							<legend>
@@ -99,7 +100,7 @@
 									<div class="controls">
 										<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
 									</div>
-								</div>
+								</div> 
 							</div>
 							<div class="row-fluid">
 								<div class="span3">
@@ -237,7 +238,7 @@
 									<br/>
 									<label class="control-label">CEP</label>
 									<div class="controls">
-										<input class="span10" type="number" name='cep' id='cep' placeholder="39.440-000"/>
+										<input class="span10" type="tel" name='cep' id='cep' placeholder="39.440-000"/>
 									</div>
 								</div>
 								<div class="span3">
@@ -297,7 +298,7 @@
 								<br/>
 							</div>
 						</fieldset>
-					<!--</form>-->
+					</form>
 
 				</div>
 			</div>
