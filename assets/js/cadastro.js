@@ -80,6 +80,7 @@ function actions(){
 			funcao: {
 				required: "Este campo é obrigatório"
 			}
+			
 		}
 	});
 }
