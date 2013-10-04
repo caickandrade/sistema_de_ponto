@@ -9,10 +9,10 @@ function actions(){
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
-	$("#phone").mask("(99)9999-9999");
+	/*$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
 	$("#cep").mask("99.999-999");
-	
+	$("#nascimento").mask("99/99/9999");*/	
 
 	
 	$('#confirme').click(function(){
@@ -38,24 +38,24 @@ function actions(){
 		endereco.complemento = $("#complemento").val();
 
 		alert("eita");
-		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
+		var url = "/sistema_de_ponto/index.php/cadastro/save";
 		alert("eita");
-		var user =  JSON.stringify(usuario);
+		user =  JSON.stringify(usuario);
 		alert("eita2");
-		var address =  JSON.stringify(endereco);
+		address =  JSON.stringify(endereco);
 
 
 
 		alert(user);
 		alert(address);
 
-		$.post(url, {'user':user,'address':address},function(retorno){
-									/*retorno = $.parseJSON(retorno);*/
-								
+		$.post(url, {"user":user,"address":address},function(){
+									//retorno = $.parseJSON(retorno);
+								//console.log(retorno);
 								});
 	});
 	
-	$("#formu").validate({
+	/*$("#formu").validate({
 		rules: {
 			Name: {
 				required: true,
@@ -69,7 +69,7 @@ function actions(){
 				required: true
 			},
 			cep: {
-				number: true
+				number: false
 			},
 			funcao: {
 				required: true
@@ -92,7 +92,7 @@ function actions(){
 				required: "Este campo é obrigatório"
 			}
 		}
-	});
+	});*/
 }
 
 

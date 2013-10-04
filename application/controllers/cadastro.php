@@ -13,49 +13,43 @@ class Cadastro extends CI_Controller {
 	{
 		// $address = (Object) array();
 		// $user = (Object) array();
-// 		
+// 	
 		// $address->rua = "Santa Rita de Cassia";
 		// $address->numero = 827;
 		// $address->bairro = "Sao Jose";
 		// $address->cidade = "Montes Claros";
 		// $address->estado = "Minas Gerais";
 		// $address->complemento = "";
-		// $address->cep = "39400344";
+		// $address->cep = "39400344";	
 // 		
-		// $user->nome = "Caick Andrade";
+		// $user->nome = "Caickao";
 		// $user->tel1 = "3891280415";
 		// $user->tel2 = "3891280416";
-		// $user->email = "caila3@ig.com.br";
+		// $user->email = "caick4@hotmail.com";
 		// $user->senha = "teste123";
 		// $user->datanasc = "1994-9-1";
 		// $user->id_cargo = 1;
-// 		
-		//echo var_dump($address);
-		//echo var_dump($user);
 
-		$address = json_decode($this->input->$post("address"));
-		$user = json_decode($this->input->$post("user"));
+
+		$address = json_decode($this->input->post("address"));
+		$user = json_decode($this->input->post("user"));
+		
+		echo var_dump($address);
+		echo var_dump($user);
 		
 		$newAddress = new Address();
 		$newUser = new User();
 		
-		
-		
+	
 		$this->load->model('ValidacaoUtil');
 		
 		$retornoValidacaoUser = $this->ValidacaoUtil->validaCamposUser($user);
 		
 		if(($retornoValidacaoUser == TRUE))
 		{
-<<<<<<< HEAD
 			
-			$response = array
-			(
-				"ERRO"=>"Campos obrigatorios usuario nao preenchidos"
-			);
-=======
 			$response = array ("ERRO"=>"Campos obrigatorios usuario nao preenchidos");
->>>>>>> db5b6413cba9bca7fc84c94dba19281c50af0391
+
 			
 			echo json_encode($response);
 		}
@@ -81,6 +75,9 @@ class Cadastro extends CI_Controller {
 					}
 					else
 					{
+									$response = array("Sucesso"=>"Sucesso");
+						
+						echo json_encode($response);
 						$idEnd = $newAddress->salvarAddress($address);
 						$newUser->salvarUser($user, $idEnd);
 					
@@ -91,4 +88,4 @@ class Cadastro extends CI_Controller {
 	
 }
 /* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* Location: ./application/controllers/cadastro.php */
