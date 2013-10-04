@@ -1,6 +1,6 @@
 <?php $this->load->view('header')
 ?>
-
+<head>
 <title>Dados Pessoais</title>
 <!-- <link href="C:/wamp/www/sistema_de_ponto/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 
