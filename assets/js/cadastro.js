@@ -9,15 +9,16 @@ function actions(){
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
-	$("#phone").mask("(99)9999-9999");
-	$("#phone2").mask("(99)9999-9999");
-	$("#cep").mask("99.999-999");
+	//$("#phone").mask("(99)9999-9999");
+	//$("#phone2").mask("(99)9999-9999");
+	//$("#cep").mask("99.999-999");
 	
 	$('#confirme').click(function(){
 		console.log('outroVishh');
 		alert ("eita");
 		var usuario = {};
 		var endereco = {};
+		
 		usuario.nome = $("#Name").val();
 		usuario.email = $("#email").val();
 		usuario.senha = $("#senha").val();
@@ -32,20 +33,21 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
-		alert("eita");
+		
 		var url = "http://localhost/sistema_de_ponto/index.php/cadastro/save";
-		alert("eita");
 		var user =  JSON.stringify(usuario);
-		alert("eita2");
 		var address =  JSON.stringify(endereco);
+		
 		alert(user);
 		alert(address);
 		$.post(url, {'user':user,'address':address},function(retorno){
+		//$.post(url, {'dados':dados},function(retorno){
 									/*retorno = $.parseJSON(retorno);*/
 									
 								});
 		
 	});
+	/*
 	$("#formu").validate({
 		rules: {
 			Name: {
@@ -82,7 +84,7 @@ function actions(){
 			}
 			
 		}
-	});
+	});*/
 }
 
 
