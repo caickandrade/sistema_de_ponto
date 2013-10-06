@@ -1,11 +1,27 @@
 $(document).ready(function(){
-	actions();
-	
+	actions();	
+	loads();
 });
 
+//TODOS OS LOADS DA PÁGINA DEVEM SER IMPLEMENTADOS AQUI.
+function loads(){
+	loadPositions();
+}
+
+function loadPositions(){
+	var url = "/sistema_de_ponto/index.php/cadastro/loadPositions";
+	$.post(url,function(retorno){
+		var retorno = $.parseJSON(retorno);		
+		$.each(retorno,function(i,item){
+			var data = $.parseJSON(item);
+			var html = "<option id="+data.id+">"+data.description+"</option>";
+			$('#funcao').append(html);		
+		});
+	},"json"); 
+}
+
 function actions(){
-	$('.estado').click(function(){
-		console.log('vish');
+	$('.estado').click(function(){		
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
@@ -15,9 +31,7 @@ function actions(){
 	$("#nascimento").mask("99/99/9999");*/	
 
 	
-	$('#confirme').click(function(){
-		console.log('outroVishh');
-		alert ("eita");
+	$('#confirme').click(function(){				
 		var usuario = {};
 		var endereco = {};
 
@@ -27,7 +41,7 @@ function actions(){
 		usuario.tel1 = $("#phone").val();
 		usuario.tel2 = $("#phone2").val();
 		usuario.datanasc = $("#nascimento").val();
-		usuario.id_cargo = $("#funcao").val();
+		usuario.id_cargo = parseInt($('#funcao option:selected').attr('id'));
 
 		endereco.estado = $("#estado").val();
 		endereco.cep = $("#cep").val();
@@ -36,24 +50,23 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
-
-		alert("eita");
+		
 		var url = "/sistema_de_ponto/index.php/cadastro/save";
-		alert("eita");
-		user =  JSON.stringify(usuario);
-		alert("eita2");
-		address =  JSON.stringify(endereco);
-
-
-
-		alert(user);
-		alert(address);
-
-		$.post(url, {"user":user,"address":address},function(){
-									//retorno = $.parseJSON(retorno);
-								//console.log(retorno);
-								});
-	});
+		
+		/*user =  JSON.stringify(usuario);		
+		address =  JSON.stringify(endereco);*/
+		//CRIANDO OBJETO DATA COM O USUÁRIO E ENDEREÇO
+		var data = {};
+		data.user = usuario;
+		data.address = endereco;
+		data = JSON.stringify(data);
+		
+		//ENVIANDO OBJETO DATA
+		//obs.: ESTAVA FALTANDO A VARIÁVEL "RETORNO" em FUNCTION do $.POST
+		$.post(url, {"data":data},function(retorno){
+			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");			
+			},"json");
+		});
 	
 	/*$("#formu").validate({
 		rules: {

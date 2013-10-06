@@ -127,8 +127,9 @@
 								<div class="span3">
 									<br/>
 									<label class="control-label">Função</label>
-									<div class="controls">
-										<input class="span10" type="text" name='funcao' id='funcao' placeholder="Diretor de marketing"/>
+									<div class="controls">																				
+										<select class="span10" name='funcao' id='funcao' placeholder="Diretor de marketing">										 
+										</select>
 									</div>
 								</div>
 							</div>
