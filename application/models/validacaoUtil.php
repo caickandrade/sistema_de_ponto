@@ -1,8 +1,9 @@
 <?php
 
 class ValidacaoUtil extends CI_Model 
-{
-		
+
+{		
+
 	function isBlank($campo)
 	{
 		$campoBlank = trim($campo);
@@ -12,6 +13,7 @@ class ValidacaoUtil extends CI_Model
 		}
 		else
 			return FALSE;	
+
 	}
 		
 	function validaCamposUser($user)
@@ -28,6 +30,6 @@ class ValidacaoUtil extends CI_Model
 		    return TRUE;
 		else 
 			return FALSE;
-	}		
+	}
 	
 }

@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Sep 11, 2013 at 12:34 AM
--- Server version: 5.5.24-log
--- PHP Version: 5.4.3
+-- Máquina: localhost
+-- Data de Criação: 06-Out-2013 às 19:18
+-- Versão do servidor: 5.6.12-log
+-- versão do PHP: 5.4.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,13 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `time`
+-- Base de Dados: `time`
 --
+CREATE DATABASE IF NOT EXISTS `time` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `time`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `addresses`
+-- Estrutura da tabela `addresses`
 --
 
 CREATE TABLE IF NOT EXISTS `addresses` (
@@ -36,12 +38,12 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `complement` varchar(11) DEFAULT NULL,
   `zip_code` int(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logins`
+-- Estrutura da tabela `logins`
 --
 
 CREATE TABLE IF NOT EXISTS `logins` (
@@ -57,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `logins` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logouts`
+-- Estrutura da tabela `logouts`
 --
 
 CREATE TABLE IF NOT EXISTS `logouts` (
@@ -73,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `logouts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `positions`
+-- Estrutura da tabela `positions`
 --
 
 CREATE TABLE IF NOT EXISTS `positions` (
@@ -84,16 +86,22 @@ CREATE TABLE IF NOT EXISTS `positions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `positions`
+-- Extraindo dados da tabela `positions`
 --
 
 INSERT INTO `positions` (`id`, `description`, `codigo`) VALUES
-(1, 'Administrador', 1);
+(1, 'Administrador', 1),
+(2, 'Diretor Administrativo', 3),
+(3, 'Diretor Presidente', 2),
+(4, 'Diretor de R.H', 4),
+(5, 'Diretor Financeiro', 5),
+(6, 'Diretor de Marketing', 6),
+(7, 'Diretor de Projetos e Qualidad', 7);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estrutura da tabela `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -110,26 +118,26 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `email` (`email`),
   KEY `addresses_id` (`addresses_id`),
   KEY `id_function` (`id_position`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `logins`
+-- Limitadores para a tabela `logins`
 --
 ALTER TABLE `logins`
   ADD CONSTRAINT `logins_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `logouts`
+-- Limitadores para a tabela `logouts`
 --
 ALTER TABLE `logouts`
   ADD CONSTRAINT `logouts_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `users`
+-- Limitadores para a tabela `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`addresses_id`) REFERENCES `addresses` (`id`),

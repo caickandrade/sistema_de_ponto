@@ -6,9 +6,10 @@ class User extends DataMapper {
 	//var $has_one = array("address");
 
 	function __construct($id = NULL)
-    {
+    {    	
         parent::__construct($id);
     }
+	
 	
 	function emailExiste($email)
 	{
@@ -23,9 +24,11 @@ class User extends DataMapper {
 			
 	}
 	
+	
 	function salvarUser($user, $idEnd)
 	{
 		$newUser = new User();
+		$getPostion = new Position();
 		
 		$newUser->name = $user->nome;
 		$newUser->addresses_id = $idEnd;
@@ -34,17 +37,31 @@ class User extends DataMapper {
 		$newUser->email = $user->email;
 		$newUser->password = $user->senha;
 		$newUser->birthday = $user->datanasc;
-		$newUser->id_position = $user->id_cargo;
+		//VOCÊS PRECISAM PASSAR O ID DO CARGO. QUANDO VOCÊS COLOCAM NA INTERFACE O NOME DO CARGO, OU
+		//ATÉ MESMO UM ID QUE NÃO EXISTE NA TABLE POSITIONS, VOCÊS DESTROEM COM O RELACIONAMENTO ENTRE AS 
+		//TABELAS E ELAS FICAM TRISTES E SOLITÁRIAS. BEM MAGOADAS, ELAS NÃO GRAVAM O USUÁRIO.
+		//CRIEI UM LOAD POSITIONS EM USER, OLHEM LÁ.
+		$getPostion->where("codigo",$user->id_cargo)->get();
+		$newUser->id_position = $getPostion->id;
 		
 		$newUser->save(); 
 				
 	}
-	
-	function validaCampos($user)
+	//VALIDAR USUÁRIO PERTENCE AO OBJETO USUÁRIO. 
+	function validaCamposUser($user)
 	{
-
+		//carregando model
+		$this->load->model("ValidacaoUtil");
+		//instanciando um objeto do model de validação
+		$validar = new ValidacaoUtil();		
+		if(($validar->isBlank($user->nome)) || ($validar->isBlank($user->email)) || ($validar->isBlank($user->senha)) || ($validar->isBlank($user->id_cargo)))
+			return FALSE;		 
+		else 
+			return TRUE;	
 	}
 	
+	
+		
 }
 
 /* End of file user.php */

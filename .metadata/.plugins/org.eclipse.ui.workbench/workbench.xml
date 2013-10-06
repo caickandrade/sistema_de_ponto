@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="52" version="2.0">
+<workbench progressCount="23" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1200" x="75" y="0">
-<fastViewData fastViewLocation="1024"/>
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.eclipse.ui.navigator.ProjectExplorer"/>
+<orientation position="512" view="com.aptana.explorer.view"/>
+</fastViewData>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
@@ -17,9 +20,11 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.css" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.js" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.html" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.aptana.editor.php" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.php" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,44 +33,22 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="com.aptana.editor.php" name="cadastro.php" partName="cadastro.php" title="cadastro.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\cadastro.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/cadastro.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="737" selectionTopPixel="150"/>
-</editor>
-<editor id="com.aptana.editor.php" name="welcome.php" partName="welcome.php" title="welcome.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\welcome.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/welcome.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.php" name="address.php" partName="address.php" title="address.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\address.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/address.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="646" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.php" name="user.php" partName="user.php" title="user.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\user.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/user.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="832" selectionTopPixel="279"/>
-</editor>
-<editor id="com.aptana.editor.php" name="validacaoUtil.php" partName="validacaoUtil.php" title="validacaoUtil.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\validacaoUtil.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/validacaoUtil.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="125" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="com.aptana.snippets.ui.views.SnippetsView" partName="Snippets"/>
 <view id="com.aptana.terminal.views.terminal" partName="Terminal"/>
-<view id="com.aptana.samples.ui.SamplesView" partName="Samples"/>
+<view id="com.aptana.terminal.views.terminal:js" partName="js">
+<viewState>
+<title>js</title>
+<workingDirectory>C:\wamp\www\sistema_de_ponto\assets\js</workingDirectory>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
@@ -86,17 +69,8 @@
 </project>
 </viewState>
 </view>
-<view id="com.aptana.terminal.views.terminal:controllers" partName="controllers">
-<viewState>
-<title>controllers</title>
-<workingDirectory>C:\wamp\www\sistema_de_ponto\application\controllers</workingDirectory>
-</viewState>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 </views>
-<perspectives activePart="com.aptana.terminal.views.terminal:controllers" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="com.aptana.terminal.views.terminal:js" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -136,27 +110,29 @@
 <new_wizard_action id="org.radrails.rails.ui.projectWizard"/>
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="com.aptana.explorer.view"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="com.aptana.terminal.views.terminal"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
-<view id="com.aptana.terminal.views.terminal:controllers"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="com.aptana.samples.ui.SamplesView"/>
-<view id="com.aptana.snippets.ui.views.SnippetsView"/>
+<view id="com.aptana.terminal.views.terminal:js"/>
+<view id="com.aptana.explorer.view"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
-<info folder="true" part="left">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1da87c1">
 <folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
 <page content="com.aptana.explorer.view" label="App Explorer"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
-<page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 </presentation>
+</folder>
+</info>
+<info folder="true" part="left" ratio="0.1306273" ratioLeft="177" ratioRight="1178" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1da87c1">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="left">
@@ -167,12 +143,13 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.19982994" ratioLeft="235" ratioRight="941" relationship="2" relative="left"/>
-<info folder="true" part="terminalArea" ratio="0.2032258" ratioLeft="126" ratioRight="494" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.aptana.terminal.views.terminal:controllers" appearance="2" expanded="2">
+<info folder="true" part="terminalArea" ratio="0.7322581" ratioLeft="454" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.aptana.terminal.views.terminal:js" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.aptana.terminal.views.terminal" label="Terminal"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="com.aptana.terminal.views.terminal:controllers" label="controllers"/>
+<page content="com.aptana.terminal.views.terminal:js" label="js"/>
+<page content="com.aptana.terminal.views.terminal:controllers" label="LabelNotFound"/>
 <page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -184,15 +161,11 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@11af7bb" ratio="0.75" ratioLeft="477" ratioRight="159" relationship="4" relative="left">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="com.aptana.samples.ui.SamplesView" label="Samples"/>
-<page content="com.aptana.snippets.ui.views.SnippetsView" label="Snippets"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="com.aptana.samples.ui.SamplesView" label="LabelNotFound"/>
+<page content="com.aptana.snippets.ui.views.SnippetsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -200,167 +173,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/cadastro.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/user.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/home.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/views/cadastro.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/welcome.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/address.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/validacaoUtil.php"/>
-</editors>
-<item historyLabel="cadastro.php | views" index="3">
-<position/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1519" y="0"/>
-</item>
-<item historyLabel="home.php" index="2">
-<position info="not_deleted" x="259" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1519" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="233" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1505" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="233" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1505" y="0"/>
-</item>
-<item historyLabel="welcome.php" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1505" y="0"/>
-</item>
-<item historyLabel="cadastro.php | views" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1000" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="475" y="0"/>
-</item>
-<item historyLabel="address.php" index="5">
-<position info="not_deleted" x="232" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="436" y="0"/>
-</item>
-<item historyLabel="address.php" index="5">
-<position info="not_deleted" x="241" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="471" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1529" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="471" y="0"/>
-</item>
-<item historyLabel="welcome.php" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="address.php" index="5">
-<position info="not_deleted" x="241" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1529" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="508" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1429" y="0"/>
-</item>
-<item historyLabel="address.php" index="5">
-<position info="not_deleted" x="642" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1359" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="393" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1459" y="0"/>
-</item>
-<item historyLabel="address.php" index="5">
-<position info="not_deleted" x="646" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1459" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="393" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="1459" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="610" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="737" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="70" y="0"/>
-</item>
-<item historyLabel="validacaoUtil.php" index="6">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="cadastro.php" index="0">
-<position info="not_deleted" x="737" y="0"/>
-</item>
-<item active="true" historyLabel="user.php" index="1">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -377,50 +190,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="validacaoUtil.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\validacaoUtil.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/validacaoUtil.php"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="user.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\user.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/user.php"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="address.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\address.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/address.php"/>
-</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="cadastro.php" tooltip="C:\wamp\www\sistema_de_ponto\application\views\cadastro.php">
 <persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/views/cadastro.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="welcome.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\welcome.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/welcome.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="cadastro2.php" tooltip="C:\wamp\www\sistema_de_ponto\application\views\cadastro2.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/views/cadastro2.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="home.php" tooltip="C:\Users\Caick\Desktop\sistema_de_ponto.old\application\controllers\home.php">
-<persistable uri="file:/C:/Users/Caick/Desktop/sistema_de_ponto.old/application/controllers/home.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" name="style.css" tooltip="C:\wamp\www\sistema_de_ponto\assets\css\style.css">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/assets/css/style.css"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="home.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\home.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/home.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="index.php" tooltip="C:\Users\Caick\Desktop\infobits\sistema_de_pontoold\application\views\index.php">
+<persistable uri="file:/C:/Users/Caick/Desktop/infobits/sistema_de_pontoold/application/views/index.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="cadastro.js" tooltip="C:\wamp\www\sistema_de_pontoold\assets\js\cadastro.js">
+<persistable uri="file:/C:/wamp/www/sistema_de_pontoold/assets/js/cadastro.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="cadastro1.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\cadastro1.js">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/cadastro1.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="cadastro.js" tooltip="C:\Users\Caick\Desktop\infobits\sistema_de_pontoold\assets\js\cadastro.js">
+<persistable uri="file:/C:/Users/Caick/Desktop/infobits/sistema_de_pontoold/assets/js/cadastro.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="login.php" tooltip="C:\Users\Caick\Desktop\infobits\sistema_de_pontoold\application\controllers\login.php">
+<persistable uri="file:/C:/Users/Caick/Desktop/infobits/sistema_de_pontoold/application/controllers/login.php"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="index.html" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\index.html">
 <persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/index.html"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="config.php" tooltip="C:\wamp\www\sistema_de_ponto\application\config\config.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/config/config.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="welcome.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\welcome.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/welcome.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="logout.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\logout.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/logout.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="login.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\login.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/login.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="position.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\position.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/position.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="home.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\home.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/home.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="login.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\login.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/login.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="sucesso.php" tooltip="C:\wamp\www\sistema_de_ponto\application\views\sucesso.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/views/sucesso.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="cadastro.php" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\cadastro.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/cadastro.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="login.php" tooltip="C:\wamp\www\sistema_de_pontoold\application\controllers\login.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_pontoold/application/controllers/login.php"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="function.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\function.php">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/application/models/function.php"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="user.php" tooltip="C:\Users\Caick\sistema_de_ponto\application\models\user.php">
-<persistable uri="file:/C:/Users/Caick/sistema_de_ponto/application/models/user.php"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="homee.php" tooltip="C:\wamp\www\sistema_de_pontoold\application\views\homee.php">
+<persistable uri="file:/C:/wamp/www/sistema_de_pontoold/application/views/homee.php"/>
 </file>
 </mruList>
 </workbench>
