@@ -1,14 +1,15 @@
-<?php // $this->load->view('')
+<?php  $this->load->view('header')
 ?>
 <html>
 	<head>
 		<title>Login</title>
 		
 		<script src = "<?php echo base_url('/assets/js/login.js')?>" type="text/javascript"></script>
-		<script src = "<?php echo base_url('/assets/css/stylelogin.css')?>"></script>
+		
 	
 	</head>
 	<body>
+		
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span">
@@ -16,6 +17,7 @@
 							<img src="assets/img/teste.jpg" class="img-rounded">
 						</div>
 					</div>
+					<div class="central">
 					<div class="span9">
 						<legend>
 								SISTEMA DE PONTO
@@ -37,6 +39,7 @@
 									Entrar
 							</button>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>
