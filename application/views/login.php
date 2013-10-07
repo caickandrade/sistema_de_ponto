@@ -2,9 +2,10 @@
 ?>
 <html>
 	<head>
-		<title>SP INFOBITS</title>
+		<title>Login</title>
 		
 		<script src = "<?php echo base_url('/assets/js/login.js')?>" type="text/javascript"></script>
+		<script src = "<?php echo base_url('/assets/css/stylelogin.css')?>"></script>
 	
 	</head>
 	<body>
@@ -17,7 +18,7 @@
 					</div>
 					<div class="span9">
 						<legend>
-								Cadastro
+								SISTEMA DE PONTO
 						</legend>
 						<div class="row-fluid">
 							<div class="span">
