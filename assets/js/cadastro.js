@@ -12,6 +12,7 @@ function actions(){
 	$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
 	$("#cep").mask("99.999-999");
+	$("#nascimento").mask("99/99/9999");
 	
 	$('#confirme').click(function(){
 		console.log('outroVishh');
