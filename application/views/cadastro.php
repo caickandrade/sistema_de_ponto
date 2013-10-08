@@ -226,7 +226,7 @@
 							</div>
 							<div class="row-fluid">
 								<br/>
-								<button id="confirme" name="confirme" class="btn btn-success">
+								<button id="confirme" name="confirme" class="btn btn-success"  >
 									Cadastrar
 								</button>
 							</div>
@@ -234,7 +234,6 @@
 								<br/>
 							</div>
 						</fieldset>
-					</form>
 
 				</div>
 			</div>
