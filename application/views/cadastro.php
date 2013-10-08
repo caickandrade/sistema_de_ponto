@@ -69,14 +69,14 @@
 		<div class="row-fluid">
 			<div class="span2">
 				<div class="imagem">
-					<img src="assets/img/teste.jpg" class="img-rounded">
+					<img src="assets/img/teste.jpg" alt="not found" class="img-rounded">
 
 				</div>
 			</div>
 			<div class="span9">
 				<div class="form">
 					<!--<form class="form-inline" id="formu">-->
-						<form class="form-inline" id="formu" method="post" action="">
+						<!--<form class="form-inline" id="formu" method="post" action="">-->
 
 						<fieldset>
 							<legend>
@@ -127,8 +127,9 @@
 								<div class="span3">
 									<br/>
 									<label class="control-label">Função</label>
-									<div class="controls">
-										<input class="span10" type="text" name='funcao' id='funcao' placeholder="Diretor de marketing"/>
+									<div class="controls">																				
+										<select class="span10" name='funcao' id='funcao' placeholder="Diretor de marketing">										 
+										</select>
 									</div>
 								</div>
 							</div>

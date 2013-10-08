@@ -6,8 +6,8 @@ class Address extends DataMapper {
 	//var $has_one = array("user");
 	
 	function __construct($id = NULL)
-    {
-        parent::__construct($id);
+    {    	
+        parent::__construct($id);		
     }
 	
 	function salvarAddress($address)
@@ -26,6 +26,18 @@ class Address extends DataMapper {
 		
 		return $newAddress->id;
 	}
+	//validar enderçeo é um método do objeto endereço
+	function validaCamposAddress($address)
+	{
+		//carregando model		
+    	$this->load->model("validacaoUtil");
+		//instanciando um objeto de validação
+		$validar = new ValidacaoUtil();	
+		if(($validar->isBlank($address->rua)) || ($validar->isBlank($address->numero)) || ($validar->isBlank($address->bairro)) || ($validar->isBlank($address->cidade)))
+			return FALSE;// MAIS COERENTE RETORNAR FALSE QUANDO A VALIDAÇÃO DER ERRADO			    
+		else 
+			return TRUE;
+	}	
 	
 }
 

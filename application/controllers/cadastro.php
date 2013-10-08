@@ -7,79 +7,62 @@ class Cadastro extends CI_Controller {
 		$this->load->view("cadastro");
 	}
 	
+	public function loadPositions(){
+		$this->load->model("position");
+		$position = new Position();	
+		$array = array('codigo >' =>1,'codigo <'=>8);
+		$position->where($array);	
+		echo json_encode($position->get()->all_to_json());
+	}
 
 	public function save()
-
 	{
-		// $address = (Object) array();
-		// $user = (Object) array();
-// 		
-		// $address->rua = "Santa Rita de Cassia";
-		// $address->numero = 827;
-		// $address->bairro = "Sao Jose";
-		// $address->cidade = "Montes Claros";
-		// $address->estado = "Minas Gerais";
-		// $address->complemento = "";
-		// $address->cep = "39400344";
-// 		
-		// $user->nome = "Caick Andrade";
-		// $user->tel1 = "3891280415";
-		// $user->tel2 = "3891280416";
-		// $user->email = "caila3@ig.com.br";
-		// $user->senha = "teste123";
-		// $user->datanasc = "1994-9-1";
-		// $user->id_cargo = 1;
-// 		
-		//echo var_dump($address);
-		//echo var_dump($user);
-
-		$address = json_decode($this->input->$post("address"));
-		$user = json_decode($this->input->$post("user"));
-		
+		//CARREGANDO MODEL		
+		$this->load->model("user");
+		$this->load->model("address");
+		//RECEBENDO USUÁRIO E ENDEREÇO DA INTERFACE
+		//FUNÇÃO JSON DECODE PEGA UMA STRING JSON E TRANSFORMA EM UM OBJETO
+		$data = json_decode($this->input->post("data"));
+				
 		$newAddress = new Address();
+		//INSTANCIANDO NOVO USUÁRIO
 		$newUser = new User();
+		//VERIFICANADO SE E-MAIL JÁ FOI CADASTRADO	
+		//VALIDANDO USUÁRIO E ENDEREÇO		
+		$retornoValidacaoUser = $newUser->validaCamposUser($data->user);
+		$retornoValidacaoAddress = $newAddress->validaCamposAddress($data->address);
 		
-		
-		
-		$this->load->model('ValidacaoUtil');
-		
-		$retornoValidacaoUser = $this->ValidacaoUtil->validaCamposUser($user);
-		
-		if(($retornoValidacaoUser == TRUE))
-		{
-			$response = array ("ERRO"=>"Campos obrigatorios usuario nao preenchidos");
-			
+		if($retornoValidacaoUser == FALSE || $retornoValidacaoAddress == FALSE){
+			$response = array(
+				"data"=> "",
+				"msg" => "Campos obrigatórios não preenchidos!"
+			);
 			echo json_encode($response);
 		}
-		else 
-		{
-				$retornoValidacaoAddress = $this->ValidacaoUtil->validaCamposAddress($address);
-				
-				if(($retornoValidacaoAddress == TRUE))
-				{
-					$response = array ("ERRO"=>"Campos obrigatorios endereco nao preenchidos");
-					echo json_encode($response);
-				}	
+		else{
+			$retornoEmail = $newUser->emailExiste($data->user->email);
+			if($retornoEmail == TRUE){
+				$response = array(
+					"data"=> "",
+					"msg" => "E-mail já existe"
+				);
+				echo json_encode($response);
+			}
+			else{
+				//SALVANDO ENDEREÇO
+				$idEnd = $newAddress->salvarAddress($data->address);
+				//SALVANDO USER
+				$newUser->salvarUser($data->user, $idEnd);
+					$response = array(
+					"data"=> "",
+					"msg" => "Salvo com sucesso!"
+				);
+				echo json_encode($response);					
+			}			
+		}
 	
-				else 
-				{
-					$retornoEmail = $newUser->emailExiste($user->email);
-					
-					if($retornoEmail == TRUE)
-					{
-						$response = array("ERRO"=>"Email existente");
-						
-						echo json_encode($response);
-					}
-					else
-					{
-						$idEnd = $newAddress->salvarAddress($address);
-						$newUser->salvarUser($user, $idEnd);	
-					}
-				}
-		}	
 	}
 	
 }
 /* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* Location: ./application/controllers/cadastro.php */
