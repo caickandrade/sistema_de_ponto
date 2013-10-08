@@ -13,9 +13,9 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span">
-						<div class="imagem">
+						<!--<div class="imagem">
 							<img src="assets/img/teste.jpg" class="img-rounded">
-						</div>
+						</div> -->
 					</div>
 					<form id='form'>
 					<div class="span9">
@@ -23,7 +23,7 @@
 								SISTEMA DE PONTO
 						</legend>
 						<div class="row-fluid">
-							<div class="span">
+							<div class="span3">
 								<label class="control-label">Email</label>
 									<div class="controls">
 										<input class="span10" type='email' name='email' id='email' placeholder="Email" />
@@ -35,6 +35,9 @@
 										<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
 									</div>
 							</div>
+							
+						</div>
+						<div class="row-fluid">
 							<button id="entrar" name="entrar" class="btn btn-success">
 									Entrar
 							</button>
