@@ -3,6 +3,7 @@ body{
 background: #012049;/*url(assets/img/infobits.png);*/
 font-family: helvetica,verdana,Arial, sans-serif;
 }
+
 .container-fluid{
 	margin-top:3%;
 
@@ -38,3 +39,17 @@ color:#FFFFFF;
 color:#000000;
 }
 
+#formlog{
+	
+	padding-left:2%;
+	background: white;
+	border-radius:7% 7% 7% 0%;	
+	width:400px;
+	height:235px;
+	position:absolute;
+	top:30%;
+	left:35%;
+	margin-top:-30px;
+	margin-left:-30px;
+	
+}
