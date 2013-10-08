@@ -9,7 +9,7 @@
 		<script src = "<?php echo base_url('/assets/js/maskedinput.js')?>"></script>
 		<?php echo link_tag("assets/css/bootstrap.min.css") ?>	
 		<?php echo link_tag("assets/css/style.css") ?>
-		<?php echo link_tag("assets/css/stylelogin.css") ?>
+		
 		
 	
 
