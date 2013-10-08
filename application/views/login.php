@@ -17,7 +17,7 @@
 							<img src="assets/img/teste.jpg" class="img-rounded">
 						</div>
 					</div>
-					<div class="central">
+					<form id='form'>
 					<div class="span9">
 						<legend>
 								SISTEMA DE PONTO
@@ -40,7 +40,7 @@
 							</button>
 						</div>
 					</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</body>

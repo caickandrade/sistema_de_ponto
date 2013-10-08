@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "home";
+$route['default_controller'] = "paginainicial";// ATENÇÂO: Define a pagina inicial do sistema
 $route['404_override'] = '';
 
 

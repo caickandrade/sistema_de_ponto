@@ -1,7 +1,7 @@
 body{
 
-background: #012049;/*url(assets/img/infobits.png);*/
-
+background: #000000;/*url(assets/img/infobits.png);*/
+font-family: helvetica,verdana,Arial, sans-serif;
 }
 .container-fluid{
 	margin-top:3%;
@@ -35,7 +35,6 @@ color:#FFFFFF;
 
 }
 #senha{
-color:#FFFFFF;
+color:#000000;
 }
-
 
