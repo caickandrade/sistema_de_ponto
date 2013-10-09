@@ -25,16 +25,17 @@ function actions(){
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
+
 	/*$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
 	$("#cep").mask("99.999-999");
 	$("#nascimento").mask("99/99/9999");*/	
 
+
 	
 	$('#confirme').click(function(){				
 		var usuario = {};
 		var endereco = {};
-
 		usuario.nome = $("#Name").val();
 		usuario.email = $("#email").val();
 		usuario.senha = $("#senha").val();
@@ -50,11 +51,12 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
+
 		
 		var url = "/sistema_de_ponto/index.php/cadastro/save";
 		
-		/*user =  JSON.stringify(usuario);		
-		address =  JSON.stringify(endereco);*/
+		user =  JSON.stringify(usuario);		
+		address =  JSON.stringify(endereco);
 		//CRIANDO OBJETO DATA COM O USUÁRIO E ENDEREÇO
 		var data = {};
 		data.user = usuario;
@@ -64,12 +66,17 @@ function actions(){
 		//ENVIANDO OBJETO DATA
 		//obs.: ESTAVA FALTANDO A VARIÁVEL "RETORNO" em FUNCTION do $.POST
 		$.post(url, {"data":data},function(retorno){
-			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");			
+			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");
+//			$("#dialog").dialog();
+			if(retorno.msg == "Salvo com sucesso!"){
+				window.location.reload();
+			}
 			},"json");
 		});
-	
-	/*$("#formu").validate({
-		rules: {
+	/*
+	$("#formu").validate({
+
+		rules: { 
 			Name: {
 				required: true,
 				minlength: 5
@@ -104,6 +111,7 @@ function actions(){
 			funcao: {
 				required: "Este campo é obrigatório"
 			}
+			
 		}
 	});*/
 }

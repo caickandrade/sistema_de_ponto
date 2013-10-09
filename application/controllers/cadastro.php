@@ -17,6 +17,7 @@ class Cadastro extends CI_Controller {
 
 	public function save()
 	{
+
 		//CARREGANDO MODEL		
 		$this->load->model("user");
 		$this->load->model("address");
@@ -24,6 +25,7 @@ class Cadastro extends CI_Controller {
 		//FUNÇÃO JSON DECODE PEGA UMA STRING JSON E TRANSFORMA EM UM OBJETO
 		$data = json_decode($this->input->post("data"));
 				
+
 		$newAddress = new Address();
 		//INSTANCIANDO NOVO USUÁRIO
 		$newUser = new User();
