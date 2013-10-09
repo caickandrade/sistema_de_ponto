@@ -12,7 +12,7 @@
 		<div class="row-fluid">
 			<div class="span2">
 				<div class="imagem">
-					<img src="assets/img/teste.jpg" alt="not found" class="img-rounded">
+					<img src="<?php echo base_url('/assets/img/teste.jpg')?>" alt="not found" class="img-rounded">
 
 				</div>
 			</div>
@@ -23,8 +23,24 @@
 
 						<fieldset>
 							<legend>
-								Cadastro
+								<div class="title">
+									Cadastro	
+								</div>								
+								<div class="search">
+									Buscar
+									<select class="filtro span3">
+										<option value="1">Nome</option>
+										<option value="2">CPF</option>
+										<option value="3">E-mail</option>									
+									</select>
+									<input type="text" class="text-search span5" />	
+									  <input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton">															
+								</div>
+								<div style="clear:both;"></div>
 							</legend>
+							
+								
+							
 							<div class="row-fluid">
 								<div class="span5">
 									<label class="control-label">Nome</label>

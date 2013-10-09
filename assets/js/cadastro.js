@@ -8,6 +8,7 @@ function loads(){
 	loadPositions();
 }
 
+
 function loadPositions(){
 	var url = "/sistema_de_ponto/index.php/cadastro/loadPositions";
 	$.post(url,function(retorno){
@@ -24,6 +25,9 @@ function actions(){
 	$('.estado').click(function(){		
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
+	});
+	$('.searchButton').click(function(){
+		searchUser();		
 	});
 	/*$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
@@ -108,4 +112,19 @@ function actions(){
 	});*/
 }
 
+function searchUser(){	
+	var data = {};
+	data.filtro = $('.filtro option:selected').val();
+	data.field = $('.text-search').val();	
+	if(data.field == "" || data.field == null || data.field == undefined){
+		alert("Preencha o campo de busca");
+	}
+	else{
+		var url = "/sistema_de_ponto/index.php/cadastro/getUser";
+		data = JSON.stringify(data);
+		$.post(url,{'data':data},function(retorno){
+			console.log(retorno);
+		});
+	}	
+}
 

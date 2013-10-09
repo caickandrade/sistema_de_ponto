@@ -63,6 +63,20 @@ class Cadastro extends CI_Controller {
 	
 	}
 	
+	public function getUser(){
+		$this->load->model('user');
+		$user = new User();		
+		$data = json_decode($this->input->post("data"));
+		
+		if($data->filtro == '1')
+			$user->like("name","%".$data->field."%")->get();
+		$response = array(
+			"data"=> $user->to_json(),
+			"msg" => "Salvo com sucesso!"
+		);
+		echo json_encode($response);
+	}
+	
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/cadastro.php */
