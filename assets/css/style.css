@@ -54,3 +54,12 @@ color:#000000;
 	margin-left:-30px;
 	
 }
+
+.title{
+	float:left;
+}
+.search{
+	float:left;
+	margin-left: 350px;
+	width: 500px;
+}

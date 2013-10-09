@@ -65,6 +65,35 @@ class Cadastro extends CI_Controller {
 	
 	}
 	
+	public function getUser(){
+		$this->load->model('user');
+		$user = new User();		
+		$data = json_decode($this->input->post("data"));
+		
+		if($data->filtro == '1')
+			$user->like("name","%".$data->field."%")->get();
+		$response = array(
+			"data"=> $user->to_json(),
+			"msg" => "Salvo com sucesso!"
+		);
+		echo json_encode($response);
+	}
+	
+	public function getAddressByCep(){		
+		$data = json_decode($this->input->post('data'),TRUE);
+		$pontos = array(",", ".","-");
+		$cep = str_replace($pontos, "", $data);
+		$reg = simplexml_load_file("http://cep.republicavirtual.com.br/web_cep.php?formato=xml&cep=" . $cep);
+		 
+		$dados['sucesso'] = (string) $reg->resultado;
+		$dados['rua']     = (string) $reg->tipo_logradouro . ' ' . $reg->logradouro;
+		$dados['bairro']  = (string) $reg->bairro;
+		$dados['cidade']  = (string) $reg->cidade;
+		$dados['estado']  = (string) $reg->uf;
+		 
+		echo json_encode($dados);	 
+	}
+	
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/cadastro.php */

@@ -6,7 +6,9 @@ $(document).ready(function(){
 //TODOS OS LOADS DA PÁGINA DEVEM SER IMPLEMENTADOS AQUI.
 function loads(){
 	loadPositions();
+	getAddress();
 }
+
 
 function loadPositions(){
 	var url = "/sistema_de_ponto/index.php/cadastro/loadPositions";
@@ -24,6 +26,10 @@ function actions(){
 	$('.estado').click(function(){		
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
+	});
+
+	$('.searchButton').click(function(){
+		searchUser();		
 	});
 
 	/*$("#phone").mask("(99)9999-9999");
@@ -116,4 +122,46 @@ function actions(){
 	});*/
 }
 
+function searchUser(){	
+	var data = {};
+	data.filtro = $('.filtro option:selected').val();
+	data.field = $('.text-search').val();	
+	if(data.field == "" || data.field == null || data.field == undefined){
+		alert("Preencha o campo de busca");
+	}
+	else{
+		var url = "/sistema_de_ponto/index.php/cadastro/getUser";
+		data = JSON.stringify(data);
+		$.post(url,{'data':data},function(retorno){
+			console.log(retorno);
+		});
+	}	
+}
+
+function getAddress(){	
+	$('.cep').blur(function(){
+		var url = "/sistema_de_ponto/index.php/cadastro/getAddressByCep";
+		var data = $(this).val();
+		data = JSON.stringify(data);
+		$.ajax({
+		  url: url,
+		  type: "POST",
+		  async: false,
+		  dataType : 'json',
+		  data: { 'data':data }
+		}).done(function(data) {
+			console.log(data);
+			rua = data.rua;
+			bairro = data.bairro;
+			cidade = data.cidade;
+			estado = data.estado;
+		});		
+			event.preventDefault();
+			
+			$('#rua').val(rua);
+			$("#bairro").val(bairro);
+			$('#cidade').val(cidade);
+			$('#estado').val(estado);		
+	});		
+}
 
