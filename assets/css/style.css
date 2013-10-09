@@ -42,13 +42,14 @@ color:#000000;
 #formlog{
 	
 	padding-left:2%;
+	
 	background: white;
-	border-radius:7% 7% 7% 0%;	
-	width:400px;
-	height:235px;
+	border-radius:8% 8% 8% 0%;	
+	width:300px;
+	height:250px;
 	position:absolute;
 	top:30%;
-	left:35%;
+	left:40%;
 	margin-top:-30px;
 	margin-left:-30px;
 	
