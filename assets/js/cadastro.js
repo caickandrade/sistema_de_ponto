@@ -6,7 +6,9 @@ $(document).ready(function(){
 //TODOS OS LOADS DA PÁGINA DEVEM SER IMPLEMENTADOS AQUI.
 function loads(){
 	loadPositions();
+	getAddress();
 }
+
 
 function loadPositions(){
 	var url = "/sistema_de_ponto/index.php/cadastro/loadPositions";
@@ -25,6 +27,11 @@ function actions(){
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
 	});
+
+	$('.searchButton').click(function(){
+		searchUser();		
+	});
+
 	/*$("#phone").mask("(99)9999-9999");
 	$("#phone2").mask("(99)9999-9999");
 	$("#CPF").mask("999.999.999-99");
@@ -36,7 +43,6 @@ function actions(){
 	$('#confirme').click(function(){				
 		var usuario = {};
 		var endereco = {};
-
 		usuario.nome = $("#Name").val();
 		usuario.email = $("#email").val();
 		usuario.senha = $("#senha").val();
@@ -52,11 +58,12 @@ function actions(){
 		endereco.rua = $("#rua").val();
 		endereco.numero = $("#numero").val();
 		endereco.complemento = $("#complemento").val();
+
 		
 		var url = "/sistema_de_ponto/index.php/cadastro/save";
 		
-		/*user =  JSON.stringify(usuario);		
-		address =  JSON.stringify(endereco);*/
+		user =  JSON.stringify(usuario);		
+		address =  JSON.stringify(endereco);
 		//CRIANDO OBJETO DATA COM O USUÁRIO E ENDEREÇO
 		var data = {};
 		data.user = usuario;
@@ -66,12 +73,17 @@ function actions(){
 		//ENVIANDO OBJETO DATA
 		//obs.: ESTAVA FALTANDO A VARIÁVEL "RETORNO" em FUNCTION do $.POST
 		$.post(url, {"data":data},function(retorno){
-			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");			
+			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");
+//			$("#dialog").dialog();
+			if(retorno.msg == "Salvo com sucesso!"){
+				window.location.reload();
+			}
 			},"json");
 		});
-	
-	/*$("#formu").validate({
-		rules: {
+	/*
+	$("#formu").validate({
+
+		rules: { 
 			Name: {
 				required: true,
 				minlength: 5
@@ -106,8 +118,51 @@ function actions(){
 			funcao: {
 				required: "Este campo é obrigatório"
 			}
+			
 		}
 	});*/
 }
 
+function searchUser(){	
+	var data = {};
+	data.filtro = $('.filtro option:selected').val();
+	data.field = $('.text-search').val();	
+	if(data.field == "" || data.field == null || data.field == undefined){
+		alert("Preencha o campo de busca");
+	}
+	else{
+		var url = "/sistema_de_ponto/index.php/cadastro/getUser";
+		data = JSON.stringify(data);
+		$.post(url,{'data':data},function(retorno){
+			console.log(retorno);
+		});
+	}	
+}
+
+function getAddress(){	
+	$('.cep').blur(function(){
+		var url = "/sistema_de_ponto/index.php/cadastro/getAddressByCep";
+		var data = $(this).val();
+		data = JSON.stringify(data);
+		$.ajax({
+		  url: url,
+		  type: "POST",
+		  async: false,
+		  dataType : 'json',
+		  data: { 'data':data }
+		}).done(function(data) {
+			console.log(data);
+			rua = data.rua;
+			bairro = data.bairro;
+			cidade = data.cidade;
+			estado = data.estado;
+		});		
+			event.preventDefault();
+			
+			$('#rua').val(rua);
+			$("#bairro").val(bairro);
+			$('#cidade').val(cidade);
+			$('#estado').val(estado);		
+	});		
+}
 
