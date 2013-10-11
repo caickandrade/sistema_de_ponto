@@ -13,15 +13,15 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span">
-						<!--<div class="imagem">
+						<div id="imglog">
 							<img src="assets/img/teste.jpg" class="img-rounded">
-						</div> -->
+						</div> 
 					</div>
 					<form class="container" id='formlog'>
 						
 					<div class="span9">
 						<legend>
-								Sistema de .
+								Sistema de Ponto
 						</legend>
 						<div class="row-fluid">
 							<div class="span12">
@@ -32,7 +32,7 @@
 							</div>
 						</div>
 						<div class="row-fluid">
-							<div class="span4">
+							<div class="span12">
 								<label class="control-label">Senha</label>
 									<div class="controls">
 										<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
