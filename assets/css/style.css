@@ -38,11 +38,9 @@ color:#FFFFFF;
 #senha{
 color:#000000;
 }
-
 #formlog{
 	
 	padding-left:2%;
-	
 	background: white;
 	border-radius:8% 8% 8% 0%;	
 	width:300px;
@@ -54,12 +52,6 @@ color:#000000;
 	margin-left:-30px;
 	
 }
-
-.title{
-	float:left;
-}
-.search{
-	float:left;
-	margin-left: 350px;
-	width: 500px;
+#imglog{
+	img:	
 }
