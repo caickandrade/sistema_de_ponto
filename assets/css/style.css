@@ -52,6 +52,6 @@ color:#000000;
 	margin-left:-30px;
 	
 }
-#imglog{
-	img:	
+#imglog{ /*imagem pagina login */
+	background-image: url(assets/img/teste.jpg); 
 }
