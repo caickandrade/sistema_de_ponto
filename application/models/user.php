@@ -32,6 +32,7 @@ class User extends DataMapper {
 		
 		$newUser->name = $user->nome;
 		$newUser->addresses_id = $idEnd;
+		$newUser->cpf = $user->cpf;
 		$newUser->phone1 = $user->tel1;
 		$newUser->phone2 = $user->tel2;
 		$newUser->email = $user->email;
@@ -54,7 +55,7 @@ class User extends DataMapper {
 		$this->load->model("ValidacaoUtil");
 		//instanciando um objeto do model de validação
 		$validar = new ValidacaoUtil();		
-		if(($validar->isBlank($user->nome)) || ($validar->isBlank($user->email)) || ($validar->isBlank($user->senha)) || ($validar->isBlank($user->id_cargo)))
+		if(($validar->isBlank($user->nome)) || ($validar->isBlank($user->email)) || ($validar->isBlank($user->senha)) || ($validar->isBlank($user->id_cargo)) || ($validar->isBlank($user->nome)))
 			return FALSE;		 
 		else 
 			return TRUE;	
