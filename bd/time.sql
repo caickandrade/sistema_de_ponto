@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
--- Máquina: localhost
--- Data de Criação: 06-Out-2013 às 19:18
--- Versão do servidor: 5.6.12-log
--- versão do PHP: 5.4.12
+-- Servidor: localhost
+-- Tempo de Geração: 11/10/2013 às 00h26min
+-- Versão do Servidor: 5.5.20
+-- Versão do PHP: 5.3.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de Dados: `time`
+-- Banco de Dados: `time`
 --
-CREATE DATABASE IF NOT EXISTS `time` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `time`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +36,15 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `complement` varchar(11) DEFAULT NULL,
   `zip_code` int(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+
+--
+-- Extraindo dados da tabela `addresses`
+--
+
+INSERT INTO `addresses` (`id`, `street`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`) VALUES
+(20, 'dsad', 1, 'eustaquio', 'Janaúba', 'Minas Gerais', 'aaaaaa', 111),
+(21, 'dsad', 1, 'eustaquio', 'Janaúba', 'Minas Gerais', 'aaaaaa', 111);
 
 -- --------------------------------------------------------
 
@@ -64,12 +70,14 @@ CREATE TABLE IF NOT EXISTS `logins` (
 
 CREATE TABLE IF NOT EXISTS `logouts` (
   `id` int(11) NOT NULL,
+  `logins_id` int(11) NOT NULL,
   `day` date NOT NULL,
   `time` date NOT NULL,
   `description` varchar(150) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `users_id` (`users_id`)
+  KEY `users_id` (`users_id`),
+  KEY `logins_id` (`logins_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -106,6 +114,7 @@ INSERT INTO `positions` (`id`, `description`, `codigo`) VALUES
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cpf` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   `addresses_id` int(11) NOT NULL,
   `phone1` varchar(20) DEFAULT NULL,
@@ -118,26 +127,35 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `email` (`email`),
   KEY `addresses_id` (`addresses_id`),
   KEY `id_function` (`id_position`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
--- Constraints for dumped tables
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id`, `cpf`, `name`, `addresses_id`, `phone1`, `phone2`, `email`, `password`, `birthday`, `id_position`) VALUES
+(20, 0, 'felipe', 20, '111', '111', 'felippe-lipe@hotmail.com', 'aaaaa', '2013-10-01', 2),
+(21, 0, 'aaaaa', 21, '111', '111', 'assdsad@asdsad.com', 'aaaaa', '2013-10-02', 4);
+
+--
+-- Restrições para as tabelas dumpadas
 --
 
 --
--- Limitadores para a tabela `logins`
+-- Restrições para a tabela `logins`
 --
 ALTER TABLE `logins`
   ADD CONSTRAINT `logins_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 
 --
--- Limitadores para a tabela `logouts`
+-- Restrições para a tabela `logouts`
 --
 ALTER TABLE `logouts`
-  ADD CONSTRAINT `logouts_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `logouts_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `logouts_ibfk_2` FOREIGN KEY (`logins_id`) REFERENCES `logins` (`id`);
 
 --
--- Limitadores para a tabela `users`
+-- Restrições para a tabela `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`addresses_id`) REFERENCES `addresses` (`id`),
