@@ -44,22 +44,29 @@
 								
 							
 							<div class="row-fluid">
-								<div class="span5">
+								<div class="span4">
 									<label class="control-label">Nome</label>
 									<div class="controls">
 										<input class="span10" type='text' name='Name' id='Name' placeholder="Nome Completo" />
 									</div>
 								</div>
-								<div class="span4">
+								<div class="span3">
+									<label class="control-label">CPF</label>
+									<div class="controls">
+										<input class="span10" type='tel' name='CPF' id='CPF' placeholder="193.234.234-54" />
+									</div>
+								</div>
+
+								<div class="span3">
 									<label class="control-label">Email</label>
 									<div class="controls">
 										<input class="span10" type='email' name='email' id='email' placeholder="Email" />
 									</div>
 								</div>
-								<div class="span3">
+								<div class="span2">
 									<label class="control-label">Senha</label>
 									<div class="controls">
-										<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
+										<input class="span11" type='password' name='senha' id='senha' placeholder="Senha"/>
 									</div>
 								</div> 
 							</div>

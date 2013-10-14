@@ -1,3 +1,4 @@
+
 <?php
 
 class ValidacaoUtil extends CI_Model 
@@ -14,6 +15,10 @@ class ValidacaoUtil extends CI_Model
 		else
 			return FALSE;	
 
+<<<<<<< HEAD
+	}			
+
+=======
 	}
 		
 	function validaCamposUser($user)
@@ -31,5 +36,6 @@ class ValidacaoUtil extends CI_Model
 		else 
 			return FALSE;
 	}
+>>>>>>> bc1a9aa008fbd3e74a7152063235865304e4e2b8
 	
 }
