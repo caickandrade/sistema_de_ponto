@@ -12,7 +12,7 @@ function actions()
 		login.email = $("#email").val();
 		login.password = $("#senha").val();
 		
-		var url = "/sistema_de_ponto/index.php/login/verificarLogin";
+		var url = "/sistema_de_ponto/index.php/logincontrol/verificarLogin";
 		
 		login = JSON.stringify(login);
 		
@@ -22,32 +22,3 @@ function actions()
 		
 	});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

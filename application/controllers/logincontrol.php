@@ -22,8 +22,14 @@ class LoginControl extends CI_Controller {
 		$retornoVerifyLogin = $verifyLogin->doLogin($login->email, $login->password);
 		
 		//se o retorno da função for 0 é porque deu tudo certo
-		if($retornoVerifyLogin == 0)
-		    $this->load->view("sucesso");
+		if($retornoVerifyLogin == 0){
+			//header('location: sucesso');
+		    //$this->load->view("sucesso");
+			$response = array(
+					"msg" => "sucesso"
+				);
+				echo json_encode($response);
+		}
 		else {
 			
 			//se o retorno da função for 1 é porque o usuário ou a senha estão incorretos

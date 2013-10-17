@@ -50,7 +50,7 @@ function actions(){
 		usuario.tel2 = $("#phone2").val();
 		usuario.datanasc = $("#nascimento").val();
 		usuario.id_cargo = parseInt($('#funcao option:selected').attr('id'));
-		usuario.cpf = parseInt($("#cpf").val());
+		usuario.cpf = parseInt($("#CPF").val());
 
 		endereco.estado = $("#estado").val();
 		endereco.cep = $("#cep").val();
