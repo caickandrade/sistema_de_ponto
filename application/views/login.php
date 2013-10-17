@@ -27,7 +27,7 @@
 							<div class="span12">
 								<label class="control-label">Email</label>
 									<div class="controls">
-										<input class="span10" type='email' name='email' id='email' placeholder="Email" />
+										<input class="span12" type='email' name='email' id='email' placeholder="Email" />
 									</div>
 							</div>
 						</div>
@@ -35,7 +35,7 @@
 							<div class="span12">
 								<label class="control-label">Senha</label>
 									<div class="controls">
-										<input class="span10" type='password' name='senha' id='senha' placeholder="Senha"/>
+										<input class="span12" type='password' name='senha' id='senha' placeholder="Senha"/>
 									</div>
 							</div>
 							

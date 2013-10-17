@@ -9,4 +9,5 @@ class Login extends DataMapper {
 		parent::__construct($id);
 	}
 	
+	
 }
