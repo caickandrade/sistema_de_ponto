@@ -1,5 +1,5 @@
 <?php  $this->load->view('header')
-?>
+?>	
 <html>
 	<head>
 		<title>Login</title>
@@ -17,7 +17,7 @@
 							<img src="assets/img/teste.jpg" class="img-rounded">
 						</div> 
 					</div>
-					<form class="container" id='formlog'>
+					<div class="container" id='formlog'>
 						
 					<div class="span9">
 						<legend>
@@ -46,7 +46,7 @@
 							</button>
 						</div>
 					</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</body>

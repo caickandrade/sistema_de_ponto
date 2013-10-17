@@ -8,7 +8,7 @@ class LoginControl extends CI_Controller {
 	}
 	
 	public function verificarLogin()
-	{
+	{	
 		//carregando model	
 		$this->load->model("loginmodel");
 		
@@ -23,7 +23,13 @@ class LoginControl extends CI_Controller {
 		
 		//se o retorno da função for 0 é porque deu tudo certo
 		if($retornoVerifyLogin == 0)
-		    $this->load->view("sucesso");
+		{
+			$response = array(
+					"msg" => "correto"
+				);
+				echo json_encode($response);
+			
+		}
 		else {
 			
 			//se o retorno da função for 1 é porque o usuário ou a senha estão incorretos
