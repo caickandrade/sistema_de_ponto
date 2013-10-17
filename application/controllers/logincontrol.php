@@ -29,6 +29,7 @@ class LoginControl extends CI_Controller {
 			//se o retorno da função for 1 é porque o usuário ou a senha estão incorretos
 			if($retornoVerifyLogin == 1)
 			{
+				$this->load->view('cadastro');	
 			    $response = array(
 					"msg" => "usuario e senha incorretos"
 				);
