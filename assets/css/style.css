@@ -16,7 +16,7 @@ font-family: helvetica,verdana,Arial, sans-serif;
 .form{
 	padding-left:1%;
 	background: white;
-	border-radius:2%; 
+	border-radius:3% 3% 3% 0%; 
 }
 .error{
 	color: red;
