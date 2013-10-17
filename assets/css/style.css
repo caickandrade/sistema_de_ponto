@@ -16,7 +16,7 @@ font-family: helvetica,verdana,Arial, sans-serif;
 .form{
 	padding-left:1%;
 	background: white;
-	border-radius:2%; 
+	border-radius:3% 3% 3% 0%; 
 }
 .error{
 	color: red;
@@ -53,6 +53,10 @@ color:#000000;
 	
 }
 
+#imglog{ /*imagem pagina login */
+	background-image: url(assets/img/teste.jpg); 
+
+
 .title{
 	float:left;
 }
@@ -61,8 +65,5 @@ color:#000000;
 	margin-left: 350px;
 	width: 500px;
 	padding-top: 1%;
-
-#imglog{
-	img:	
 
 }
