@@ -1,22 +1,22 @@
-$(document).ready(function)(){
-	actions();
+$(document).ready(function(){
+	actions();	
 });
 
 function actions()
 {
 	$('#entrar').click(function(){
-		var log = {};
+		var login = {};
 		
 		//nao sei validar o login então estou tentando de acordo com o que vi aqui na infobits + algumas funções da internet, qualquer erro, favor me corrigir
 		
-		log.email = $("#email").val();
-		log.password = $("#senha").val();
+		login.email = $("#email").val();
+		login.password = $("#senha").val();
 		
-		var url = "/sistema_de_ponto/index.php/login";
+		var url = "/sistema_de_ponto/index.php/login/verificarLogin";
 		
-		log = JSON.stringify(log);
+		login = JSON.stringify(login);
 		
-		$.post(url, {"log":log}, function(retorno){
+		$.post(url, {"login":login}, function(retorno){
 			alert(retorno.msg)
 		}, "json");
 		
