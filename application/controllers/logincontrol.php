@@ -8,7 +8,7 @@ class LoginControl extends CI_Controller {
 	}
 	
 	public function verificarLogin()
-	{
+	{	
 		//carregando model	
 		$this->load->model("loginmodel");
 		
@@ -22,6 +22,7 @@ class LoginControl extends CI_Controller {
 		$retornoVerifyLogin = $verifyLogin->doLogin($login->email, $login->password);
 		
 		//se o retorno da função for 0 é porque deu tudo certo
+
 		if($retornoVerifyLogin == 0){
 			//header('location: sucesso');
 		    //$this->load->view("sucesso");

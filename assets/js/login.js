@@ -15,7 +15,7 @@ function actions()
 		var url = "/sistema_de_ponto/index.php/logincontrol/verificarLogin";
 		
 		login = JSON.stringify(login);
-		
+	
 		$.post(url, {"login":login}, function(retorno){
 			
 			if(retorno.msg=="Logando"){

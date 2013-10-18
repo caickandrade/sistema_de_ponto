@@ -1,5 +1,5 @@
 <?php  $this->load->view('header')
-?>
+?>	
 <html>
 	<head>
 		<title>Login</title>
