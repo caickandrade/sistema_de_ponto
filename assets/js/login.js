@@ -17,8 +17,18 @@ function actions()
 		login = JSON.stringify(login);
 		
 		$.post(url, {"login":login}, function(retorno){
-			alert(retorno.msg)
+			
+			if(retorno.msg=="Logando"){
+				alert("sucesso");
+				window.location = "/sistema_de_ponto/index.php/welcome";
+			}
+			else{
+				alert(retorno.msg)
+			}
+			window.location.reload();
 		}, "json");
+		
+		
 		
 	});
 }
