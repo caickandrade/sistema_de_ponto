@@ -74,7 +74,7 @@ function actions(){
 		//obs.: ESTAVA FALTANDO A VARIÁVEL "RETORNO" em FUNCTION do $.POST
 		$.post(url, {"data":data},function(retorno){
 			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");
-//			$("#dialog").dialog();
+		//$("#dialog").dialog();
 			if(retorno.msg == "Salvo com sucesso!"){
 				window.location.reload();
 			}
