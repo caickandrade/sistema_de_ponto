@@ -23,9 +23,19 @@ class LoginModel extends DataMapper {
 			$senha = $verify->password;
 			
 			//se existir, variavel senha recebe o password do usuario e confere se é igual ao passado cmo parametro 
-			if($password == $senha)
+			if($password == $senha){
 				//retorna zero se forem iguais
 				return 0;
+				$novosdados = array(
+                   'id_usuario'  => $verify->id,
+                   'nome_usuario'     => $verify->name,
+                   'acesso' => $verify->id_position,
+                   'logado' => TRUE
+               );
+
+				$this->session->set_userdata($novosdados);
+				echo var_dump($this->session->userdata("nome_usuario"))  ;
+			}
 			else
 				//retorna um se forem diferentes
 				return 1;
