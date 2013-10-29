@@ -20,12 +20,13 @@ function actions()
 			
 			if(retorno.msg=="Logando"){
 				alert("sucesso");
-				window.location = "/sistema_de_ponto/index.php/welcome";
+				//window.location = "/sistema_de_ponto/index.php/welcome";
+				redirect("../");
 			}
 			else{
 				alert(retorno.msg)
+				window.location.reload();
 			}
-			window.location.reload();
 		}, "json");
 		
 		
