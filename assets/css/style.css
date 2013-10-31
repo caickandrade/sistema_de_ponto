@@ -4,10 +4,175 @@ background: #012049;/*url(assets/img/infobits.png);*/
 font-family: helvetica,verdana,Arial, sans-serif;
 }
 
+.container{
+	margin-top: 3%;
+	background : white;
+}
 .container-fluid{
 	margin-top:3%;
 
 }
+#menu {
+
+	background: #FFF;
+
+	width:960px;
+
+	height:35px;
+
+	margin:0 auto;
+
+}
+
+#menu ul {
+
+	list-style-type: none;
+
+	margin-left:14px;
+
+}
+
+
+
+#menu ul li {
+
+	display: inline;
+
+}
+
+#menu ul li a {
+
+	font-size:14px;
+
+	float:left;
+
+	font-family: Arial;
+
+	text-decoration:none;
+
+	padding-top:9px;
+
+	padding-left:20px;
+
+	padding-right:20px;
+
+	padding-bottom:10px;
+
+	color: #333;
+
+}
+
+#menu ul li a:hover {
+
+	font-size:14px;
+
+	color: #333;
+
+	float:left;
+
+	font-family: Arial;
+
+	background:#ccc;
+
+	text-decoration:none;
+
+	padding-top:9px;
+
+	padding-left:20px;
+
+	padding-right:20px;
+
+	padding-bottom:10px;
+
+}
+
+#menu li ul{
+
+		background:#FFF;
+
+		display:none;
+
+		height:35px;
+
+		padding:0px;
+
+		margin:0px;
+
+		border:0px;
+
+		
+
+		/*top:1em;
+
+		/*left:0;*/
+
+		}
+
+	#menu li:hover ul{
+
+		display:block;
+
+		
+
+		}
+
+	#menu li li {
+
+		background:#333;
+
+		display:inline;
+
+		float:none;
+
+		margin:0px;
+
+		padding:0px;
+
+		width:150px;
+
+		}
+
+	#menu li:hover li a{
+
+		background:none;
+
+		display: inline;
+
+	
+
+		}
+
+	#menu li ul a{
+
+		display:block;
+
+		height:35px;
+
+		font-size:12px;
+
+		font-style:normal;
+
+		margin:0px;
+
+		
+
+		text-align:center;
+
+		}
+
+		#menu li ul a:hover, #menu li ul li:hover a{
+
+			background:#000 ;
+
+			border:0px;
+
+			color:#ffffff;
+
+			text-decoration:none;
+
+		
+
+			} 
 .imagem{
 	width: 90%;
 	height: 90%;

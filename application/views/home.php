@@ -11,10 +11,7 @@
 <body>
 	
 	<div class="container">
-		<div class="row">
-		<div class="tudo">
-			hei hu
-		</div>	
-	</div> 
+		<?php $this->load->view('menu')?>
+
 	</div>
 </body>
