@@ -4,6 +4,7 @@ class LoginControl extends CI_Controller {
 	
 	public function index()
 	{
+			$this->load->library('session');
 		$this->load->view("login");
 	}
 	
@@ -11,7 +12,7 @@ class LoginControl extends CI_Controller {
 	{	
 		//carregando model	
 		$this->load->model("loginmodel");
-		
+		//$usuario = new Usuario();
 		//recebendo dados do email e senha para serem conferidos
 		$login = json_decode($this->input->post('login'));
 		
@@ -23,8 +24,7 @@ class LoginControl extends CI_Controller {
 		
 		//se o retorno da função for 0 é porque deu tudo certo
 
-		if($retornoVerifyLogin == 0)
-		{
+		if($retornoVerifyLogin == 0){
 			$response = array(
 					"msg" => "Logando"
 				);

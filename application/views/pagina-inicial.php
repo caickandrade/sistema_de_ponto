@@ -1,7 +1,7 @@
 <?php $this->load->view('header') ?>	
 <body>
 		
-Pagina Inicial
+<p>Pagina Inicial</p>
 <?php $this->load->view('footer') ?>		
 </body>
 	

@@ -21,12 +21,13 @@ function actions()
 			if(retorno.msg=="Logando"){
 				alert("sucesso");
 				//window.location = "/sistema_de_ponto/index.php/welcome";
+				//parent.location = "index.php/home";
 			}
 			else{
 				window.location.reload();
 				alert(retorno.msg)
+				window.location.reload();
 			}
-			
 		}, "json");
 		
 		
