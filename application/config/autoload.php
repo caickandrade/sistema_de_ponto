@@ -66,7 +66,6 @@ $autoload['libraries'] = array("database", "datamapper");
 
 $autoload['helper'] = array('url','html');
 
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files

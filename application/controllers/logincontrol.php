@@ -23,9 +23,8 @@ class LoginControl extends CI_Controller {
 		
 		//se o retorno da função for 0 é porque deu tudo certo
 
-		if($retornoVerifyLogin == 0){
-			//header('location: sucesso');
-		    //$this->load->view("sucesso");
+		if($retornoVerifyLogin == 0)
+		{
 			$response = array(
 					"msg" => "Logando"
 				);
