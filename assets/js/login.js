@@ -19,9 +19,8 @@ function actions()
 		$.post(url, {"login":login}, function(retorno)
 		{	
 			if(retorno.msg=="Logando"){
-				alert("sucesso");
 				//window.location = "/sistema_de_ponto/index.php/welcome";
-				//parent.location = "index.php/home";
+				parent.location = "index.php/cadastro";
 			}
 			else{
 				window.location.reload();
