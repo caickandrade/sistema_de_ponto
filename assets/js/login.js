@@ -16,12 +16,14 @@ function actions()
 		
 		login = JSON.stringify(login);
 	
-		$.post(url, {"login":login}, function(retorno){
-			
+		$.post(url, {"login":login}, function(retorno)
+		{	
 			if(retorno.msg=="Logando"){
-				//parent.location = "index.php/home";
+				//window.location = "/sistema_de_ponto/index.php/welcome";
+				parent.location = "index.php/cadastro";
 			}
 			else{
+				window.location.reload();
 				alert(retorno.msg)
 				window.location.reload();
 			}

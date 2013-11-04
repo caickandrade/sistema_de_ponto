@@ -41,6 +41,5 @@
 $route['default_controller'] = "paginainicial";// ATENÇÂO: Define a pagina inicial do sistema
 $route['404_override'] = '';
 
-
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
