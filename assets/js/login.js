@@ -19,10 +19,11 @@ function actions()
 		$.post(url, {"login":login}, function(retorno){
 			
 			if(retorno.msg=="Logando"){
+				alert(retorno.msg);
 				//parent.location = "index.php/home";
 			}
 			else{
-				alert(retorno.msg)
+				alert(retorno.msg);
 				window.location.reload();
 			}
 		}, "json");

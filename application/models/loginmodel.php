@@ -26,15 +26,6 @@ class LoginModel extends DataMapper {
 			if($password == $senha){
 				//retorna zero se forem iguais
 				return 0;
-				$novosdados = array(
-                   'id_usuario'  => $verify->id,
-                   'nome_usuario'     => $verify->name,
-                   'acesso' => $verify->id_position,
-                   'logado' => TRUE
-               );
-
-				$this->session->set_userdata($novosdados);
-				echo var_dump($this->session->userdata("nome_usuario"))  ;
 			}
 			else
 				//retorna um se forem diferentes
@@ -46,4 +37,11 @@ class LoginModel extends DataMapper {
 			return 2;
 		
 	}
+	
+	function retornaDados($email){
+		$retorna = new User();
+		$retorna->where('email',$email)->get();
+		return $retorna;
+	}
+	
 }

@@ -23,19 +23,34 @@ class LoginControl extends CI_Controller {
 		$retornoVerifyLogin = $verifyLogin->doLogin($login->email, $login->password);
 		
 		//se o retorno da função for 0 é porque deu tudo certo
+		$usuario = new User();
+		$usuario = $verifyLogin->retornaDados($login->email);
 
 		if($retornoVerifyLogin == 0){
 			
+			/*
+			tá trabando
+			 * 
+			$novosdados = array(
+                   'id_usuario'  => $usuario->id,
+                   'nome_usuario'     => $usuario->nome,
+                   'acesso' => $usuario->id_position,
+                   'logado' => TRUE
+            );
+			$this->session->set_userdata($novosdados);
+			*/	
 			$response = array(
 					"msg" => "Logando"
 				);
+				
 				echo json_encode($response);
 		}
 		else {
 			
 			//se o retorno da função for 1 é porque o usuário ou a senha estão incorretos
 			if($retornoVerifyLogin == 1)
-			{	
+			{
+				
 			    $response = array(
 					"msg" => "usuario e senha incorretos"
 				);
