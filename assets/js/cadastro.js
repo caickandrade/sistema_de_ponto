@@ -126,6 +126,7 @@ function actions(){
 
 function searchUser(){	
 	var data = {};
+	
 	data.filtro = $('.filtro option:selected').val();
 	data.field = $('.text-search').val();	
 	if(data.field == "" || data.field == null || data.field == undefined){
@@ -135,7 +136,13 @@ function searchUser(){
 		var url = "/sistema_de_ponto/index.php/cadastro/getUser";
 		data = JSON.stringify(data);
 		$.post(url,{'data':data},function(retorno){
-			console.log(retorno);
+			var retornoSearch =jQuery.parseJSON(retorno);
+			
+			var retornoData =jQuery.parseJSON(retornoSearch.data); 
+			
+			$('#name').val(retornoData.name);
+			
+			console.log(retornoData.name);
 		});
 	}	
 }

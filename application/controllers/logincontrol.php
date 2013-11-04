@@ -38,7 +38,7 @@ class LoginControl extends CI_Controller {
                    'logado' => TRUE
             );
 			$this->session->set_userdata($novosdados);
-			*/	
+			*/
 			$response = array(
 					"msg" => "Logando"
 				);

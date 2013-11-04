@@ -16,9 +16,10 @@ function actions()
 		
 		login = JSON.stringify(login);
 	
-		$.post(url, {"login":login}, function(retorno){
-			
+		$.post(url, {"login":login}, function(retorno)
+		{	
 			if(retorno.msg=="Logando"){
+
 				alert(retorno.msg);
 				//parent.location = "index.php/home";
 			}
