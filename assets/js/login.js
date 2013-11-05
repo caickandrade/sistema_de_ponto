@@ -18,10 +18,12 @@ function actions()
 	
 		$.post(url, {"login":login}, function(retorno)
 		{	
+			console.log(retorno);
 			if(retorno.msg=="Logando"){
 
 				alert(retorno.msg);
-				//parent.location = "index.php/home";
+				
+				parent.location = "index.php/home";
 			}
 			else{
 				alert(retorno.msg);

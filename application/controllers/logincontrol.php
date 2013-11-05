@@ -12,6 +12,7 @@ class LoginControl extends CI_Controller {
 	{	
 		//carregando model	
 		$this->load->model("loginmodel");
+		$this->load->library('session');
 		//$usuario = new Usuario();
 		//recebendo dados do email e senha para serem conferidos
 		$login = json_decode($this->input->post('login'));
@@ -28,19 +29,17 @@ class LoginControl extends CI_Controller {
 
 		if($retornoVerifyLogin == 0){
 			
-			/*
-			tá trabando
-			 * 
 			$novosdados = array(
                    'id_usuario'  => $usuario->id,
-                   'nome_usuario'     => $usuario->nome,
+                   'nome_usuario'     => $usuario->name,
                    'acesso' => $usuario->id_position,
                    'logado' => TRUE
             );
 			$this->session->set_userdata($novosdados);
-			*/
+			// echo $this->session->userdata('nome_usuario');
 			$response = array(
-					"msg" => "Logando"
+					"msg" => "Logando",
+					"sessao" => $this->session->userdata('nome_usuario')
 				);
 				
 				echo json_encode($response);
