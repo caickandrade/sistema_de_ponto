@@ -140,7 +140,9 @@ function searchUser(){
 			
 			var retornoData =jQuery.parseJSON(retornoSearch.data); 
 			
-			$('#name').val(retornoData.name);
+			$('#Name').val(retornoData.name);
+			$('#cpf').val(retornoData.cpf);
+			$('#email').val(retornoData.email);
 			
 			console.log(retornoData.name);
 		});
@@ -148,7 +150,7 @@ function searchUser(){
 }
 
 function getAddress(){	
-	$('.cep').blur(function(){
+	$('.cep').blur(function(event){
 		var url = "/sistema_de_ponto/index.php/cadastro/getAddressByCep";
 		var data = $(this).val();
 		data = JSON.stringify(data);
@@ -165,12 +167,12 @@ function getAddress(){
 			cidade = data.cidade;
 			estado = data.estado;
 		});		
-			event.preventDefault();
-			
-			$('#rua').val(rua);
-			$("#bairro").val(bairro);
-			$('#cidade').val(cidade);
-			$('#estado').val(estado);		
+		event.preventDefault();
+		
+		$('#rua').val(rua);
+		$("#bairro").val(bairro);
+		$('#cidade').val(cidade);
+		$('#estado').val(estado);		
 	});		
 }
 
