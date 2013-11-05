@@ -10,6 +10,7 @@ function loads(){
 }
 
 
+
 function loadPositions(){
 	var url = "/sistema_de_ponto/index.php/cadastro/loadPositions";
 	$.post(url,function(retorno){

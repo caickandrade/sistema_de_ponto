@@ -23,7 +23,7 @@ function actions()
 
 				alert(retorno.msg);
 				
-				parent.location = "index.php/home";
+				parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
 			else{
 				alert(retorno.msg);

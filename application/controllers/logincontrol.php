@@ -10,7 +10,7 @@ class LoginControl extends CI_Controller {
 	
 	public function verificarLogin()
 	{	
-		//carregando model	
+		//carregando model
 		$this->load->model("loginmodel");
 		$this->load->library('session');
 		//$usuario = new Usuario();
