@@ -22,6 +22,7 @@ function actions()
 			if(retorno.msg=="Logando"){
 
 				alert(retorno.msg);
+				 
 				
 				parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
