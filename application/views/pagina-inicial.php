@@ -1,8 +1,12 @@
 <?php $this->load->view('header') ?>	
 <body>
-		
-<p>Pagina Inicial</p>
-<?php $this->load->view('footer') ?>		
+	<div class="cotainer">
+		<?php $this->load->view('menu') ?>	
+		<div id="box">
+			teste
+		</div>
+	</div>
+	
 </body>
 	
 </html>
