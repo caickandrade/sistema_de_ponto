@@ -18,13 +18,15 @@ function actions()
 	
 		$.post(url, {"login":login}, function(retorno)
 		{	
+			console.log(retorno);
 			if(retorno.msg=="Logando"){
-				//window.location = "/sistema_de_ponto/index.php/welcome";
-				parent.location = "index.php/cadastro";
+
+				alert(retorno.msg);
+				
+				parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
 			else{
-				window.location.reload();
-				alert(retorno.msg)
+				alert(retorno.msg);
 				window.location.reload();
 			}
 		}, "json");
