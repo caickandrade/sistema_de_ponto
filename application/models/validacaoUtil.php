@@ -13,7 +13,7 @@ class ValidacaoUtil extends CI_Model
 			return TRUE;
 		}
 		else
-			return FALSE;	
-
+			return FALSE;
 	}
 }
+
