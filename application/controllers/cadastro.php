@@ -9,6 +9,7 @@ class Cadastro extends CI_Controller {
 			$this->load->view("cadastro");
 		}
 		
+		
 		//se a pessoa não possuir acesso
 		else{
 			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
