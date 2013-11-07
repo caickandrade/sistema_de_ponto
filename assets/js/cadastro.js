@@ -10,6 +10,7 @@ function loads(){
 }
 
 
+
 function loadPositions(){
 	var url = "/sistema_de_ponto/index.php/cadastro/loadPositions";
 	$.post(url,function(retorno){
@@ -126,6 +127,7 @@ function actions(){
 
 function searchUser(){	
 	var data = {};
+	
 	data.filtro = $('.filtro option:selected').val();
 	data.field = $('.text-search').val();	
 	if(data.field == "" || data.field == null || data.field == undefined){
@@ -135,13 +137,21 @@ function searchUser(){
 		var url = "/sistema_de_ponto/index.php/cadastro/getUser";
 		data = JSON.stringify(data);
 		$.post(url,{'data':data},function(retorno){
-			console.log(retorno);
+			var retornoSearch =jQuery.parseJSON(retorno);
+			
+			var retornoData =jQuery.parseJSON(retornoSearch.data); 
+			
+			$('#Name').val(retornoData.name);
+			$('#cpf').val(retornoData.cpf);
+			$('#email').val(retornoData.email);
+			
+			console.log(retornoData.name);
 		});
 	}	
 }
 
 function getAddress(){	
-	$('.cep').blur(function(){
+	$('.cep').blur(function(event){
 		var url = "/sistema_de_ponto/index.php/cadastro/getAddressByCep";
 		var data = $(this).val();
 		data = JSON.stringify(data);
@@ -158,12 +168,12 @@ function getAddress(){
 			cidade = data.cidade;
 			estado = data.estado;
 		});		
-			event.preventDefault();
-			
-			$('#rua').val(rua);
-			$("#bairro").val(bairro);
-			$('#cidade').val(cidade);
-			$('#estado').val(estado);		
+		event.preventDefault();
+		
+		$('#rua').val(rua);
+		$("#bairro").val(bairro);
+		$('#cidade').val(cidade);
+		$('#estado').val(estado);		
 	});		
 }
 

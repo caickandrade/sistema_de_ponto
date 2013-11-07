@@ -16,13 +16,17 @@ function actions()
 		
 		login = JSON.stringify(login);
 	
-		$.post(url, {"login":login}, function(retorno){
-			
+		$.post(url, {"login":login}, function(retorno)
+		{	
+			console.log(retorno);
 			if(retorno.msg=="Logando"){
-				//parent.location = "index.php/home";
+
+				alert(retorno.msg);
+				
+				parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
 			else{
-				alert(retorno.msg)
+				alert(retorno.msg);
 				window.location.reload();
 			}
 		}, "json");
