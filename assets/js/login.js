@@ -28,7 +28,8 @@ function actions()
 			}
 			else{
 				alert(retorno.msg);
-				window.location.reload();
+				$("#myModal").modal('show');
+				//window.location.reload();
 			}
 		}, "json");
 		
