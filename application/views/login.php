@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sistema de Ponto</title>
-
+	<script src = "<?php echo base_url('/assets/js/login.js')?>" type="text/javascript"></script>
   </head>
 
   <body>
