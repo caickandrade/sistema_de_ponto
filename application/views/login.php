@@ -19,8 +19,10 @@
         	<button id="entrar" name="entrar" class="btn btn-large btn btn-success" type="submit">Entrar</button>
       	</div>
 
+
     </div>
 	
+
 	</div>
 	<!-- Modal -->
 	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
