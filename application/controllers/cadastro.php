@@ -67,11 +67,12 @@ class Cadastro extends CI_Controller {
 	
 	public function getUser(){
 		$this->load->model('user');
-		$user = new User();		
+		$user = new User();
+		$address = new Address();		
 		$data = json_decode($this->input->post("data"));
 		
 		if($data->filtro == '1')
-			$user->like("name","%".$data->field."%")->get();
+			$user->like("name","%".$data->field."%")->get()->all-to-json;
 		$response = array(
 			"data"=> $user->to_json(),
 			"msg" => "Salvo com sucesso!"
