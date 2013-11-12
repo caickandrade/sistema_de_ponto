@@ -30,6 +30,7 @@
   		</div>
   		<div class="modal-body">
     		<p>Um aviso</p>
+    		<?php $status = "<script>document.getElement ;</script>";if($status=="valor") {  echo "uma";}else {  echo $status;}?>
   		</div>
   		<div class="modal-footer">
     		<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>

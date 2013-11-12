@@ -28,6 +28,8 @@ function actions()
 			}
 			else{
 				alert(retorno.msg);
+				var x = 'valor';
+				alert(x);
 				$("#myModal").modal('show');
 				//window.location.reload();
 			}
