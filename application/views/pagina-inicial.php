@@ -1,4 +1,7 @@
-<?php $this->load->view('header') ?>	
+<head>
+	<?php $this->load->view('header') ?>
+	<script src = "<?php echo base_url('/assets/js/pagInicial.js')?>" type="text/javascript"></script>
+</head>	
 <body>
 
 	<?php if($this->session->userdata('acesso')==4){ ?>
@@ -10,8 +13,7 @@
 	<div class="cotainer">
 		<?php $this->load->view('menu') ?>	
 	</div>
-	<!-- Button to trigger modal -->
-	<a href="#myModal" role="button" class="btn" data-toggle="modal">Executar modal de demo</a>
+	
 	<!-- Modal -->
 	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
@@ -19,14 +21,13 @@
     		<h3 id="myModalLabel">Aviso</h3>
   		</div>
   		<div class="modal-body">
-    		<p>Um aviso</p>
+    		
   		</div>
   		<div class="modal-footer">
-    		<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    		<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">Fechar</button>
   		</div>
 	</div>
 	
-
 </body>
 	
 </html>
