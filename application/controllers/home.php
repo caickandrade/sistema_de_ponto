@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 	{
 		
 		if($this->session->userdata('acesso')==2){
-			$this->load->view("cadastro");
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/cadastro'; </script>";
 		}
 		else{
 			$this->load->view("pagina-inicial");

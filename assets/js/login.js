@@ -22,14 +22,17 @@ function actions()
 			if(retorno.msg=="Logando"){
 
 				alert(retorno.msg);
+				 
 				
-				parent.location = "index.php/home";
+				parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
 			else{
 				alert(retorno.msg);
-				window.location.reload();
+				$("#myModal").modal('show');
+				//window.location.reload();
 			}
 		}, "json");
+		
 		
 		
 		
