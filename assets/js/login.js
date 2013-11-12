@@ -4,6 +4,9 @@ $(document).ready(function(){
 
 function actions()
 {
+	$('#btModal').click(function(){
+		window.location.reload();
+	});
 	$('#entrar').click(function(){
 		var login = {};
 		
@@ -21,22 +24,18 @@ function actions()
 			console.log(retorno);
 			if(retorno.msg=="Logando"){
 
-				alert(retorno.msg);
-				 
-				
 				parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
 			else{
-				alert(retorno.msg);
-				var x = 'valor';
-				alert(x);
+				
+				$(".modal-body").html("<p>"+retorno.msg+"<p>");
+				//console.log(retorno.msg);
 				$("#myModal").modal('show');
 				//window.location.reload();
 			}
 		}, "json");
 		
-		
-		
-		
 	});
+	
+	
 }

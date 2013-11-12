@@ -31,11 +31,10 @@
     		<h3 id="myModalLabel">Aviso</h3>
   		</div>
   		<div class="modal-body">
-    		<p>Um aviso</p>
-    		<?php $status = "<script>document.getElement ;</script>";if($status=="valor") {  echo "uma";}else {  echo $status;}?>
+    		
   		</div>
   		<div class="modal-footer">
-    		<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    		<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">Fechar</button>
   		</div>
 	</div>
   </body>
