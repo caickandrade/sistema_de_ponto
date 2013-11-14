@@ -12,8 +12,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>Usuário<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<!-- <a href="http://localhost/sistema_de_ponto/index.php/cadastro">Cadastro</a>-->
-								<a id="menuCadastro">Cadastro</a>
+								 <a href="http://localhost/sistema_de_ponto/index.php/cadastro">Cadastro</a>
 							</li>
 							<li>
 								<a href="#">Consulta</a>
@@ -39,7 +38,7 @@
 				</ul>
 				
 				<ul class="nav pull-right">
-                      <li><a href="#">Sair</a></li>
+                      <li><a href="http://localhost/sistema_de_ponto/">Sair</a></li>
                       
                 </ul>
 				
