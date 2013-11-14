@@ -1,4 +1,5 @@
 <?php $this->load->view('header')
+
 ?>
 <head>
 	
@@ -8,6 +9,9 @@
 
 
 <body>
+	<div class="cotainer">
+		<?php $this->load->view('menu') ?>	
+	</div>
 	<div class="container">
 	<div class="bs-docs-example">
             <table class="table table-striped">
