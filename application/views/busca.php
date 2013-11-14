@@ -4,35 +4,41 @@
 	
 	<title>Busca</title>
 
-</head>cd
+</head>
 
-	<div class="search">
-		Buscar
-		<select class="filtro span3">
-		<option value="1">Nome</option>
-		<option value="2">CPF</option>
-		<option value="3">E-mail</option>									
-		</select>
-		<input type="text" class="text-search span5" />	
-		<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton">															
-	</div>
-		<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Título do modal</h3>
-		</div>
-		<div class="modal-body">
-		<p>E aqui o conteúdo...</p>
-	  	</div>
-	  	<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
-			<button class="btn btn-primary">Salvar</button>
-	  	</div>
-	</div>
+
 <body>
-
-	
+	<div class="container">
+	<div class="bs-docs-example">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Cargo</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tesla Andrade Alves Antunes Almeida Junior</td>
+                  <td>CEO</td>
+                  <td>ceo@infobits.com.br</td>
+                </tr>
+                <tr>
+                  <td>Testadondo Andrade Alves Antunes Almeida Junior</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>Texta Andrade Alves Antunes Almeida Junior</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                
+              </tbody>
+            </table>
+    </div>
+	</div>
 </body>
 
 </html>
