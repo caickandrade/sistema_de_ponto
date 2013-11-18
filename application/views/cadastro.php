@@ -8,13 +8,15 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 </head>
 <body>
-
-		<div class="pull-left">
+		<div class="cotainer">
+		<?php $this->load->view('menu') ?>	
+		</div>
+		<!--<div class="pull-left">
 			<div class="imagem">
 				<img src="<?php echo base_url('/assets/img/teste.jpg')?>" alt="not found" class="img-rounded">
 
-			</div>
-		</div>
+			</div> 
+		</div> -->
 		<div class="pull-right">
 			<div class="container"
 			<div class="form-inline">
