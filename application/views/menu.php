@@ -12,7 +12,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>Usuário<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Cadastro</a>
+								 <a href="http://localhost/sistema_de_ponto/index.php/cadastro">Cadastro</a>
 							</li>
 							<li>
 								<a href="#">Consulta</a>
@@ -23,7 +23,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-ok"></i>Ponto<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Bater ponto</a>
+								<a href="#">Bater Ponto</a>
 							</li>
 						</ul>
 					</li>
@@ -31,11 +31,17 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt"></i>Relatórios<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Horas semanais</a>
+								<a href="#">Horas Semanais</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
+				
+				<ul class="nav pull-right">
+                      <li><a href="http://localhost/sistema_de_ponto/">Sair</a></li>
+                      
+                </ul>
+				
 			</div>
 		</div>
 	</div>

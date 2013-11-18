@@ -1,5 +1,8 @@
-<?php $this->load->view('header')
-?>
+<head>
+	<?php $this->load->view('header') ?>
+	<script src = "<?php echo base_url('/assets/js/pagInicial.js')?>" type="text/javascript"></script>
+	
+</head>	
 <body>
 
 	<?php if($this->session->userdata('acesso')==4){
@@ -37,6 +40,10 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 3976cbf22bb0432ebf3808960831b3624c8ef5ab
 </body>
 
 </html>
