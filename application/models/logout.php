@@ -9,4 +9,13 @@ class Logout extends DataMapper {
 		parent::__construct($id);	
 	}
 	
+	function fecharPonto ($dia, $hora,$ident){
+		$this->load->model("logout");
+		$ponto = new Logout();
+		$ponto->day = $dia;
+		$ponto->startTime = $hora;
+		$ponto->users_id = $ident;
+		$ponto->save();
+	}
+	
 }
