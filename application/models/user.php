@@ -61,6 +61,22 @@ class User extends DataMapper {
 			return TRUE;	
 	}
 	
+	public function getUser($name){
+			
+		$user = new User();
+	
+		$user->like("name",$name."%")->get();
+		
+		$all = array("");
+ 		
+		foreach ($user as $field) 
+		{
+			array_push($all, $field->name);
+		}
+		
+		return $all;
+	}
+	
 	
 		
 }

@@ -4,13 +4,24 @@
 <head>
 	
 	<title>Busca</title>
+	<script src = "<?php echo base_url('/assets/js/typeahead.min.js')?>"> </script>
+	<script src = "<?php echo base_url('/assets/js/busca.js')?>" ></script>
+	
+
 
 </head>
 
 
+
+	<div class="search">
+		Buscar
+		<input type="text" class="text-search span5"  id="buscar" />	
+		<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">															
+
 <body>
 	<div class="cotainer">
 		<?php $this->load->view('menu') ?>	
+
 	</div>
 	<div class="container">
 	<div class="bs-docs-example">
@@ -43,6 +54,7 @@
             </table>
     </div>
 	</div>
+		
 </body>
 
 </html>
