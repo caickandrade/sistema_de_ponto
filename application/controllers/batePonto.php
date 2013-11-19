@@ -5,9 +5,11 @@ class BatePonto extends CI_Controller {
 	public function index()
 	{
 		$this->load->model("login");
-		$login = Login();
-		$login.day = date("d/m/Y");
-		$login.time = date("H:i");
+		$login = new Login();
+		$dia = date("Y-m-d");
+		$hora = date("H:i");
+		$ident = $this->session->userdata('id_usuario');
+		//$login->salvaPonto($dia, $hora, $ident);
 		
 	}
 	
