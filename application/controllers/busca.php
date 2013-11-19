@@ -21,6 +21,20 @@ class Busca extends CI_Controller {
 	{
 		$this->load->view('busca');
 	}
+	
+	public function getUser(){
+		
+		$query = $_GET['query'];
+		
+		$this->load->model('user');
+		
+		$user = new User();
+		
+		$busca = $user->getUser($query);
+		
+		echo json_encode($busca);
+	}
+	
 }
 
 /* End of file welcome.php */

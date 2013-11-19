@@ -81,7 +81,7 @@ class Cadastro extends CI_Controller {
 		$data = json_decode($this->input->post("data"));
 		
 		if($data->filtro == '1')
-			$user->like("name","%".$data->field."%")->get()->all-to-json;
+			$user->like("name",$data->field."%")->get()->all-to-json;
 		$response = array(
 			"data"=> $user->to_json(),
 			"msg" => "Salvo com sucesso!"

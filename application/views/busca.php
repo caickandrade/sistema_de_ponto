@@ -3,20 +3,17 @@
 <head>
 	
 	<title>Busca</title>
-	<script src = "<?php echo base_url('/assets/js/testes.js')?>" type="text/javascript"></script>
+	<script src = "<?php echo base_url('/assets/js/typeahead.min.js')?>"> </script>
+	<script src = "<?php echo base_url('/assets/js/busca.js')?>" ></script>
+	
 
 
 </head>cd
 
 	<div class="search">
 		Buscar
-		<select class="filtro span3">
-		<option value="1">Nome</option>
-		<option value="2">CPF</option>
-		<option value="3">E-mail</option>									
-		</select>
-		<input type="text" class="text-search span5" />	
-		<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton">															
+		<input type="text" class="text-search span5"  id="buscar" />	
+		<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">															
 	</div>
 		<!-- Modal -->
 	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
