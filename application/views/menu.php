@@ -16,7 +16,7 @@
 								 <a href="http://localhost/sistema_de_ponto/index.php/cadastro">Cadastro</a>
 							</li>
 							<li>
-								<a href="#">Consulta</a>
+								<a href="http://localhost/sistema_de_ponto/index.php/busca">Consulta</a>
 							</li>
 						</ul>
 					</li>
