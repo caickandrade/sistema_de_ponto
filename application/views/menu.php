@@ -25,7 +25,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-ok"></i>Ponto<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a id="baterponto">Bater Ponto</a>
+								<a id="baterponto" href="#">Bater Ponto</a>
 							</li>
 						</ul>
 					</li>
@@ -97,7 +97,7 @@
 		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
     		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    		<h3 id="myModalLabel">Aviso</h3>
+    		<h3 id="myModalLabel">Ponto Efetivado</h3>
   		</div>
   		<div class="modal-body">
     		
