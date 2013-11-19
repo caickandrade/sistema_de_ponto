@@ -5,15 +5,15 @@ class Cadastro extends CI_Controller {
 	public function index()
 	{
 			//se a pessoa tiver acesso
-		if($this->session->userdata('acesso')==2){
+	//	if($this->session->userdata('acesso')==2){
 			$this->load->view("cadastro");
-		}
+		//}
 		
 		
 		//se a pessoa não possuir acesso
-		else{
-			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
-		}
+	//	else{
+	//		echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		//}
 	}
 	
 	public function loadPositions(){
@@ -76,11 +76,12 @@ class Cadastro extends CI_Controller {
 	
 	public function getUser(){
 		$this->load->model('user');
-		$user = new User();		
+		$user = new User();
+		$address = new Address();		
 		$data = json_decode($this->input->post("data"));
 		
 		if($data->filtro == '1')
-			$user->like("name","%".$data->field."%")->get();
+			$user->like("name",$data->field."%")->get()->all-to-json;
 		$response = array(
 			"data"=> $user->to_json(),
 			"msg" => "Salvo com sucesso!"

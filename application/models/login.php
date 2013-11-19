@@ -9,9 +9,13 @@ class Login extends DataMapper {
 		parent::__construct($id);
 	}
 	
-	function salvaPonto ($dia, $hora){
+	function salvaPonto ($dia, $hora,$ident){
+		$this->load->model("login");
 		$ponto = new Login();
-		$ponto->
+		$ponto->day = $dia;
+		$ponto->startTime = $hora;
+		$ponto->users_id = $ident;
+		$ponto->save();
 	}
 	
 }
