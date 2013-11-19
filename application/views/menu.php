@@ -23,7 +23,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-ok"></i>Ponto<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Bater Ponto</a>
+								<a href="http://localhost/sistema_de_ponto/index.php/batePonto">Bater Ponto</a>
 							</li>
 						</ul>
 					</li>
