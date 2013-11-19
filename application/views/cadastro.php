@@ -14,7 +14,6 @@
 		<div class="span2">
 			<div class="imagem">
 			<img src="<?php echo base_url('/assets/img/teste.jpg')?>" alt="not found" class="img-rounded">
-
 			</div>
 		</div>
 
@@ -248,6 +247,7 @@
 			</div>
 		</div>
 		</div>
+	</div>
 	</div>
 	<!--<?php $this->load->view('footer') ?> -->
 

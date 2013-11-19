@@ -16,6 +16,11 @@ body {
 	padding: 10px 15px;
 	border-radius: 4px;
 }
+#tabela{
+	background: #E0EDFF;
+	margin-top: 4px;
+	border-radius: 4px;
+}
 .imagem {
 	width: 90%;
 	height: 90%;
@@ -64,8 +69,27 @@ body {
 	float: left;*/
 }
 .search {
-	float: left;
+	/*float: left;
 	margin-left: 350px;
 	width: 500px;
-	padding-top: 1%;
+	padding-top: 1%;*/ 
+}
+#busca{
+	background: #E0EDFF;
+	border-radius: 4px;
+	
+}
+.twitter-typeahead{
+	
+	width: 206px;
+}
+#pesquisar{
+	margin-top:35px;
+}
+/*.tt-hint{
+	width: 206px;
+	height:30px;
+}
+.text-search{
+	background: white;
 }
