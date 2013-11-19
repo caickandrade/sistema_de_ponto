@@ -13,7 +13,7 @@ class Login extends DataMapper {
 		$this->load->model("login");
 		$ponto = new Login();
 		$ponto->day = $dia;
-		$ponto->time = $hora;
+		$ponto->startTime = $hora;
 		$ponto->users_id = $ident;
 		$ponto->save();
 	}

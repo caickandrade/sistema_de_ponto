@@ -9,7 +9,7 @@ class BatePonto extends CI_Controller {
 		$dia = date("Y-m-d");
 		$hora = date("H:i");
 		$ident = $this->session->userdata('id_usuario');
-		//$login->salvaPonto($dia, $hora, $ident);
+		$login->salvaPonto($dia, $hora, $ident);
 		
 	}
 	
