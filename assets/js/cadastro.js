@@ -24,6 +24,12 @@ function loadPositions(){
 }
 
 function actions(){
+	var recarregar = false;
+	$('#btModal').click(function(){
+		if(recarregar==true){
+			window.location.reload();
+		}
+	});
 	$('.estado').click(function(){		
 		var estado = $.trim($(this).text());
 		$('#estado').val(estado);
@@ -75,10 +81,13 @@ function actions(){
 		//ENVIANDO OBJETO DATA
 		//obs.: ESTAVA FALTANDO A VARIÁVEL "RETORNO" em FUNCTION do $.POST
 		$.post(url, {"data":data},function(retorno){
-			alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");
-		//$("#dialog").dialog();
+			//alert(retorno.msg + " UTILIZEM O DIALOG DO JQUERY UI PARA DAR O RETORNO DA MENSAGEM BUNITIM! E LIMPEM TODOS OS CAMPOS PARA CADASTRAR UMA NOVA PESSOA :D");
+			$(".modal-body").html("<p>"+retorno.msg+"<p>");
+				//console.log(retorno.msg);
+			$("#myModal").modal('show');
 			if(retorno.msg == "Salvo com sucesso!"){
-				window.location.reload();
+				//window.location.reload();
+				recarregar = true;
 			}
 			},"json");
 		});

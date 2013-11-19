@@ -1,4 +1,5 @@
 <?php $this->load->view('header')
+
 ?>
 <head>
 	
@@ -8,31 +9,52 @@
 	
 
 
-</head>cd
+</head>
+
+
 
 	<div class="search">
 		Buscar
 		<input type="text" class="text-search span5"  id="buscar" />	
 		<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">															
-	</div>
-		<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Título do modal</h3>
-		</div>
-		<div class="modal-body">
-		<p>E aqui o conteúdo...</p>
-	  	</div>
-	  	<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
-			<button class="btn btn-primary">Salvar</button>
-	  	</div>
-	</div>
-	
-<body>
 
-	
+<body>
+	<div class="cotainer">
+		<?php $this->load->view('menu') ?>	
+
+	</div>
+	<div class="container">
+	<div class="bs-docs-example">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Cargo</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tesla Andrade Alves Antunes Almeida Junior</td>
+                  <td>CEO</td>
+                  <td>ceo@infobits.com.br</td>
+                </tr>
+                <tr>
+                  <td>Testadondo Andrade Alves Antunes Almeida Junior</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>Texta Andrade Alves Antunes Almeida Junior</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                
+              </tbody>
+            </table>
+    </div>
+	</div>
+		
 </body>
 
 </html>

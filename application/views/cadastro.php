@@ -8,34 +8,25 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 </head>
 <body>
-
-		<div class="pull-left">
+		<div class="cotainer">
+		<?php $this->load->view('menu') ?>	
+		</div>
+		<!--<div class="pull-left">
 			<div class="imagem">
 				<img src="<?php echo base_url('/assets/img/teste.jpg')?>" alt="not found" class="img-rounded">
 
-			</div>
-		</div>
+			</div> 
+		</div> -->
 		<div class="pull-right">
 			<div class="container"
 			<div class="form-inline">
-				<!--<form class="form-inline" id="formu">-->
-					<!--<form class="form-inline" id="formu" method="post" action="">-->
 
 					<fieldset>
 						<legend>
 							<div class="title">
 								Cadastro	
 							</div>								
-							<!--<div class="search">
-								Buscar
-								<select class="filtro span3">
-									<option value="1">Nome</option>
-									<option value="2">CPF</option>
-									<option value="3">E-mail</option>									
-								</select>
-								<input type="text" class="text-search span5" />	
-								  <input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton">															
-							</div>-->
+							
 							<div style="clear:both;"></div>
 						</legend>
 						
@@ -253,68 +244,24 @@
 					</fieldset>
 			</div>
 			</div>
-							<!--<div class="span3">
-										<br/>
-										<label class="control-label">CEP</label>
-										<div class="controls">
-											<input class="span10 cep" type="tel" name='cep' id='cep' placeholder="39.440-000"/>
-										</div>
-									</div>
-									<div class="span3">
-										<br/>
-										<label class="control-label">Bairro</label>
-										<div class="controls">
-											<input class="span10" type='text' name= 'bairro' id='bairro' placeholder="Bairro"/>
-										</div>
-									</div>
-									<div class="span3">
-										<br/>
-										<label class="control-label">Cidade</label>
-										<div class="controls">
-											<input class="span10" type= 'text'  name= 'cidade' id= 'cidade' placeholder="Cidade"/>
-										</div>
-									</div>
-								</div>
-								<div class="row-fluid">
-									<div class="span4">
-										<br/>
-										<label class="control-label">Rua</label>
-										<div class="controls">
-											<input class="span10" type='text' name='rua' id='rua' placeholder="Rua"/>
-										</div>
-									</div>
-									<div class="span4">
-										<br/>
-										<label class="control-label">Número</label>
-										<div class="controls">
-											<input class="span10" type='number' name= 'numero' id='numero' placeholder="Número"/>
-										</div>
-									</div>
-									<div class="span4">
-										<br/>
-										<label class="control-label">Complemento</label>
-										<div class="controls">
-											<input class="span10" type='text' name= 'complemento' id='complemento' placeholder="Complemento"/>
-										</div>
-									</div>
-								</div>
-								<div class="row-fluid">
-									<br/>
-									<button id="confirme" name="confirme" class="btn btn-success"  >
-										Cadastrar
-									</button>
-								</div>
-								<div class="row-fluid">
-									<br/>
-								</div>
-							</fieldset>
 	
-					</div>		
-				</div>-->
 			</div>
 			<!--<?php $this->load->view('footer') ?> -->
 
 		</div>
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-header">
+    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    		<h3 id="myModalLabel">Aviso</h3>
+  		</div>
+  		<div class="modal-body">
+    		
+  		</div>
+  		<div class="modal-footer">
+    		<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">OK</button>
+  		</div>
+	</div>
 
 </body>
 

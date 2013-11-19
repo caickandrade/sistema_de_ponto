@@ -1,5 +1,7 @@
 <html>
-
+	<head>  
+	<script src = "<?php echo base_url('/assets/js/Ponto.js')?>" type="text/javascript"></script>
+  	</head>
 	<div class="container">
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -12,7 +14,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>Usuário<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Cadastro</a>
+								 <a href="http://localhost/sistema_de_ponto/index.php/cadastro">Cadastro</a>
 							</li>
 							<li>
 								<a href="#">Consulta</a>
@@ -23,7 +25,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-ok"></i>Ponto<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Bater ponto</a>
+								<a id="baterponto">Bater Ponto</a>
 							</li>
 						</ul>
 					</li>
@@ -31,11 +33,17 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt"></i>Relatórios<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Horas semanais</a>
+								<a href="#">Horas Semanais</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
+				
+				<ul class="nav pull-right">
+                      <li><a href="http://localhost/sistema_de_ponto/">Sair</a></li>
+                      
+                </ul>
+				
 			</div>
 		</div>
 	</div>
@@ -84,4 +92,20 @@
 			</div>
 		</div>
 	</div>-->
+	<body>
+				
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-header">
+    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    		<h3 id="myModalLabel">Aviso</h3>
+  		</div>
+  		<div class="modal-body">
+    		
+  		</div>
+  		<div class="modal-footer">
+    		<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">Fechar</button>
+  		</div>
+	</div>		
+
+	</body>
 </html>
