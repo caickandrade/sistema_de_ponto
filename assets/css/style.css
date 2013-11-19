@@ -3,150 +3,19 @@ body {
 	background: #012049;/*url(assets/img/infobits.png);*/
 	font-family: helvetica, verdana, Arial, sans-serif;
 }
-
 .container {
-	margin-top: 3%;
-	background: white;
-	padding: 15px 20px;
+	padding: 0px 0px;
 	border-radius: 4px;
 }
-.container-fluid {
-	margin-top: 3%;
+.navbar {
+	margin-top: 1%;
+	height: 27px;
+}	
+#cadastro{
+	background: white;
+	padding: 10px 15px;
+	border-radius: 4px;
 }
-	
-#menu {
-
-	background: #FFF;
-	width: 960px;
-	height: 405px;
-	margin: 0 auto;
-}
-
-#menu ul li {
-
-	display: inline;
-}
-
-#menu ul li a {
-
-	text-decoration: none;
-	/*padding-top: 9px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 10px;*/
-	color: #333;
-}
-
-#menu ul li a:hover {
-
-	color: #333;
-	/*float: left;*/
-	background: #ccc;
-	text-decoration: none;
-	/*padding-top: 40px;
-	padding-left: 40px;*/
-	padding-right: 20px;
-	padding-bottom: 10px;
-}
-
-/*#menu li ul {
-
-	background: #FFF;
-	display: none;
-	height: 35px;
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-	/*top:1em;
-
-	 /*left:0;*/
-
-}
-
-#menu li:hover ul {
-
-	display: block;
-}
-
-#menu li li {
-
-	background: #333;
-	display: inline;
-	float: none;
-	margin: 0px;
-	padding: 0px;
-	width: 150px;
-}
-
-#menu li:hover li a {
-
-	background: none;
-	display: inline;
-}
-
-#menu li ul a {
-
-	display: block;
-	height: 35px;
-	font-size: 12px;
-	font-style: normal;
-	margin: 0px;
-	text-align: center;
-}
-
-#menu li ul a:hover, #menu li ul li:hover a {
-
-	background: #000;
-	border: 0px;
-	color: #ffffff;
-	text-decoration: none;
-}
-#menudrop{
-	margin-top: 3%;	
-}
-/*#leftmenu{
-	margin-top: 10%;
-}
-#leftMenu .accordion-group {
-	margin-bottom: 0px;
-	border: 0px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-}
-
-#leftMenu .accordion-heading {
-	height: 30px;
-	border-top: 1px solid #ADADAA;/*margem superior*/
-	/*border-bottom: 1px solid #ADADAA; /* imargem inferior */
-	/*background-image: -webkit-linear-gradient(90deg, #ADADAA 0%, #34342E 100%); /* gradient overlay */
-	/*list-style-type: none;*/
-}
-
-/*#leftMenu .accordion-heading  a {
-	color: 	white; /* cor do texto */
-	/*text-shadow: 0 1px 0 #3b3b3b; /* sombra do texto */
-	/*text-decoration: none;
-}
-
-/*#leftMenu .accordion-heading  a:hover {
-	color: #ccc;
-}
-
-#leftMenu .accordion-heading .active {
-	/*width: 182px;
-	height: 34px;
-	border: 1px solid #5b5b5b; /* inner stroke */
-	/*background-color: #353535; /* layer fill content */
-	/*background-image: -moz-linear-gradient(90deg, #4b4b4b 0%, green/*#555 100%); /* gradient overlay */
-	/*background-image: -o-linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
-	/*background-image: -webkit-linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
-	/*background-image: linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
-}
-
-/*#leftMenu .accordion-body{
-	background: #E6E6DA;	
-}*/
 .imagem {
 	width: 90%;
 	height: 90%;
@@ -165,7 +34,7 @@ body {
 .error {
 	color: red;
 }
-#centro {
+/*#centro {
 	width: 100px;
 	height: 100px;
 	position: absolute;
@@ -174,13 +43,8 @@ body {
 	margin-top: -50px;
 	margin-left: -50px;
 	color: #FFFFFF;
-}
-#login {
-	color: #FFFFFF;
-}	
-#senha {
-	color: #000000;
-}
+}*/
+
 #formlog {
 
 	padding: 2%;
@@ -195,9 +59,9 @@ body {
 	margin-left: -30px;
 }
 
-#imglog {/*imagem pagina login */
-	background-image: url(assets/img/teste.jpg);
-	float: left;
+/*#imglog {/*imagem pagina login */
+	/*background-image: url(assets/img/teste.jpg);
+	float: left;*/
 }
 .search {
 	float: left;
