@@ -25,8 +25,7 @@
 						<ul class="dropdown-menu">
 							<li>
 
-								<a id="baterponto" href="http://localhost/sistema_de_ponto/index.php/batePonto">Bater Ponto</a>
-
+								<a id="baterponto" href="#">Bater Ponto</a>
 							</li>
 						</ul>
 					</li>
@@ -54,10 +53,14 @@
 		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
     		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    		<h3 id="myModalLabel">Aviso</h3>
+    		<h3 id="myModalLabel">Ponto Efetivado</h3>
   		</div>
   		<div class="modal-body">
-    		
+    		<ul class="nav nav-pills">
+  				<li class="active">
+    				<a href="#">Finalizar Ponto</a>
+  				</li>
+			</ul>	
   		</div>
   		<div class="modal-footer">
     		<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">Fechar</button>
