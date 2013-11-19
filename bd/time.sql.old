@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 19, 2013 at 09:30 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.4.3
+-- Servidor: localhost
+-- Tempo de Geração: 11/10/2013 às 00h26min
+-- Versão do Servidor: 5.5.20
+-- Versão do PHP: 5.3.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `time`
+-- Banco de Dados: `time`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `addresses`
+-- Estrutura da tabela `addresses`
 --
 
 CREATE TABLE IF NOT EXISTS `addresses` (
@@ -36,28 +36,26 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `complement` varchar(11) DEFAULT NULL,
   `zip_code` int(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
--- Dumping data for table `addresses`
+-- Extraindo dados da tabela `addresses`
 --
 
 INSERT INTO `addresses` (`id`, `street`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`) VALUES
-(22, 'Santa Rita de Cássia', 827, 'São José', 'Montes Claros', 'Minas Gerais', '', 39400344),
-(23, 'Santa Rita de Cássia', 827, 'São José', 'Montes Claros', 'Minas Gerais', '', 39400344),
-(24, 'Rua Santa Rita de Cássia', 827, 'São José', 'Montes Claros', 'MG', '', 39400344),
-(25, 'Santa Rita de Cássia', 827, 'São José', 'Montes Claros', 'MG', '', 39400344);
+(20, 'dsad', 1, 'eustaquio', 'Janaúba', 'Minas Gerais', 'aaaaaa', 111),
+(21, 'dsad', 1, 'eustaquio', 'Janaúba', 'Minas Gerais', 'aaaaaa', 111);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logins`
+-- Estrutura da tabela `logins`
 --
 
 CREATE TABLE IF NOT EXISTS `logins` (
   `id` int(11) NOT NULL,
   `day` date NOT NULL,
-  `startTime` date NOT NULL,
+  `time` date NOT NULL,
   `description` varchar(150) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -67,14 +65,14 @@ CREATE TABLE IF NOT EXISTS `logins` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logouts`
+-- Estrutura da tabela `logouts`
 --
 
 CREATE TABLE IF NOT EXISTS `logouts` (
   `id` int(11) NOT NULL,
   `logins_id` int(11) NOT NULL,
   `day` date NOT NULL,
-  `endTime` date NOT NULL,
+  `time` date NOT NULL,
   `description` varchar(150) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -85,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `logouts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `positions`
+-- Estrutura da tabela `positions`
 --
 
 CREATE TABLE IF NOT EXISTS `positions` (
@@ -96,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `positions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `positions`
+-- Extraindo dados da tabela `positions`
 --
 
 INSERT INTO `positions` (`id`, `description`, `codigo`) VALUES
@@ -111,7 +109,7 @@ INSERT INTO `positions` (`id`, `description`, `codigo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estrutura da tabela `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -129,37 +127,35 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `email` (`email`),
   KEY `addresses_id` (`addresses_id`),
   KEY `id_function` (`id_position`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
--- Dumping data for table `users`
+-- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `cpf`, `name`, `addresses_id`, `phone1`, `phone2`, `email`, `password`, `birthday`, `id_position`) VALUES
-(22, 0, 'Caick Andrade Dias', 22, '3891280415', '', 'caila@ig.com.br', '7177163', '1994-09-01', 7),
-(23, 0, 'Charles Dias Leite Júnior', 23, '3891092262', '', 'charlesdljr@yahoo.com.br', '123321', '1962-12-15', 3),
-(24, 2147483647, 'Caick', 24, '3891280415', '', 'caila2@ig.com.br', '7177163', '1994-09-01', 3),
-(25, 2147483647, 'Caickão', 25, '3891280415', '', 'caila3@ig.com.br', '7177163', '1994-11-05', 2);
+(20, 0, 'felipe', 20, '111', '111', 'felippe-lipe@hotmail.com', 'aaaaa', '2013-10-01', 2),
+(21, 0, 'aaaaa', 21, '111', '111', 'assdsad@asdsad.com', 'aaaaa', '2013-10-02', 4);
 
 --
--- Constraints for dumped tables
+-- Restrições para as tabelas dumpadas
 --
 
 --
--- Constraints for table `logins`
+-- Restrições para a tabela `logins`
 --
 ALTER TABLE `logins`
   ADD CONSTRAINT `logins_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `logouts`
+-- Restrições para a tabela `logouts`
 --
 ALTER TABLE `logouts`
   ADD CONSTRAINT `logouts_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `logouts_ibfk_2` FOREIGN KEY (`logins_id`) REFERENCES `logins` (`id`);
 
 --
--- Constraints for table `users`
+-- Restrições para a tabela `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`addresses_id`) REFERENCES `addresses` (`id`),

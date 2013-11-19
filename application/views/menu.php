@@ -24,7 +24,9 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-ok"></i>Ponto<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a id="baterponto">Bater Ponto</a>
+
+								<a id="baterponto" href="http://localhost/sistema_de_ponto/index.php/batePonto">Bater Ponto</a>
+
 							</li>
 						</ul>
 					</li>
