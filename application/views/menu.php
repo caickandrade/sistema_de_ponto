@@ -65,7 +65,7 @@
 			</ul>	
   		</div>
   		<div class="modal-footer">
-    		
+    		<button class='btn' id='btFecharPonto' data-dismiss='modal' aria-hidden='true'>Conf</button>
   		</div>
 	</div>		
 
