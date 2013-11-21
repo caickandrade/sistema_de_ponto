@@ -25,10 +25,10 @@
 						<ul class="dropdown-menu">
 							<li>
 
-								<a id="baterponto" href="#">Bater Ponto</a>
+								<a id="baterPonto" href="#">Bater Ponto</a>
 							</li>
 							<li>
-								<a id="baterponto" href="#">Finalizar Ponto</a>
+								<a id="fecharPonto" href="#">Finalizar Ponto</a>
 							</li>
 						</ul>
 					</li>
@@ -55,8 +55,7 @@
 				
 		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
-    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    		<h3 id="myModalLabel">Ponto Efetivado</h3>
+    		
   		</div>
   		<div class="modal-body">
     		<ul class="nav nav-pills">
@@ -66,7 +65,7 @@
 			</ul>	
   		</div>
   		<div class="modal-footer">
-    		<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    		
   		</div>
 	</div>		
 
