@@ -29,6 +29,7 @@
 							</li>
 							<li>
 								<a id="fecharPonto" href="#">Finalizar Ponto</a>
+
 							</li>
 						</ul>
 					</li>
@@ -59,9 +60,10 @@
   		</div>
   		<div class="modal-body">
     		<ul class="nav nav-pills">
-  				<li class="active">
-    				<a href="#">Comentário</a>
-  				</li>
+    			<form class="navbar-form pull-left">
+  					<textarea rows="9" cols="50"></textarea>
+  					<button type="submit" class="btn">Justificar</button>
+				</form>
 			</ul>	
   		</div>
   		<div class="modal-footer">
