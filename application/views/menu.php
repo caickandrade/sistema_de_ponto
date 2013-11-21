@@ -27,6 +27,9 @@
 
 								<a id="baterponto" href="#">Bater Ponto</a>
 							</li>
+							<li>
+								<a id="baterponto" href="#">Finalizar Ponto</a>
+							</li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -58,7 +61,7 @@
   		<div class="modal-body">
     		<ul class="nav nav-pills">
   				<li class="active">
-    				<a href="#">Finalizar Ponto</a>
+    				<a href="#">Comentário</a>
   				</li>
 			</ul>	
   		</div>
