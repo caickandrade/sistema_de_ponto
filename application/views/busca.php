@@ -40,6 +40,7 @@
 									<th>Nome</th>
 									<th>Cargo</th>
 									<th>Email</th>
+									<th colspan="2">Ações</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -47,16 +48,22 @@
 									<td>Tesla Andrade Alves Antunes Almeida Junior</td>
 									<td>CEO</td>
 									<td>ceo@infobits.com.br</td>
+									<td><a class="btn btn-info" href="#">Editar</a></td>
+									<td><a class="btn btn-danger" href="#">Excluir</a></td>
 								</tr>
 								<tr>
 									<td>Testadondo Andrade Alves Antunes Almeida Junior</td>
 									<td>Otto</td>
 									<td>@mdo</td>
+									<td><a class="btn btn-info" href="#">Editar</a></td>
+									<td><a class="btn btn-danger" href="#">Excluir</a></td>
 								</tr>
 								<tr>
 									<td>Texta Andrade Alves Antunes Almeida Junior</td>
 									<td>Otto</td>
 									<td>@mdo</td>
+									<td><a class="btn btn-info" href="#">Editar</a></td>
+									<td><a class="btn btn-danger" href="#">Excluir</a></td>
 								</tr>
 
 							</tbody>
