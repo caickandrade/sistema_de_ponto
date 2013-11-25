@@ -79,12 +79,19 @@ body {
 	border-radius: 4px;
 	
 }
-.twitter-typeahead{
+/*.twitter-typeahead{
 	
 	width: 206px;
+}*/
+#buscar{
+	margin-top: 25px;
 }
 #pesquisar{
-	margin-top:35px;
+	margin-top:16px;
+	height: 20px;
+}
+#conteudo{
+	padding-left: 10px;
 }
 /*.tt-hint{
 	width: 206px;
