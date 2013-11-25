@@ -26,7 +26,7 @@
 				<div class="search">
 					<div id="busca">
 						Buscar
-						<input type="text" class="text-search span12"  id="buscar" />
+						<input type="text" class="text-search span4"  id="buscar" />
 						<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">
 					</div>
 				</div>
