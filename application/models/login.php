@@ -13,9 +13,16 @@ class Login extends DataMapper {
 		$this->load->model("login");
 		$ponto = new Login();
 		$ponto->day = $dia;
-		$ponto->time = $hora;
+		$ponto->startTime = $hora;
 		$ponto->users_id = $ident;
 		$ponto->save();
+	}
+	
+	function pesquisaId($usuario){
+		$this->load->model("login");
+		$ponto = new Login();
+		$ponto->where("users_id",$usuario && "status",0)->get();
+		return $ponto;
 	}
 	
 }

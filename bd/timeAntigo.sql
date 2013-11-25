@@ -2,10 +2,10 @@
 -- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tempo de Geração: 
--- Versão do Servidor: 5.5.24-log
--- Versão do PHP: 5.3.13
+-- Host: localhost
+-- Generation Time: Nov 19, 2013 at 09:30 PM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.4.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `time`
+-- Database: `time`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `addresses`
+-- Table structure for table `addresses`
 --
 
 CREATE TABLE IF NOT EXISTS `addresses` (
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
--- Extraindo dados da tabela `addresses`
+-- Dumping data for table `addresses`
 --
 
 INSERT INTO `addresses` (`id`, `street`, `number`, `neighborhood`, `city`, `state`, `complement`, `zip_code`) VALUES
@@ -51,48 +51,41 @@ INSERT INTO `addresses` (`id`, `street`, `number`, `neighborhood`, `city`, `stat
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `logins`
+-- Table structure for table `logins`
 --
 
 CREATE TABLE IF NOT EXISTS `logins` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `day` date NOT NULL,
-  `startTime` time NOT NULL,
+  `startTime` date NOT NULL,
   `description` varchar(150) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `users_id` (`users_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Extraindo dados da tabela `logins`
---
-
-INSERT INTO `logins` (`id`, `day`, `startTime`, `description`, `users_id`) VALUES
-(2, '2013-11-19', '22:45:00', NULL, 25);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `logouts`
+-- Table structure for table `logouts`
 --
 
 CREATE TABLE IF NOT EXISTS `logouts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `logins_id` int(11) NOT NULL,
   `day` date NOT NULL,
-  `endTime` time NOT NULL,
+  `endTime` date NOT NULL,
   `description` varchar(150) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `users_id` (`users_id`),
   KEY `logins_id` (`logins_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `positions`
+-- Table structure for table `positions`
 --
 
 CREATE TABLE IF NOT EXISTS `positions` (
@@ -103,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `positions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `positions`
+-- Dumping data for table `positions`
 --
 
 INSERT INTO `positions` (`id`, `description`, `codigo`) VALUES
@@ -118,7 +111,7 @@ INSERT INTO `positions` (`id`, `description`, `codigo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -139,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
--- Extraindo dados da tabela `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `cpf`, `name`, `addresses_id`, `phone1`, `phone2`, `email`, `password`, `birthday`, `id_position`) VALUES
@@ -149,24 +142,24 @@ INSERT INTO `users` (`id`, `cpf`, `name`, `addresses_id`, `phone1`, `phone2`, `e
 (25, 2147483647, 'Caickão', 25, '3891280415', '', 'caila3@ig.com.br', '7177163', '1994-11-05', 2);
 
 --
--- Restrições para as tabelas dumpadas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para a tabela `logins`
+-- Constraints for table `logins`
 --
 ALTER TABLE `logins`
   ADD CONSTRAINT `logins_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 
 --
--- Restrições para a tabela `logouts`
+-- Constraints for table `logouts`
 --
 ALTER TABLE `logouts`
   ADD CONSTRAINT `logouts_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `logouts_ibfk_2` FOREIGN KEY (`logins_id`) REFERENCES `logins` (`id`);
 
 --
--- Restrições para a tabela `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`addresses_id`) REFERENCES `addresses` (`id`),
