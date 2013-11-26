@@ -63,9 +63,9 @@ class User extends DataMapper {
 	
 	public function getUser($name){
 			
-		$user = new User();
+		$user = new User();//INSTANCIA NOVO USUARIO
 	
-		$user->like("name",$name."%")->get();
+		$user->like("name",$name."%")->get();//PEGA OS USUARIOS QUE TEM PARTE DO NOME OU NOME INTEIRO NO BD
 		
 		return $user;
 		
@@ -74,22 +74,46 @@ class User extends DataMapper {
 	public function toAutoComplete($query)
 	{
 		
-		$fullUser = $this->getUser($query);
+		$fullUsers = $this->getUser($query);//ENVIA A QUERY CONTENDO O NOME DA BUSCA E RECEBE O RETORNO DA FUNCAO COM OS USUARIOS
 			
-		$all = array("");
+		$result = array(); //INICIALIZA NOVO ARRAY
  		
-		foreach ($fullUser as $field) 
+		foreach ($fullUsers as $user) //FAZ UM LOOP SEPARANDO APENAS OS NOMES E JOGANDO CADA NOME EM UM ARRAY
 		{
-			array_push($all, $field->name);
+			array_push($result, $user->name);
 		}
 		
-		return $all;
+		return $result;//RETORNA ARRAY COM OS NOMES
 		
 	}
 	
-	
+	public function toTable($query)
+	{
 		
-}
+		$fullUsers= $this->getUser($query);
+		
+		$result = array();
+		
+			foreach ($fullUsers as $user)
+			{
+				$item = new stdClass;
+				
+				$item->id = $user->id;
+				$item->name = $user->name;
+				$item->email = $user->email;
+				$item->position = $user->id_position;
+				
+				array_push($result, $item);
+			}
+			
+		return $result;
+			
+		}
+		
+		
+		
+	}
+	
 
 /* End of file user.php */
 /* Location: ./application/models/user.php */
