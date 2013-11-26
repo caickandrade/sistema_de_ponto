@@ -21,7 +21,7 @@ class Login extends DataMapper {
 	function pesquisaId($usuario){
 		$this->load->model("login");
 		$ponto = new Login();
-		$ponto->where("users_id",$usuario && "status",0)->get();
+		//$ponto->where("users_id",$usuario  and "status",0)->get();
 		return $ponto;
 	}
 	

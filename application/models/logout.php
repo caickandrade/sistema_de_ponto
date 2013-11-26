@@ -14,7 +14,7 @@ class Logout extends DataMapper {
 		$ponto = new Logout();
 		$ponto->logins_id = $idLogin;
 		$ponto->day = $dia;
-		$ponto->startTime = $hora;
+		$ponto->endTime = $hora;
 		$ponto->users_id = $ident;
 		$ponto->save();
 	}
