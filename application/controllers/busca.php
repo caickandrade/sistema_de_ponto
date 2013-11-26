@@ -22,17 +22,17 @@ class Busca extends CI_Controller {
 		$this->load->view('busca');
 	}
 	
-	public function getUser(){
+	public function getUserAutoComplete(){
 		
-		$query = $_GET['query'];
+		$query = $_GET['query'];//PEGA STRING A SER PESQUISADA DA URL
 		
-		$this->load->model('user');
+		$this->load->model('user');//CARREGA MODEL USER
 		
-		$user = new User();
+		$user = new User();//INSTANCIA NOVO USER
 		
-		$busca = $user->getUser($query);
+		$busca = $user->toAutoComplete($query);//RECEBE EM UM ARRAY A VARIAVEL BUSCA COM OS NOMES PESQUISADOS DE ACORDO COM A STRING DA URL
 		
-		echo json_encode($busca);
+		echo json_encode($busca);//MANDA A VARIAVEL COMO JSON PARA SER REALIZADO O AUTOCOMPLETE
 	}
 	
 }
