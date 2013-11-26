@@ -10,6 +10,7 @@ class FechaPonto extends CI_Controller {
 		$logout = new Logout();
 		$login = new Login();
 		
+		date_default_timezone_set('America/Sao_Paulo');
 		$dia = date("Y-m-d");
 		$hora = date("H:i");
 		$ident = $this->session->userdata('id_usuario');
