@@ -67,14 +67,24 @@ class User extends DataMapper {
 	
 		$user->like("name",$name."%")->get();
 		
+		return $user;
+		
+	}
+	
+	public function toAutoComplete($query)
+	{
+		
+		$fullUser = $this->getUser($query);
+			
 		$all = array("");
  		
-		foreach ($user as $field) 
+		foreach ($fullUser as $field) 
 		{
 			array_push($all, $field->name);
 		}
 		
 		return $all;
+		
 	}
 	
 	
