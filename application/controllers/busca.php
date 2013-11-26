@@ -34,6 +34,21 @@ class Busca extends CI_Controller {
 		
 		echo json_encode($busca);//MANDA A VARIAVEL COMO JSON PARA SER REALIZADO O AUTOCOMPLETE
 	}
+
+	public function getUserTable()
+	{
+		
+		$query = $_GET['query'];//PEGA STRING A SER PESQUISADA DA URL
+		
+		$this->load->model('user');//CARREGA MODEL USER
+		
+		$user = new User();//INSTANCIA NOVO USER
+		
+		$busca = $user->toTable($query);//RECEBE EM UM ARRAY A VARIAVEL BUSCA COM OS NOMES PESQUISADOS DE ACORDO COM A STRING DA URL
+		
+		echo json_encode($busca);//MANDA A VARIAVEL COMO JSON PARA SER REALIZADO O AUTOCOMPLETE
+		
+		}
 	
 }
 
