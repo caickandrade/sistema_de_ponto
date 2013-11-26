@@ -23,7 +23,7 @@
 				?>
 			</div>
 			<div class="span9">
-				<div class="search">
+				
 					<div id="busca">
 						<div id="conteudo">
 							Buscar
@@ -31,7 +31,6 @@
 							<a class="btn" id="pesquisar" href="#"><i class="icon-search"></i></a><!--<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">-->
 						</div>
 					</div>
-				</div>
 			</div>
 			<div class="span9">
 				<div id="tabela">
