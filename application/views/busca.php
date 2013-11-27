@@ -28,49 +28,43 @@
 						<div id="conteudo">
 							Buscar
 							<input type="text" class="text-search span3"  id="buscar" />
-							<a class="btn" id="pesquisar" href="#"><i class="icon-search"></i></a><!--<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">-->
+							<a class="btn" id="pesquisar" href="/sistema_de_ponto/index.php/busca/getUserTable"><i class="icon-search"></i></a><!--<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">-->
 						</div>
 					</div>
 			</div>
 			<div class="span9">
-				<div id="tabela">
-					<div class="bs-docs-example">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Nome</th>
-									<th>Cargo</th>
-									<th>Email</th>
-									<th colspan="2">Ações</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Tesla Andrade Alves Antunes Almeida Junior</td>
-									<td>CEO</td>
-									<td>ceo@infobits.com.br</td>
-									<td><a class="btn btn-info" href="#"><i class="icon-edit"></i></a></td>
-									<td><a class="btn btn-danger" href="#"><i class="icon-trash"></i></a></td>
-								</tr>
-								<tr>
-									<td>Testadondo Andrade Alves Antunes Almeida Junior</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-									<td><a class="btn btn-info" href="#"><i class="icon-edit"></i></a></td>
-									<td><a class="btn btn-danger" href="#"><i class="icon-trash"></i></a></td>
-								</tr>
-								<tr>
-									<td>Texta Andrade Alves Antunes Almeida Junior</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-									<td><a class="btn btn-info" href="#"><i class="icon-edit"></i></a></td>
-									<td><a class="btn btn-danger" href="#"><i class="icon-trash"></i></a></td>
-								</tr>
-
-							</tbody>
-						</table>
+				
+					<div id="tabela">
+						<div class="bs-docs-example">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Nome</th>
+										<th>Cargo</th>
+										<th>Email</th>
+										<th colspan="2">Ações</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php if(isset($resultado)){?>
+										
+										<?php foreach($resultado as $user) { ?>
+										<tr>
+											<td><?php echo $user->id ?></td>
+											<td><?php echo $user->name ?></td>
+											<td><?php echo $user->position ?></td>
+											<td><?php echo $user->email ?></td>
+											<td><a class="btn btn-info" href="#"><i class="icon-edit"></i></a></td>
+											<td><a class="btn btn-danger" href="#"><i class="icon-trash"></i></a></td>
+										</tr>
+										<?php } ?>
+									<?php } ?>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
+					
 			</div>
 		</div>
 	</div>
