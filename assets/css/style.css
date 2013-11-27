@@ -100,3 +100,8 @@ body {
 .text-search{
 	background: white;
 }
+*/
+#boxtext{	
+	overflow: 200%;
+	vertical-align: 200%;
+}

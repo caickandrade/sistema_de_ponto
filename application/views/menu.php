@@ -60,14 +60,23 @@
   		</div>
   		<div class="modal-body">
     		<ul class="nav nav-pills">
-    			<form class="navbar-form pull-left">
-  					<textarea rows="9" cols="50"></textarea>
-  					<button type="submit" class="btn">Justificar</button>
-				</form>
+<!--    			<div class="navbar-form pull-left">
+  					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12"> -->
+								<div id="boxtext">
+  									<textarea rows="7" cols="9950"></textarea>
+  								</div>
+<!--  							</div>
+  		</div> -->
+  						<button type="submit" class="btn">Justificar</button>
+<!--  					</div>
+  					
+</div> -->
 			</ul>	
   		</div>
   		<div class="modal-footer">
-    		<button class='btn' id='btFecharPonto' data-dismiss='modal' aria-hidden='true'>Conf</button>
+    		<button class='btn' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
 	</div>		
 
