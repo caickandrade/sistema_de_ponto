@@ -6,14 +6,14 @@ function actions ()
 {
 	$('#baterPonto').click(function(){
 		$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Bater Ponto</h3>");
-		//$(".modal-footer").html("<button class='btn' id='btBaterPonto' data-dismiss='modal' aria-hidden='true'>Confirma</button>");
+		//$(".modal-footer").html("<button class='btn' id='btBaterPonto' data-dismiss='modal' aria-hidden='true'>Confirma Abrimento</button>");
 		$("#myModal").modal('show');
 		  
 	});
 	
 	$('#fecharPonto').click(function(){
 		$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Fechar Ponto</h3>");
-		//$(".modal-footer").html("<button class='btn' id='btFecharPonto' data-dismiss='modal' aria-hidden='true'>Conf</button>");
+		//$(".modal-footer").html("<button class='btn' id='btFecharPonto' data-dismiss='modal' aria-hidden='true'>Confirma Fechamento</button>");
 		$("#myModal").modal('show');
 		  
 	});

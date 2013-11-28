@@ -24,7 +24,6 @@ class Login extends DataMapper {
 		$ponto->where("users_id", $usuario);
 		$ponto->where("status",0);
 		$ponto->get();
-		//$ponto = $this->db->query("SELECT id FROM logins WHERE users_id = ?", $usuario);
 		return $ponto;
 	}
 	
