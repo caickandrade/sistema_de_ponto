@@ -48,6 +48,10 @@ class Busca extends CI_Controller {
 		
 		echo json_encode($busca);//MANDA A VARIAVEL COMO JSON PARA SER REALIZADO O AUTOCOMPLETE
 		
+		$data['resultado'] = $busca;
+		
+		$this->load->view('busca', $data);
+		
 		}
 	
 }

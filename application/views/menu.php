@@ -65,7 +65,7 @@
 						<div class="row-fluid">
 							<div class="span12">
 								<div id="boxtext">
-  									<textarea rows="9" cols="50"></textarea>
+  									<textarea rows="7" cols="9950"></textarea>
   								</div>
   							</div>
   		</div> 

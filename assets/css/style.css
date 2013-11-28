@@ -101,7 +101,7 @@ body {
 	background: white;
 }
 */
-#boxtext{
-	
-	
+#boxtext{	
+	overflow: 200%;
+	vertical-align: 200%;
 }
