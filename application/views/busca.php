@@ -26,9 +26,11 @@
 				
 					<div id="busca">
 						<div id="conteudo">
-							Buscar
-							<input type="text" class="text-search span3"  id="buscar" />
-							<a class="btn" id="pesquisar" href="/sistema_de_ponto/index.php/busca/getUserTable"><i class="icon-search"></i></a><!--<input type="image" src="<?php echo base_url('/assets/img/search.png')?>" alt="Submit" class="searchButton" id="pesquisar">-->
+							<form method="GET" action = "/sistema_de_ponto/index.php/busca/getUserTable">
+								<label for="consulta">Buscar:</label>
+									<input type="text" id="buscar" name="consulta" maxlength="255" required/>
+									<input type="submit" value="Buscar" />
+							</form>
 						</div>
 					</div>
 			</div>

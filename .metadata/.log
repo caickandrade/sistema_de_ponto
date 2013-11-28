@@ -1533,3 +1533,15 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
 !SUBENTRY 2 org.eclipse.core.resources 4 567 2013-11-25 19:50:03.376
 !MESSAGE The project description file (.project) for 'sistema_de_ponto' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SESSION 2013-11-28 19:37:27.245 -----------------------------------------------
+eclipse.buildId=3.4.1.201306062137
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 0 2013-11-28 21:00:08.185
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.jruby.exceptions.RaiseException: (Errno::EINVAL) =::
+	at org.jruby.RubyHash.replace(org/jruby/RubyHash.java:1623)
