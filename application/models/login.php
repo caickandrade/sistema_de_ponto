@@ -27,4 +27,12 @@ class Login extends DataMapper {
 		return $ponto;
 	}
 	
+	function mudaStatus($idLogin){
+		$this->load->model("login");
+		$ponto = new Login();
+		$ponto->where("id",$idLogin)->get();
+		//$ponto->status = '1';
+		$ponto->update('status',1);
+	}
+	
 }

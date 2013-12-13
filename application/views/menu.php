@@ -54,7 +54,7 @@
 
 	<body>
 				
-		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="pontoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
     		
   		</div>
@@ -65,7 +65,10 @@
 						<div class="row-fluid">
 							<div class="span12">
 								<div id="boxtext">
-  									<textarea rows="7" cols="9950"></textarea>
+  									<textarea rows="7" cols="9950" placeholder="Justifique"></textarea>
+  								</div>
+  								<div class="botaoPonto">
+  									
   								</div>
   							</div>
   		</div> 
@@ -76,7 +79,7 @@
 			</ul>	
   		</div>
   		<div class="modal-footer">
-    		<button class='btn' id='btBaterPonto' data-dismiss='modal' aria-hidden='true'>Confirma Abrimento</button>
+    		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
 	</div>		
 

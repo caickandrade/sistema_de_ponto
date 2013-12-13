@@ -19,6 +19,8 @@ class FechaPonto extends CI_Controller {
 		
 		$logout->fecharPonto($login->id,$dia, $hora, $ident);
 		
+		$login->mudaStatus($login->id);
+		
 	}
 	
 }
