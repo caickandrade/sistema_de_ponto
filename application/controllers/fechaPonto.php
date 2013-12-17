@@ -21,6 +21,7 @@ class FechaPonto extends CI_Controller {
 		
 		$login->mudaStatus($login->id);
 		
+		echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
 	}
 	
 }
