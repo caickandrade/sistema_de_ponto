@@ -35,4 +35,27 @@ class Login extends DataMapper {
 		$ponto->update('status',1);
 	}
 	
+	function pesquisaData($inicial, $final){
+		$this->load->model("login");
+		$pontos = new Login();
+		
+		$pontos->where("status",1);
+		$pontos->where('day >=', $inicial);
+		$pontos->where('day <=', $final);
+		$pontos->get();
+		
+		$resultado = array();
+		foreach ($pontos as $ponto)
+			{
+				/*$item = new stdClass;
+				$item->id = $ponto->id;
+				$item->name = $ponto->day;
+				$item->email = $ponto->startTime;
+				$item->position = $ponto->users_id;*/
+				
+				array_push($resultado, $ponto);
+			}
+		return $resultado;
+	}
+	
 }

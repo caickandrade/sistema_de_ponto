@@ -15,6 +15,16 @@ function actions ()
 		data.inicio = $("#dataInicio").val();
 		data.termino = $("#dataTermino").val();
 		
+		var data = JSON.stringify(data);
+		
+		var url = "http://localhost/sistema_de_ponto/index.php/relatorios/relatorioGeral";
+		
+		
+		
+		$.post(url, {"data":data}, function(retorno)
+		{	
+			console.log(retorno);
+		});
 		
 		
 		//alert(data.inicio);
