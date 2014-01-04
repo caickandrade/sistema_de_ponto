@@ -19,4 +19,17 @@ class Logout extends DataMapper {
 		$ponto->save();
 	}
 	
+	function pesquisaLogout($identificador){
+		$this->load->model("logout");
+		$ponto = new Logout();
+		
+		$ponto->where("logins_id",$identificador);
+		$ponto->get();
+		
+		//echo $ponto->endTime;
+		
+		return $ponto;
+		
+	}
+	
 }

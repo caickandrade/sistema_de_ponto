@@ -47,11 +47,6 @@ class Login extends DataMapper {
 		$resultado = array();
 		foreach ($pontos as $ponto)
 			{
-				/*$item = new stdClass;
-				$item->id = $ponto->id;
-				$item->name = $ponto->day;
-				$item->email = $ponto->startTime;
-				$item->position = $ponto->users_id;*/
 				
 				array_push($resultado, $ponto);
 			}
