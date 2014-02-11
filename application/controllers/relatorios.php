@@ -52,6 +52,8 @@ class Relatorios extends CI_Controller {
 		return $usuario;
 	}
 	
+	
+	
 	public function relatorioGeral(){
 		
 		$data = json_decode($this->input->post('data'));
@@ -61,7 +63,6 @@ class Relatorios extends CI_Controller {
 		$logouts = $this->buscaSaidaId($logins,$contador);
 		$usuarios = $this->buscaUserLogin($logins);
 		
-		echo $usuarios[5]->name;
 		$relatorio = array();
 		for($i=0;$i<$contador;$i++){
 			
@@ -71,13 +72,11 @@ class Relatorios extends CI_Controller {
 			$item->name = $usuarios[$i]->name;
 			$item->entrada = $logins[$i]->startTime;
 			$item->saida = $logouts[$i]->endTime;
-			//$item->diferenca = $logouts[$i]->endTime - $logins[$i]->startTime; achar uma forma de calcular a diferença entre as horas
-			$item->diferenca = date("H:i"); 
-			//echo $item->diferenca;
+			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+			$item->diferenca = date("H:i",$intervalo);
 			
 			array_push($relatorio,$item);
 		}
-		
 		
 		
 	}
