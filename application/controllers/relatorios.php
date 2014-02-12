@@ -63,8 +63,17 @@ class Relatorios extends CI_Controller {
 		$logouts = $this->buscaSaidaId($logins,$contador);
 		$usuarios = $this->buscaUserLogin($logins);
 		
-		$relatorio = array();
+		$data = array();
+		$contData = 0;
+		$data[$contData][0] = $logins[0]->day;
+		$preenche=1;
 		for($i=0;$i<$contador;$i++){
+			
+			if(strtotime($data[$contData][0])!=strtotime($logins[$i]->day)){
+				$contData=$contData+1;
+				$preenche=1;
+				$data[$contData][0] = $logins[$i]->day;
+			}
 			
 			$item = new stdClass;
 				
@@ -74,11 +83,11 @@ class Relatorios extends CI_Controller {
 			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
 			$item->diferenca = date("H:i",$intervalo);
-			
-			array_push($relatorio,$item);
+				
+			$data[$contData][$preenche] = $item;
+			echo $contData."  ".$preenche."///";
+			$preenche++;
 		}
-		
-		
 	}
 	
 }
