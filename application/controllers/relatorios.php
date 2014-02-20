@@ -4,7 +4,15 @@ class Relatorios extends CI_Controller {
 	
 	public function index()
 	{
-		
+		//$this->load->view("relatorio");
+	}
+	
+	public function relatorioGeral(){
+		$this->load->view("relatorioGeral");
+	}
+	
+	public function relatorioEspecifico(){
+		$this->load->view("relatorioEspecifico");
 	}
 	
 	public function buscaEntradaData($inicio,$termino){
@@ -54,7 +62,7 @@ class Relatorios extends CI_Controller {
 	
 	
 	
-	public function relatorioGeral(){
+	public function criaRelatorioGeral(){
 		
 		$data = json_decode($this->input->post('data'));
 		
@@ -88,6 +96,7 @@ class Relatorios extends CI_Controller {
 			echo $contData."  ".$preenche."///";
 			$preenche++;
 		}
+	
 	}
 	
 }
