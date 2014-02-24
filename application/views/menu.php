@@ -1,6 +1,7 @@
 <html>
 	<head>  
 	<script src = "<?php echo base_url('/assets/js/Ponto.js')?>" type="text/javascript"></script>
+	
   	</head>
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -37,7 +38,9 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt"></i>Relatórios<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Horas Semanais</a>
+								<a id="especifico" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioEspecifico">Relatório Específico</a>
+								<a id="geral" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioGeral">Relatório Geral</a>
+								<!--<a href="#">Horas Semanais</a>-->
 							</li>
 						</ul>
 					</li>
@@ -54,31 +57,34 @@
 
 	<body>
 				
-		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="pontoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
     		
   		</div>
   		<div class="modal-body">
     		<ul class="nav nav-pills">
-<!--    			<div class="navbar-form pull-left">
+    			<div class="navbar-form pull-left">
   					<div class="container-fluid">
 						<div class="row-fluid">
-							<div class="span12"> -->
+							<div class="span12">
 								<div id="boxtext">
-  									<textarea rows="7" cols="9950"></textarea>
+  									<textarea rows="7" cols="9950" placeholder="Justifique"></textarea>
   								</div>
-<!--  							</div>
-  		</div> -->
-  						<button type="submit" class="btn">Justificar</button>
-<!--  					</div>
+  								<div class="botaoPonto">
+  									
+  								</div>
+  							</div>
+  		</div> 
+  						
+  					</div>
   					
-</div> -->
+</div>
 			</ul>	
   		</div>
   		<div class="modal-footer">
-    		<button class='btn' data-dismiss='modal' aria-hidden='true'>Sair</button>
+    		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
-	</div>		
+	</div>	
 
 	</body>
 </html>

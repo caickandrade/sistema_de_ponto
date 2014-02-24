@@ -24,8 +24,33 @@ class Login extends DataMapper {
 		$ponto->where("users_id", $usuario);
 		$ponto->where("status",0);
 		$ponto->get();
-		//$ponto = $this->db->query("SELECT id FROM logins WHERE users_id = ?", $usuario);
 		return $ponto;
+	}
+	
+	function mudaStatus($idLogin){
+		$this->load->model("login");
+		$ponto = new Login();
+		$ponto->where("id",$idLogin)->get();
+		//$ponto->status = '1';
+		$ponto->update('status',1);
+	}
+	
+	function pesquisaData($inicial, $final){
+		$this->load->model("login");
+		$pontos = new Login();
+		
+		$pontos->where("status",1);
+		$pontos->where('day >=', $inicial);
+		$pontos->where('day <=', $final);
+		$pontos->get();
+		
+		$resultado = array();
+		foreach ($pontos as $ponto)
+			{
+				
+				array_push($resultado, $ponto);
+			}
+		return $resultado;
 	}
 	
 }

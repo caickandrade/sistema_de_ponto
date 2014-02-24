@@ -12,6 +12,8 @@ class BatePonto extends CI_Controller {
 		$ident = $this->session->userdata('id_usuario');
 		$login->salvaPonto($dia, $hora, $ident);
 		
+		echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		
 	}
 	
 }

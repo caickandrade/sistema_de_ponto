@@ -110,7 +110,16 @@ class User extends DataMapper {
 			
 		}
 		
+		function pesquisaId($identificador){
+		$this->load->model("user");
+		$us = new User();
 		
+		$us->where("id",$identificador);
+		$us->get();
+		
+		return $us;
+		
+	}
 		
 	}
 	
