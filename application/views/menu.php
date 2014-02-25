@@ -116,5 +116,32 @@
   		</div>
 	</div>
 	
+	
+	<div id="modalMensagem" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-header">
+    		
+  		</div>
+  		<div class="modal-body">
+    		<ul class="nav nav-pills">
+    			<div class="navbar-form pull-left">
+  					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div id="boxtext" class="boxtext">
+  									
+  								</div>
+  							</div>
+  		</div> 
+  						
+  					</div>
+  					
+</div>
+			</ul>	
+  		</div>
+  		<div class="modal-footer">
+    		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
+  		</div>
+	</div>
+	
 	</body>
 </html>

@@ -19,28 +19,24 @@ function actions ()
 	$("#btBaterPonto").click(function(){
 		//alert("bateu o ponto");
 		//parent.location = "http://localhost/sistema_de_ponto/index.php/batePonto";
+		console.log("teste");
 		var dados = {};
 		dados.texto = $("#texto").val();
 		
 		var url = "/sistema_de_ponto/index.php/batePonto/salvaLogin";
 		
 		data =  JSON.stringify(dados);
-		
-		$.post(url, {"data":data}, function(retorno)
+		console.log("alerta");
+		/*$.post(url, {"data":data}, function(retorno)
 		{	
 			console.log(retorno);
 			if(retorno.msg == 'sucesso'){
 				$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Sucesso</h3>");
 				$(".boxtext").html("<p>Operação realizada com sucesso</p>");
-				$("#pontoModal").modal('show');
+				$("#modalMensagem").modal('show');
 				//parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
-			else{
-				$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Sucesso</h3>");
-				$(".boxtext").html("<p>"+retorno.msg+"<p>");
-				$("#pontoModal").modal('show');
-			}
-		}, "json");
+		}, "json");*/
 		
 	});
 	
