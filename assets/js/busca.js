@@ -1,9 +1,9 @@
 $(document).ready(function() {
-		activia();
+		actions();
 	});
 	
 	
-function activia(){
+function actions(){
 	
 	    $('#buscar').typeahead({
 	             name: 'buscarUser',

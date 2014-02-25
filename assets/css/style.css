@@ -76,13 +76,8 @@ body {
 }
 #busca{
 	background: #E0EDFF;
-	border-radius: 4px;
-	
+	border-radius: 4px;	
 }
-/*.twitter-typeahead{
-	
-	width: 206px;
-}*/
 #buscar{
 	margin-top: 20px;
 }
