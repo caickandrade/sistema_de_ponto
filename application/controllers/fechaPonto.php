@@ -15,13 +15,19 @@ class FechaPonto extends CI_Controller {
 		$hora = date("H:i");
 		$ident = $this->session->userdata('id_usuario');
 		
-		$login = $login->pesquisaId($ident);
+		$login = $login->pesquisaId($ident,$dia);
+		if($login->exists()){
+			$logout->fecharPonto($login->id,$dia, $hora, $ident);
 		
-		$logout->fecharPonto($login->id,$dia, $hora, $ident);
+			$login->mudaStatus($login->id);
 		
-		$login->mudaStatus($login->id);
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		}
 		
-		echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		else{
+			
+		}
+		
 	}
 	
 }
