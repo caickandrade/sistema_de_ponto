@@ -9,20 +9,22 @@ class Login extends DataMapper {
 		parent::__construct($id);
 	}
 	
-	function salvaPonto ($dia, $hora,$ident){
+	function salvaPonto ($dia, $hora,$ident,$descricao){
 		$this->load->model("login");
 		$ponto = new Login();
 		$ponto->day = $dia;
 		$ponto->startTime = $hora;
 		$ponto->users_id = $ident;
+		$ponto->description = $descricao;
 		$ponto->save();
 	}
 	
-	function pesquisaId($usuario){
+	function pesquisaId($usuario,$dia){
 		$this->load->model("login");
 		$ponto = new Login();
 		$ponto->where("users_id", $usuario);
 		$ponto->where("status",0);
+		$ponto->where("day",$dia);
 		$ponto->get();
 		return $ponto;
 	}
@@ -31,7 +33,6 @@ class Login extends DataMapper {
 		$this->load->model("login");
 		$ponto = new Login();
 		$ponto->where("id",$idLogin)->get();
-		//$ponto->status = '1';
 		$ponto->update('status',1);
 	}
 	

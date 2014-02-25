@@ -57,7 +57,7 @@
 
 	<body>
 				
-		<div id="pontoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="modalBatePonto" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
     		
   		</div>
@@ -67,11 +67,11 @@
   					<div class="container-fluid">
 						<div class="row-fluid">
 							<div class="span12">
-								<div id="boxtext">
-  									<textarea rows="7" cols="9950" placeholder="Justifique"></textarea>
+								<div id="boxtext" class="boxtext">
+  									<textarea  id='texto'  rows='7' cols='9950' placeholder='Justifique'></textarea>
   								</div>
   								<div class="botaoPonto">
-  									
+  									<button class='btn' id='btBaterPonto' data-dismiss='modal' aria-hidden='true'>Abrir Ponto</button>
   								</div>
   							</div>
   		</div> 
@@ -85,6 +85,36 @@
     		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
 	</div>	
-
+	
+	
+	<div id="modalFechaPonto" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-header">
+    		
+  		</div>
+  		<div class="modal-body">
+    		<ul class="nav nav-pills">
+    			<div class="navbar-form pull-left">
+  					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div id="boxtext" class="boxtext">
+  									<textarea  id='texto'  rows='7' cols='9950' placeholder='Justifique'></textarea>
+  								</div>
+  								<div class="botaoPonto">
+  									<button class='btn' id='btFecharPonto' data-dismiss='modal' aria-hidden='true'>Fechar Ponto</button>
+  								</div>
+  							</div>
+  		</div> 
+  						
+  					</div>
+  					
+</div>
+			</ul>	
+  		</div>
+  		<div class="modal-footer">
+    		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
+  		</div>
+	</div>
+	
 	</body>
 </html>
