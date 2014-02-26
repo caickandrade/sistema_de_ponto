@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="43" version="2.0">
+<workbench progressCount="44" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1200" x="75" y="0">
 <fastViewData fastViewLocation="1024">
@@ -41,38 +41,33 @@
 <part id="4"/>
 <part id="3"/>
 <part id="5"/>
-<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.aptana.editor.js" name="cadastro.js" partName="cadastro.js" title="cadastro.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\cadastro.js" workbook="DefaultEditorWorkbook">
+<editor id="com.aptana.editor.js" name="cadastro.js" partName="cadastro.js" title="cadastro.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\cadastro.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/cadastro.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1021" selectionTopPixel="330"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
 </editor>
-<editor id="com.aptana.editor.js" name="busca.js" partName="busca.js" title="busca.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\busca.js" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.aptana.editor.js" name="busca.js" partName="busca.js" title="busca.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\busca.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/busca.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="292" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="66" selectionOffset="171" selectionTopPixel="0"/>
 </editor>
 <editor id="com.aptana.editor.php" name="busca.php" partName="busca.php | controllers" title="busca.php | controllers" tooltip="C:\wamp\www\sistema_de_ponto\application\controllers\busca.php" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/busca.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="654" selectionTopPixel="195"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1149" selectionTopPixel="405"/>
 </editor>
 <editor id="com.aptana.editor.php" name="user.php" partName="user.php" title="user.php" tooltip="C:\wamp\www\sistema_de_ponto\application\models\user.php" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/user.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2824" selectionTopPixel="1275"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="2049" selectionTopPixel="855"/>
 </editor>
-<editor id="com.aptana.editor.php" name="busca.php" partName="busca.php" title="busca.php" tooltip="C:\wamp\www\sistema_de_ponto\application\views\busca.php" workbook="DefaultEditorWorkbook">
+<editor id="com.aptana.editor.php" name="busca.php" partName="busca.php | views" title="busca.php | views" tooltip="C:\wamp\www\sistema_de_ponto\application\views\busca.php" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/application/views/busca.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="857" selectionTopPixel="330"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="518" selectionTopPixel="315"/>
 </editor>
 <editor id="com.aptana.editor.php" name="dados.php" partName="dados.php" title="dados.php" tooltip="C:\Users\Caick\Desktop\curso html, css, php, mysql\aula nao sei q numero\dados.php" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/Users/Caick/Desktop/curso%20html,%20css,%20php,%20mysql/aula%20nao%20sei%20q%20numero/dados.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1265" selectionTopPixel="990"/>
-</editor>
-<editor id="com.aptana.editor.js" name="typeahead.js" partName="typeahead.js" title="typeahead.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\typeahead.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/typeahead.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7049" selectionTopPixel="2730"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -100,7 +95,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.aptana.editor.js" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="com.aptana.terminal.views.terminal:js" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -208,173 +203,165 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/busca.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/views/busca.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/user.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.xml" uri="file:/C:/Users/Caick/Documents/Meus%20arquivos%20recebidos/caick_dias109120313908/Histórico/lorenanassau3366702815.xml"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/all.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/chartbeat.js"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/cadastro.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/embed.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/jquery.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/store-json2-1.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/swiftype_nocode-9819fdab0a6edb7d9e19670059c26ac3.css"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/swiftype_nocode-e30be03bbd678b57bc84348ee7f99a3d.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/te.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/underscore-1.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/util.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/ga.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/comments_data/5V553zY5ry2.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/busca.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/controllers/busca.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/models/user.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/wamp/www/sistema_de_ponto/application/views/busca.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/C:/Users/Caick/Desktop/curso%20html,%20css,%20php,%20mysql/aula%20nao%20sei%20q%20numero/dados.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/typeahead.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/jquery.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/C:/wamp/www/sistema_de_ponto/assets/css/style.css"/>
 </editors>
-<item historyLabel="busca.php | controllers" index="0">
-<position info="not_deleted" x="745" y="61"/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="992" y="0"/>
 </item>
-<item historyLabel="busca.php | controllers" index="0">
-<position info="not_deleted" x="1149" y="0"/>
+<item historyLabel="dados.php" index="5">
+<position info="not_deleted" x="1265" y="0"/>
 </item>
-<item historyLabel="busca.php | controllers" index="0">
-<position info="not_deleted" x="1546" y="0"/>
+<item historyLabel="typeahead.js" index="6">
+<position info="not_deleted" x="7049" y="0"/>
 </item>
-<item historyLabel="user.php" index="2">
-<position info="not_deleted" x="2824" y="0"/>
+<item historyLabel="dados.php" index="5">
+<position info="not_deleted" x="1265" y="0"/>
 </item>
-<item historyLabel="busca.php | controllers" index="0">
-<position info="not_deleted" x="1546" y="0"/>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="1979" y="0"/>
 </item>
-<item historyLabel="busca.php | views" index="1">
-<position info="not_deleted" x="924" y="0"/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="992" y="0"/>
 </item>
-<item historyLabel="busca.php | controllers" index="0">
-<position info="not_deleted" x="1546" y="0"/>
-</item>
-<item historyLabel="busca.php | controllers" index="0">
-<position/>
-</item>
-<item historyLabel="busca.php | controllers" index="0">
+<item historyLabel="busca.php | controllers" index="2">
 <position info="not_deleted" x="654" y="0"/>
 </item>
-<item historyLabel="busca.php" index="1">
-<position info="not_deleted" x="924" y="0"/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="1022" y="0"/>
 </item>
-<item historyLabel="lorenanassau3366702815.xml" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="busca.php | controllers" index="2">
+<position info="not_deleted" x="115" y="0"/>
 </item>
-<item historyLabel="all.js" index="4">
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="1022" y="0"/>
+</item>
+<item historyLabel="jquery.js" index="7">
+<position info="not_deleted" x="93113" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="291" y="0"/>
+</item>
+<item historyLabel="busca.php | controllers" index="2">
+<position info="not_deleted" x="1554" y="0"/>
+</item>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="597" y="0"/>
+</item>
+<item historyLabel="dados.php" index="5">
+<position info="not_deleted" x="895" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="597" y="0"/>
+</item>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="597" y="0"/>
+</item>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="597" y="0"/>
+</item>
+<item historyLabel="busca.php | controllers" index="2">
+<position info="not_deleted" x="1554" y="0"/>
+</item>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="597" y="0"/>
+</item>
+<item historyLabel="dados.php" index="5">
+<position info="not_deleted" x="895" y="0"/>
+</item>
+<item historyLabel="cadastro.js" index="0">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="dados.php" index="5">
+<position info="not_deleted" x="895" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="597" y="0"/>
+</item>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="busca.php | controllers" index="2">
+<position info="not_deleted" x="1557" y="0"/>
+</item>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="8" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="796" y="0"/>
+</item>
+<item historyLabel="busca.js" index="1">
+<position info="not_deleted" x="146" y="0"/>
+</item>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="801" y="0"/>
+</item>
+<item historyLabel="style.css" index="8">
 <position/>
 </item>
-<item historyLabel="chartbeat.js" index="5">
-<position/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="801" y="0"/>
 </item>
-<item historyLabel="all.js" index="4">
-<position/>
+<item historyLabel="style.css" index="8">
+<position info="not_deleted" x="1198" y="183"/>
 </item>
-<item historyLabel="lorenanassau3366702815.xml" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="style.css" index="8">
+<position info="not_deleted" x="8" y="0"/>
 </item>
-<item historyLabel="cadastro.js" index="6">
-<position info="not_deleted" x="1020" y="0"/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="554" y="0"/>
 </item>
-<item historyLabel="all.js" index="4">
-<position/>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="2049" y="7"/>
 </item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
+<item historyLabel="dados.php" index="5">
+<position info="not_deleted" x="5" y="0"/>
 </item>
-<item historyLabel="embed.js" index="7">
-<position/>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="2049" y="7"/>
 </item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="688" y="0"/>
 </item>
-<item historyLabel="jquery.js" index="8">
-<position/>
+<item historyLabel="user.php" index="3">
+<position info="not_deleted" x="2049" y="7"/>
 </item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="688" y="0"/>
 </item>
-<item historyLabel="store-json2-1.js" index="9">
-<position/>
+<item historyLabel="busca.php | controllers" index="2">
+<position info="not_deleted" x="1149" y="0"/>
 </item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="33" y="0"/>
 </item>
-<item historyLabel="swiftype_nocode-9819fdab0a6edb7d9e19670059c26ac3.css" index="10">
-<position info="not_deleted" x="36721" y="0"/>
+<item historyLabel="busca.js" index="1">
+<position info="not_deleted" x="80" y="0"/>
 </item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
+<item historyLabel="busca.php | views" index="4">
+<position info="not_deleted" x="518" y="0"/>
 </item>
-<item historyLabel="swiftype_nocode-e30be03bbd678b57bc84348ee7f99a3d.js" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="te.js" index="12">
-<position info="not_deleted" x="73" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="underscore-1.js" index="13">
-<position info="not_deleted" x="1436" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="util.js" index="14">
-<position/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="util.js" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="store-json2-1.js" index="9">
-<position info="not_deleted" x="5448" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="jquery.js" index="8">
-<position info="not_deleted" x="17413" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="ga.js" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="embed.js" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="chartbeat.js" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="embed.js" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="all.js" index="4">
-<position info="not_deleted" x="153661" y="0"/>
-</item>
-<item historyLabel="cadastro.js" index="6">
-<position/>
-</item>
-<item historyLabel="5V553zY5ry2.js" index="16">
-<position info="not_deleted" x="51523" y="0"/>
-</item>
-<item active="true" historyLabel="cadastro.js" index="6">
-<position/>
+<item active="true" historyLabel="busca.js" index="1">
+<position info="not_deleted" x="80" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -393,6 +380,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" name="style.css" tooltip="C:\wamp\www\sistema_de_ponto\assets\css\style.css">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/assets/css/style.css"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="jquery.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\jquery.js">
+<persistable uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/jquery.js"/>
+</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="5V553zY5ry2.js" tooltip="C:\Users\Caick\Desktop\Super-heróis - Trivia - Racha Cuca_files\comments_data\5V553zY5ry2.js">
 <persistable uri="file:/C:/Users/Caick/Desktop/Super-heróis%20-%20Trivia%20-%20Racha%20Cuca_files/comments_data/5V553zY5ry2.js"/>
 </file>
@@ -431,12 +424,6 @@
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.xml" name="lorenanassau3366702815.xml" tooltip="C:\Users\Caick\Documents\Meus arquivos recebidos\caick_dias109120313908\Histórico\lorenanassau3366702815.xml">
 <persistable uri="file:/C:/Users/Caick/Documents/Meus%20arquivos%20recebidos/caick_dias109120313908/Histórico/lorenanassau3366702815.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="typeahead.js" tooltip="C:\wamp\www\sistema_de_ponto\assets\js\typeahead.js">
-<persistable uri="file:/C:/wamp/www/sistema_de_ponto/assets/js/typeahead.js"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="dados.php" tooltip="C:\Users\Caick\Desktop\curso html, css, php, mysql\aula nao sei q numero\dados.php">
-<persistable uri="file:/C:/Users/Caick/Desktop/curso%20html,%20css,%20php,%20mysql/aula%20nao%20sei%20q%20numero/dados.php"/>
 </file>
 </mruList>
 </workbench>
