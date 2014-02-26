@@ -16,9 +16,7 @@ function actions ()
 		$("#modalFechaPonto").modal('show');
 	});
 	
-	$("#btBaterPonto").click(function(){
-		//alert("bateu o ponto");
-		//parent.location = "http://localhost/sistema_de_ponto/index.php/batePonto";
+	$("#btBatePonto").click(function(){
 		console.log("teste");
 		var dados = {};
 		dados.texto = $("#texto").val();
@@ -27,7 +25,8 @@ function actions ()
 		
 		data =  JSON.stringify(dados);
 		console.log("alerta");
-		/*$.post(url, {"data":data}, function(retorno)
+		
+		$.post(url, {"data":data}, function(retorno)
 		{	
 			console.log(retorno);
 			if(retorno.msg == 'sucesso'){
@@ -36,7 +35,7 @@ function actions ()
 				$("#modalMensagem").modal('show');
 				//parent.location = "http://localhost/sistema_de_ponto/index.php/home";
 			}
-		}, "json");*/
+		}, "json");
 		
 	});
 	
