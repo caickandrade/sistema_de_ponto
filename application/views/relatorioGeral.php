@@ -4,7 +4,7 @@
 
 	<head>
 		<title>Relatório Geral</title>
-		<script src = "<?php echo base_url('/assets/js/relatorioGeral.js')?>" type="text/javascript"></script>
+		<script src = "<?php echo base_url('/assets/js/relatorioGeral.js')?>" ></script>
 	</head>
 	
 	<div class="container">

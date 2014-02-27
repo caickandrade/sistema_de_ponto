@@ -75,6 +75,7 @@ class Relatorios extends CI_Controller {
 		$contData = 0;
 		$dados[$contData][0] = $logins[0]->day;
 		$preenche=2;
+		$somaIntervalos = 0;
 		for($i=0;$i<$contador;$i++){
 			
 			if(strtotime($dados[$contData][0])!=strtotime($logins[$i]->day)){
@@ -91,15 +92,18 @@ class Relatorios extends CI_Controller {
 			$item->entrada = $logins[$i]->startTime;
 			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
-			//$somaIntervalos = date("H:i",$somaIntervalos + $intervalo);
+			$somaIntervalos = $somaIntervalos + $intervalo;
+			echo $somaIntervalos;
+			echo "///";
 			$item->diferenca = date("H:i",$intervalo);
-			//echo $intervalo."///".$data[$contData][0]."-----";
-			//$data[$contData][1] = strtotime($data[$contData][1]) + strtotime($intervalo);
+			$data[$contData][1] = date("H:i",$somaIntervalos);
 			$dados[$contData][$preenche] = $item;
-			//echo $contData."  ".$preenche."///";
+			//echo $data[$contData][1];
+			//echo $somaIntervalos;
+			//echo "///";
 			$preenche++;
 		}
-		echo $dados[0][0]."---".(string)$dados[0][2]->startTime;
+		//echo $dados[0][0]."---".(string)$dados[0][2]->startTime;
 		//echo json_encode($dados);
 	}
 	

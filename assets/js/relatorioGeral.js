@@ -18,7 +18,7 @@ function acaoRelatorioGeral ()
 		
 		$.post(url, {"data":data}, function(retorno)
 		{	
-			console.log(retorno.);
+			console.log(retorno);
 		});
 		
 	});
