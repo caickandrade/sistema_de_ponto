@@ -2,9 +2,9 @@ $(document).ready(function()
 {
 	$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Relatório Geral</h3>");
 	$("#relatorioGeralModal").modal('show');
-	actions();
+	acaoRelatorioGeral();
 });
-function actions () 
+function acaoRelatorioGeral () 
 {
 	
 	$('#geraRelatorio').click(function(){
@@ -15,8 +15,6 @@ function actions ()
 		var data = JSON.stringify(data);
 		
 		var url = "http://localhost/sistema_de_ponto/index.php/relatorios/criaRelatorioGeral";
-		
-		
 		
 		$.post(url, {"data":data}, function(retorno)
 		{	

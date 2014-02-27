@@ -1,12 +1,11 @@
 <?php $this->load->view('header')
 
 ?>
-<head>
+
 
 	<title>Busca</title>
 	
-	<script src = "<?php echo base_url('/assets/js/busca.js')?>" ></script>
-	<script src = "<?php echo base_url('/assets/js/typeahead.js')?>"></script>
+	
 
 </head>
 
