@@ -93,10 +93,12 @@ class Relatorios extends CI_Controller {
 			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
 			$somaIntervalos = $somaIntervalos + $intervalo;
-			echo $somaIntervalos;
-			echo "///";
+			$conversor = date("H:i",$somaIntervalos);
+			//echo $conversor;
+			//echo "///";
 			$item->diferenca = date("H:i",$intervalo);
-			$data[$contData][1] = date("H:i",$somaIntervalos);
+			//echo $item->diferenca;
+			//$data[$contData][1] = $conversor;
 			$dados[$contData][$preenche] = $item;
 			//echo $data[$contData][1];
 			//echo $somaIntervalos;
