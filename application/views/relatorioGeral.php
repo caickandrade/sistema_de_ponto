@@ -7,13 +7,11 @@
 		<script src = "<?php echo base_url('/assets/js/relatorioGeral.js')?>" type="text/javascript"></script>
 	</head>
 	
+	<div class="container">
+		<?php $this->load->view('menu') ?>
+	</div>
+	
 	<body>
-		
-		<!--
-		<div class="container">
-			<?php $this->load->view('menu') ?>
-		</div>
-		-->
 		
 		<!-- modal de relatorio -->
 		<div id="relatorioGeralModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

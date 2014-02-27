@@ -71,16 +71,16 @@ class Relatorios extends CI_Controller {
 		$logouts = $this->buscaSaidaId($logins,$contador);
 		$usuarios = $this->buscaUserLogin($logins);
 		
-		$data = array();
+		$dados = array();
 		$contData = 0;
-		$data[$contData][0] = $logins[0]->day;
+		$dados[$contData][0] = $logins[0]->day;
 		$preenche=2;
 		for($i=0;$i<$contador;$i++){
 			
-			if(strtotime($data[$contData][0])!=strtotime($logins[$i]->day)){
+			if(strtotime($dados[$contData][0])!=strtotime($logins[$i]->day)){
 				$contData=$contData+1;
 				$preenche=2;
-				$data[$contData][0] = $logins[$i]->day;
+				$dados[$contData][0] = $logins[$i]->day;
 				$somaIntervalos = 0;
 			}
 			
@@ -91,15 +91,16 @@ class Relatorios extends CI_Controller {
 			$item->entrada = $logins[$i]->startTime;
 			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
-			$somaIntervalos = date("H:i",$somaIntervalos + $intervalo);
+			//$somaIntervalos = date("H:i",$somaIntervalos + $intervalo);
 			$item->diferenca = date("H:i",$intervalo);
-			echo $somaIntervalos."///".$data[$contData][0]."-----";
+			//echo $intervalo."///".$data[$contData][0]."-----";
 			//$data[$contData][1] = strtotime($data[$contData][1]) + strtotime($intervalo);
-			$data[$contData][$preenche] = $item;
+			$dados[$contData][$preenche] = $item;
 			//echo $contData."  ".$preenche."///";
 			$preenche++;
 		}
-	
+		echo $dados[0][0]."---".(string)$dados[0][2]->startTime;
+		//echo json_encode($dados);
 	}
 	
 }

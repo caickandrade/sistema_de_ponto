@@ -1,7 +1,6 @@
 <html>
-	<head>  
 	
-	
+		
   	</head>
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -90,16 +89,16 @@
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 				×
 			</button>
-			<h3 id="myModalLabel">Fecha Ponto</h3>
+			<h3 id="myModalLabel">Fechar Ponto</h3>
 		</div>
 		<div class="modal-body">
 			
 			<div id="boxtext" class="boxtext">
-  				<textarea  id='texto'  rows='7' cols='9950' placeholder='Justifique'></textarea>
+  				<textarea  id='tex'  rows='7' cols='9950' placeholder='Justifique'></textarea>
   			</div>
 			
 			<button class="btn" id="btFechaPonto" data-dismiss="modal" aria-hidden="true">
-				Fecha Ponto
+				Fechar Ponto
 			</button>
 
 		</div>
@@ -120,7 +119,7 @@
   					<div class="container-fluid">
 						<div class="row-fluid">
 							<div class="span12">
-								<div id="boxtext" class="boxtext">
+								<div id="mensagem" class="mensagem">
   									
   								</div>
   							</div>
