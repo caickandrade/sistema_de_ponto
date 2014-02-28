@@ -60,15 +60,9 @@ class Relatorios extends CI_Controller {
 		return $usuario;
 	}
 	
-<<<<<<< HEAD
-
-	public function relatorioGeral(){
-=======
-	
 	
 	public function criaRelatorioGeral(){
->>>>>>> cba4d609ebae8f77c6b6fc0336790d4beae63491
-		
+		echo "teste";
 		$data = json_decode($this->input->post('data'));
 		
 		$contador = 0;
