@@ -1,11 +1,11 @@
-$(document).ready(function() {
-		activia();
+$(document).ready(function() {	
+		actions();
 	});
 	
 	
-function activia(){
+function actions(){
 	
-	    $('#buscar').typeahead({
+	    $('#procurar').typeahead({	    
 	             name: 'buscarUser',
 	             remote: '/sistema_de_ponto/index.php/busca/getUserAutoComplete?query=%QUERY',
 	             minLenght: 3,

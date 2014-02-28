@@ -4,6 +4,14 @@ class FechaPonto extends CI_Controller {
 
 	public function index()
 	{
+		
+		
+	}
+	
+	public function salvaLogout(){
+		
+		$dados = json_decode($this->input->post('data'));
+		
 		$this->load->model("logout");
 		$this->load->model("login");
 		
@@ -14,14 +22,27 @@ class FechaPonto extends CI_Controller {
 		$dia = date("Y-m-d");
 		$hora = date("H:i");
 		$ident = $this->session->userdata('id_usuario');
+		$descricao = $dados->texto;
 		
-		$login = $login->pesquisaId($ident);
+		$login = $login->pesquisaId($ident,$dia);
+		if($login->exists()){
+			$logout->fecharPonto($login->id,$dia, $hora, $ident,$descricao);
 		
-		$logout->fecharPonto($login->id,$dia, $hora, $ident);
+			$login->mudaStatus($login->id);
 		
-		$login->mudaStatus($login->id);
+			$response = array(
+					"msg" => "sucesso"
+			);
+			//echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		}
 		
-		echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		else{
+			$response = array(
+					"msg" => "Erro! Nenhum se encontra aberto hoje"
+			);
+		}
+				
+		echo json_encode($response);
 	}
 	
 }

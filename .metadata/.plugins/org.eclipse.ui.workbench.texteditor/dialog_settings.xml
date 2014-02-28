@@ -5,13 +5,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="wholeword"/>
-		<item value="formu" key="selection"/>
+		<item value="getUserTable" key="selection"/>
 		<list key="findhistory">
-			<item value="formu"/>
-			<item value="HEAD"/>
-			<item value="$newuser"/>
-			<item value="$newaddress"/>
-			<item value="$newAddress"/>
+			<item value="getUserTable"/>
+			<item value="getUser"/>
+			<item value="busca"/>
+			<item value="conteudo"/>
+			<item value="buscar"/>
+			<item value="pesquisar"/>
+			<item value="getElementById"/>
+			<item value="res"/>
 		</list>
 	</section>
 </section>

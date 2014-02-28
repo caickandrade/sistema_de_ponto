@@ -76,13 +76,8 @@ body {
 }
 #busca{
 	background: #E0EDFF;
-	border-radius: 4px;
-	
+	border-radius: 4px;	
 }
-/*.twitter-typeahead{
-	
-	width: 206px;
-}*/
 #buscar{
 	margin-top: 20px;
 }
@@ -105,3 +100,19 @@ body {
 	overflow: 200%;
 	vertical-align: 200%;
 }
+
+.tt-dropdown-menu
+{
+	background:#FFF;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius:8px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);	
+	padding: 3px 0;
+	width: 205px;
+}
+
+.tt-suggestion:hover 
+{
+	background:#B2D1F0;
+}
+	

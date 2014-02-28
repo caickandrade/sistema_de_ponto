@@ -1,7 +1,6 @@
 <html>
-	<head>  
-	<script src = "<?php echo base_url('/assets/js/Ponto.js')?>" type="text/javascript"></script>
-	<script src = "<?php echo base_url('/assets/js/relatorio.js')?>" type="text/javascript"></script>
+	
+		
   	</head>
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -38,8 +37,8 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt"></i>Relatórios<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
-								<a id="especifico" href="#">Relatório Específico</a>
-								<a id="geral" href="#">Relatório Geral</a>
+								<a id="especifico" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioEspecifico">Relatório Específico</a>
+								<a id="geral" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioGeral">Relatório Geral</a>
 								<!--<a href="#">Horas Semanais</a>-->
 							</li>
 						</ul>
@@ -57,7 +56,60 @@
 
 	<body>
 				
-		<div id="pontoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<!-- Modal -->
+	<div id="modalBatePonto" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				×
+			</button>
+			<h3 id="myModalLabel">Abrir Ponto</h3>
+		</div>
+		<div class="modal-body">
+			
+			<div id="boxtext" class="boxtext">
+  				<textarea  id='texto'  rows='7' cols='9950' placeholder='Justifique'></textarea>
+  			</div>
+			
+			<button class="btn" id="btBatePonto" data-dismiss="modal" aria-hidden="true">
+				Abrir Ponto
+			</button>
+
+		</div>
+		<div class="modal-footer">
+			<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">
+				Sair
+			</button>
+		</div>
+	</div>	
+	
+	
+		<!-- Modal -->
+	<div id="modalFechaPonto" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				×
+			</button>
+			<h3 id="myModalLabel">Fechar Ponto</h3>
+		</div>
+		<div class="modal-body">
+			
+			<div id="boxtext" class="boxtext">
+  				<textarea  id='tex'  rows='7' cols='9950' placeholder='Justifique'></textarea>
+  			</div>
+			
+			<button class="btn" id="btFechaPonto" data-dismiss="modal" aria-hidden="true">
+				Fechar Ponto
+			</button>
+
+		</div>
+		<div class="modal-footer">
+			<button class="btn" id="btModal" data-dismiss="modal" aria-hidden="true">
+				Sair
+			</button>
+		</div>
+	</div>	
+	
+	<div id="modalMensagem" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-header">
     		
   		</div>
@@ -67,10 +119,7 @@
   					<div class="container-fluid">
 						<div class="row-fluid">
 							<div class="span12">
-								<div id="boxtext">
-  									<textarea rows="7" cols="9950" placeholder="Justifique"></textarea>
-  								</div>
-  								<div class="botaoPonto">
+								<div id="mensagem" class="mensagem">
   									
   								</div>
   							</div>
@@ -84,6 +133,7 @@
   		<div class="modal-footer">
     		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
+<<<<<<< HEAD
 	</div>	
 	
 	<!-- modal de relatorio -->
@@ -114,8 +164,9 @@
   		<div class="modal-footer">
     		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
+=======
+>>>>>>> cba4d609ebae8f77c6b6fc0336790d4beae63491
 	</div>
-		
-
+	
 	</body>
 </html>

@@ -1,12 +1,11 @@
 <?php $this->load->view('header')
 
 ?>
-<head>
+
 
 	<title>Busca</title>
 	
-	<script src = "<?php echo base_url('/assets/js/busca.js')?>" ></script>
-	<!-- <script src = "<?php echo base_url('/assets/js/typeahead.min.js')?>"></script> -->
+	
 
 </head>
 
@@ -22,14 +21,15 @@
 			<div class="span9">
 				<?php $this->load->view('menu')	?>
 			</div>
+
 			<div class="span9">				
 					<div id="busca">
 						<div id="conteudo">
 							<form method="GET" action = "/sistema_de_ponto/index.php/busca/getUserTable">
 								<label for="consulta">Buscar:</label>
-									<input type="text" id="buscar" name="consulta" maxlength="255" required />
-									<input type="submit" value="Buscar" />
-							</form>
+								<input type="text" id="procurar" name="consulta" maxlength="255" required />
+								<input type="submit" value="Buscar" />
+							</form>							
 						</div>
 					</div>
 			</div>

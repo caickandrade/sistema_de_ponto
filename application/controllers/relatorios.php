@@ -4,7 +4,15 @@ class Relatorios extends CI_Controller {
 	
 	public function index()
 	{
-		
+		//$this->load->view("relatorio");
+	}
+	
+	public function relatorioGeral(){
+		$this->load->view("relatorioGeral");
+	}
+	
+	public function relatorioEspecifico(){
+		$this->load->view("relatorioEspecifico");
 	}
 	
 	public function buscaEntradaData($inicio,$termino){
@@ -52,8 +60,14 @@ class Relatorios extends CI_Controller {
 		return $usuario;
 	}
 	
+<<<<<<< HEAD
 
 	public function relatorioGeral(){
+=======
+	
+	
+	public function criaRelatorioGeral(){
+>>>>>>> cba4d609ebae8f77c6b6fc0336790d4beae63491
 		
 		$data = json_decode($this->input->post('data'));
 		
@@ -62,16 +76,18 @@ class Relatorios extends CI_Controller {
 		$logouts = $this->buscaSaidaId($logins,$contador);
 		$usuarios = $this->buscaUserLogin($logins);
 		
-		$data = array();
+		$dados = array();
 		$contData = 0;
-		$data[$contData][0] = $logins[0]->day;
-		$preenche=1;
+		$dados[$contData][0] = $logins[0]->day;
+		$preenche=2;
+		$somaIntervalos = 0;
 		for($i=0;$i<$contador;$i++){
 			
-			if(strtotime($data[$contData][0])!=strtotime($logins[$i]->day)){
+			if(strtotime($dados[$contData][0])!=strtotime($logins[$i]->day)){
 				$contData=$contData+1;
-				$preenche=1;
-				$data[$contData][0] = $logins[$i]->day;
+				$preenche=2;
+				$dados[$contData][0] = $logins[$i]->day;
+				$somaIntervalos = 0;
 			}
 			
 			$item = new stdClass;
@@ -81,12 +97,21 @@ class Relatorios extends CI_Controller {
 			$item->entrada = $logins[$i]->startTime;
 			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+			$somaIntervalos = $somaIntervalos + $intervalo;
+			$conversor = date("H:i",$somaIntervalos);
+			//echo $conversor;
+			//echo "///";
 			$item->diferenca = date("H:i",$intervalo);
-				
-			$data[$contData][$preenche] = $item;
-			echo $contData."  ".$preenche."///";
+			//echo $item->diferenca;
+			//$data[$contData][1] = $conversor;
+			$dados[$contData][$preenche] = $item;
+			//echo $data[$contData][1];
+			//echo $somaIntervalos;
+			//echo "///";
 			$preenche++;
 		}
+		//echo $dados[0][0]."---".(string)$dados[0][2]->startTime;
+		//echo json_encode($dados);
 	}
 	
 }
