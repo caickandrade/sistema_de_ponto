@@ -133,6 +133,39 @@
   		<div class="modal-footer">
     		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
+<<<<<<< HEAD
+	</div>	
+	
+	<!-- modal de relatorio -->
+	<div id="relatorioModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-header">
+  		
+  		</div>
+  		<div class="modal-body">
+    		<ul class="nav nav-pills">
+    			<div class="navbar-form pull-left">
+  					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="relatorioForm" id="relatorioForm">
+									<label for="dataInicio">Data de Início</label><input id="dataInicio" type="date" />
+									<label for="dataTermino">Data de Término</label><input id="dataTermino" type="date" />
+								</div>
+								<p></p>
+								<button class='btn' id='geraRelatorio' data-dismiss='modal' aria-hidden='true'href="http://localhost/sistema_de_ponto/index.php/cadastro">Gerar Relatório</button>
+  							</div>
+  						</div> 
+  						
+  					</div>
+  					
+				</div>
+			</ul>	
+  		</div>
+  		<div class="modal-footer">
+    		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
+  		</div>
+=======
+>>>>>>> cba4d609ebae8f77c6b6fc0336790d4beae63491
 	</div>
 	
 	</body>
