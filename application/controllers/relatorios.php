@@ -52,8 +52,7 @@ class Relatorios extends CI_Controller {
 		return $usuario;
 	}
 	
-	
-	
+
 	public function relatorioGeral(){
 		
 		$data = json_decode($this->input->post('data'));

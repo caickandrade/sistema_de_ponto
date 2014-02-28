@@ -101,7 +101,8 @@
 									<label for="dataInicio">Data de Início</label><input id="dataInicio" type="date" />
 									<label for="dataTermino">Data de Término</label><input id="dataTermino" type="date" />
 								</div>
-								<button class='btn' id='geraRelatorio' data-dismiss='modal' aria-hidden='true'>Gerar Relatório</button>
+								<p></p>
+								<button class='btn' id='geraRelatorio' data-dismiss='modal' aria-hidden='true'href="http://localhost/sistema_de_ponto/index.php/cadastro">Gerar Relatório</button>
   							</div>
   						</div> 
   						
