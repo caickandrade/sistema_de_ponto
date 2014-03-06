@@ -13,6 +13,14 @@
 	
 	<body>
 		
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span5">
+					adanadanadanadanadanadanadanadanadanadanadanadanadanadanadanadanada
+				</div>
+			</div>
+		</div>
+		
 		<!-- modal de relatorio -->
 		<div id="relatorioGeralModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-header">
@@ -29,6 +37,7 @@
 										<input id="dataInicio" type="date" />
 										<label for="dataTermino">Data de Término</label>
 										<input id="dataTermino" type="date" />
+										
 									</div>
 									<button class='btn' id='geraRelatorio' data-dismiss='modal' aria-hidden='true'>
 										Gerar Relatório
