@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <title>Sistema de Ponto</title>
 	<script src = "<?php echo base_url('/assets/js/login.js')?>" type="text/javascript"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
 
   <body>
