@@ -2,6 +2,8 @@
 ?>
 
 	<title>Dados Pessoais</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 	<!-- <link href="C:/wamp/www/sistema_de_ponto/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 	<script src = "<?php echo base_url('/assets/js/cadastro.js')?>" type="text/javascript"></script>
 	<script src = "<?php echo base_url('/assets/js/jquery-ui.js')?>" type="text/javascript"></script>
