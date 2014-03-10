@@ -4,6 +4,8 @@
 
 	<head>
 		<title>Relatório Geral</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<script src = "<?php echo base_url('/assets/js/relatorioGeral.js')?>" ></script>
 	</head>
 	
@@ -11,12 +13,14 @@
 		<?php $this->load->view('menu') ?>
 	</div>
 	
-	<body>
+	<body> 
 		
 		<div class="container">
 			<div class="row-fluid">
 				<div class="span5">
-					adanadanadanadanadanadanadanadanadanadanadanadanadanadanadanadanada
+					
+
+
 				</div>
 			</div>
 		</div>
