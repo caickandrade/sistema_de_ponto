@@ -54,4 +54,23 @@ class Login extends DataMapper {
 		return $resultado;
 	}
 	
+	function pesquisaDataEspecifica($id, $inicial, $final){
+		$this->load->model("login");
+		$pontos = new Login();
+		
+		$pontos->where("status",1);
+		$pontos->where('day >=', $inicial);
+		$pontos->where('day <=', $final);
+		$pontos->where('users_id', $id);
+		$pontos->get();
+		
+		$resultado = array();
+		foreach ($pontos as $ponto)
+			{
+				
+				array_push($resultado, $ponto);
+			}
+		return $resultado;
+	}
+	
 }

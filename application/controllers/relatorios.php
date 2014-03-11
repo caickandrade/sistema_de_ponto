@@ -115,4 +115,77 @@ class Relatorios extends CI_Controller {
 		echo json_encode($dados);
 	}
 	
+	
+	public function buscaEntradaEspecifica($id,$inicio,$termino){
+		$this->load->model("login");		
+		$login = new Login();
+		
+		$valor = $login->pesquisaDataEspecifica($id,$inicio, $termino);
+		
+		return $valor;
+	}
+	
+	
+	public function criaRelatorioEspecifico(){
+		
+		$data = json_decode($this->input->post('data'));
+		
+		$this->load->model("user");
+		$usuario = new User();
+		
+		$usuario = $usuario->pesquisaId($data->id);
+		
+		$contador = 0;
+		$logins = $this->buscaEntradaEspecifica($data->id,$data->inicio, $data->termino);
+		$logouts = $this->buscaSaidaId($logins,$contador);
+		
+		$dados = array();
+		$contData = 0;
+		$dados[$contData][0] = $logins[0]->day;
+		
+		//$dados[$contData][1] = 'as';
+		$preenche=2;
+		$somaIntervalos = 0;
+		
+		echo $usuario->name;
+		echo $logins[0]->startTime;
+		echo $logouts[0]->endTime;
+		
+		echo $contador;
+		/*
+		for($i=0;$i<$contador;$i++){
+			
+			if(strtotime($dados[$contData][0])!=strtotime($logins[$i]->day)){
+				$dados[$contData][1] = $conversor;
+				$contData=$contData+1;
+				$preenche=2;
+				$dados[$contData][0] = $logins[$i]->day;
+				//$dados[$contData][1] = 'as';
+				
+				$somaIntervalos = 0;
+			}
+			//echo "///";
+			$item = new stdClass;
+				
+			$item->id = $usuarios[$i]->id;
+			$item->name = $usuarios[$i]->name;
+			$item->entrada = $logins[$i]->startTime;
+			$item->saida = $logouts[$i]->endTime;
+			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+			$somaIntervalos = $somaIntervalos + $intervalo;
+			$conversor = date("H:i",$somaIntervalos);
+			//echo $item->entrada;
+			//echo $conversor;
+			//echo "///";
+			$item->diferenca = date("H:i",$intervalo);
+			//echo $item->diferenca;
+			
+			$dados[$contData][$preenche] = $item;
+			
+			$preenche++;
+		}
+		$dados[$contData][1] = $conversor;
+		echo json_encode($dados);*/
+	}
+	
 }
