@@ -26,6 +26,7 @@
 							<div class="progress progress-success">
   								<div class="bar" style="width: 40%"></div>
 							</div>
+							
 							<span class="label label-success"><div id="reducao">..........</div></span><label id="comentario">Horas trabalhadas </label>
 					</div>	
 
