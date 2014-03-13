@@ -1,16 +1,19 @@
 $(document).ready(function()
 {
-	$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Relatório Geral</h3>");
-	$("#relatorioGeralModal").modal('show');
+			
 	acaoRelatorioGeral();
 });
-function acaoRelatorioGeral () 
+function acaoRelatorioGeral() 
 {
+
+	$(".modal-header").html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h3 id='myModalLabel'>Relatório Geral</h3>");
+	$("#relatorioGeralModal").modal('show');
 	
-	$('#geraRelatorio').click(function(){
+	$('#geraRelatorioGeral').click(function(){
+		
 		var data = {};
-		data.inicio = $("#dataInicio").val();
-		data.termino = $("#dataTermino").val();
+		data.inicio = $("#dInicio").val();
+		data.termino = $("#dTermino").val();
 		
 		var data = JSON.stringify(data);
 		

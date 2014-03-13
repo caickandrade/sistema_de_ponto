@@ -46,13 +46,14 @@
 							<div class="row-fluid">
 								<div class="span12">
 									<div class="relatorioForm" id="relatorioForm">
-										<label for="dataInicio">Data de Início</label>
-										<input id="dataInicio" type="date" />
-										<label for="dataTermino">Data de Término</label>
-										<input id="dataTermino" type="date" />
-										
+
+										<label for="dInicio">Data de Início</label>
+										<input id="dInicio" type="date" />
+										<label for="dTermino">Data de Término</label>
+										<input id="dTermino" type="date" />
+
 									</div>
-									<button class='btn' id='geraRelatorio' data-dismiss='modal' aria-hidden='true'>
+									<button class='btn' id='geraRelatorioGeral' data-dismiss='modal' aria-hidden='true'>
 										Gerar Relatório
 									</button>
 								</div>
