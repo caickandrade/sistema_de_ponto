@@ -17,9 +17,18 @@
 		
 		<div class="container">
 			<div class="row-fluid">
-				<div class="span5">
+				<div class="span12">
 					
-
+					<div id="cadastro">
+						
+							<label class="control-label">Gráfico do Relatório Geral</label>
+							
+							<div class="progress progress-success">
+  								<div class="bar" style="width: 40%"></div>
+							</div>
+							
+							<span class="label label-success"><div id="reducao">..........</div></span><label id="comentario">Horas trabalhadas </label>
+					</div>	
 
 				</div>
 			</div>
