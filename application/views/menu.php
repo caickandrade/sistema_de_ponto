@@ -39,6 +39,7 @@
 							<li>
 								<a id="especifico" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioEspecifico">Relatório Específico</a>
 								<a id="geral" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioGeral">Relatório Geral</a>
+								<a id="dia" href="http://localhost/sistema_de_ponto/index.php/relatorios/relatorioDia">Relatório por Dia</a>
 								<!--<a href="#">Horas Semanais</a>-->
 							</li>
 						</ul>
