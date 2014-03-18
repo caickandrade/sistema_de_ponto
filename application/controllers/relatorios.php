@@ -164,22 +164,31 @@ class Relatorios extends CI_Controller {
 		
 		$data = json_decode($this->input->post('data'));
 		
-		//$usuario = $usuario->pesquisaId($data->id);
+		
 		$contador = 0;
-		$logins = $this->buscaEntradaData($data->Dia, $data->Dia);
+		$logins = $this->buscaEntradaData($data->dia, $data->dia);
 		$logouts = $this->buscaSaidaId($logins,$contador);
 		$usuarios = $this->buscaUserLogin($logins);
+		
+		echo $data->dia;
 		
 		$dados = array();
 		
 		$dado[0] = $data->Dia;
-		
+		$vet[];
+		$achou = 0;
 		for($i=0;$i<$contador;$i++){
-			
+			for($c=$i;$c>0;$c--){
+				if($usuarios[$i]->id == $usuarios[$c]->id){
+					$achou = 1;
+				}
+				//restringir o caso d 2 pontos em um dia só, tratar como uma só carga horária
+			}
+			//if(achou==0)
 			$item = new stdClass;
 			
-			$item->entrada = $usuarios[$i]->name;
-			$item->entrada = $logins[$i]->startTime;
+			$vet[$i]=$usuario[$i]->id;
+			$item->nome = $usuarios[$i]->name;
 			$item->entrada = $logins[$i]->startTime;
 			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
