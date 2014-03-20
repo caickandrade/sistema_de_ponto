@@ -13,7 +13,7 @@ function acaoRelatorioDia()
 		
 		var data = {};
 		data.dia = $("#Dia").val();
-		alert(data.dia);
+		
 		var data = JSON.stringify(data);
 		
 		var url = "http://localhost/sistema_de_ponto/index.php/relatorios/criaRelatorioDia";

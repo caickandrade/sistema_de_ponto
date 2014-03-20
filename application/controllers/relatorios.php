@@ -170,31 +170,45 @@ class Relatorios extends CI_Controller {
 		$logouts = $this->buscaSaidaId($logins,$contador);
 		$usuarios = $this->buscaUserLogin($logins);
 		
-		echo $data->dia;
-		
 		$dados = array();
 		
-		$dado[0] = $data->Dia;
-		$vet[];
+		$dados[0] = $data->dia;
 		$achou = 0;
+		$vet[0]=0;
 		for($i=0;$i<$contador;$i++){
-			for($c=$i;$c>0;$c--){
-				if($usuarios[$i]->id == $usuarios[$c]->id){
-					$achou = 1;
+				$achou = 0;
+			if($i>=1){
+				for($c=$i;$c>0;$c--){
+					if($usuarios[$i]->id == $vet[$c-1]){
+						$achou = 1;
+						echo "achou";
+					}
 				}
 				//restringir o caso d 2 pontos em um dia só, tratar como uma só carga horária
 			}
-			//if(achou==0)
 			$item = new stdClass;
 			
-			$vet[$i]=$usuario[$i]->id;
-			$item->nome = $usuarios[$i]->name;
-			$item->entrada = $logins[$i]->startTime;
-			$item->saida = $logouts[$i]->endTime;
 			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
 			$item->diferenca = date("H:i",$intervalo);
 			
-			$dados[$i+1] = $item;
+			$vet[$i]=$usuarios[$i]->id;
+			if($achou==0){
+				
+				$item->nome = $usuarios[$i]->name;
+				//$item->entrada = $logins[$i]->startTime;
+				//$item->saida = $logouts[$i]->endTime;
+				$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+				$item->diferenca = date("H:i",$intervalo);
+				
+				$dados[$i+1] = $item;
+			}
+			
+			else{
+				
+				$dados[$c-1]->diferenca = date("H:i",(strtotime($dados[$c-1]->diferenca) - $intervalo));  
+			}
+			
+			
 			
 		}
 		echo json_encode($dados);
