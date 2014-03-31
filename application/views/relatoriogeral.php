@@ -7,20 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<script src = "<?php echo base_url('/assets/js/relatorioGeral.js')?>" ></script>
-	</head>
-	
-	<div class="container">
-		<?php $this->load->view('menu')?>
-	</div>
-	
-	<body> 
 		
-		<div class="container">
-			<div class="row-fluid">
-				<div class="span12">
-					
-					
-					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type="text/javascript">
 $(function () {
         $('#container').highcharts({
@@ -81,13 +69,31 @@ $(function () {
                 data: [133, 156, 947, 408, 6]
             }, {
                 name: 'Year 2008',
-                data: [973, 914, 4054, 732, 34]
+                data: [973, 914, 054, 732, 34]
             }]
         });
     });
     
 
 		</script>
+		
+		
+	</head>
+	
+	<div class="container">
+		<?php $this->load->view('menu')?>
+	</div>
+	
+	<body> 
+		<script src="../../js/highcharts.js"></script>
+		<script src="../../js/modules/exporting.js"></script>
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+										
+					
+					
 					
 					
 					

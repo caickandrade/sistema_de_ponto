@@ -10,6 +10,9 @@
 		<script src = "<?php echo base_url('/assets/js/Ponto.js')?>"></script>
 		<script src = "<?php echo base_url('/assets/js/busca.js')?>" ></script>
 		<script src = "<?php echo base_url('/assets/js/typeahead.js')?>"></script>
+		<script src = "<?php echo base_url('/assets/js/highcharts')?>"></script>
+		<script src = "<?php echo base_url('/assets/js/exporting')?>"></script>
+		
 		
 		
 		<?php echo link_tag("assets/css/bootstrap.min.css") ?>	
