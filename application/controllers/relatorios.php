@@ -175,8 +175,10 @@ class Relatorios extends CI_Controller {
 		$dados[0] = $data->dia;
 		$achou = 0;
 		$vet[0]=0;
+		$c;
 		for($i=0;$i<$contador;$i++){
 				$achou = 0;
+			
 			if($i>=1){
 				for($c=$i;$c>0;$c--){
 					if($usuarios[$i]->id == $vet[$c-1]){
@@ -184,28 +186,30 @@ class Relatorios extends CI_Controller {
 						echo "achou";
 					}
 				}
-				//restringir o caso d 2 pontos em um dia só, tratar como uma só carga horária
 			}
 			$item = new stdClass;
 			
-			$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+			$c=$c-1;
+			//$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+			$intervalo = (strtotime($logins[$i]->startTime)-strtotime($logouts[$i]->endTime));
 			$item->diferenca = date("H:i",$intervalo);
-			
+			echo $dados[$c].$item->diferenca;
 			$vet[$i]=$usuarios[$i]->id;
 			if($achou==0){
 				
 				$item->nome = $usuarios[$i]->name;
-				//$item->entrada = $logins[$i]->startTime;
-				//$item->saida = $logouts[$i]->endTime;
-				$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
+				
+				//$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
 				$item->diferenca = date("H:i",$intervalo);
 				
 				$dados[$i+1] = $item;
 			}
 			
+			
+			
 			else{
 				
-				$dados[$c-1]->diferenca = date("H:i",(strtotime($dados[$c-1]->diferenca) - $intervalo));  
+				$dados[$c].$item->diferenca = date("H:i",(strtotime($dados[$c].$item->diferenca) + $intervalo));  
 			}
 			
 			
