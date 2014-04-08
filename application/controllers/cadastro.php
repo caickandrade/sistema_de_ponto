@@ -4,8 +4,8 @@ class Cadastro extends CI_Controller {
 
 	public function index()
 	{
-			//se a pessoa tiver acesso
-		if($this->session->userdata('acesso')==2){
+		//se a pessoa tiver acesso
+		if($this->session->userdata('acesso')==4){
 			$this->load->view("cadastro");
 		}
 		
@@ -19,7 +19,7 @@ class Cadastro extends CI_Controller {
 	public function loadPositions(){
 		$this->load->model("position");
 		$position = new Position();	
-		$array = array('codigo >' =>1,'codigo <'=>8);
+		$array = array('codigo >' =>1,'codigo <'=>9);
 		$position->where($array);	
 		echo json_encode($position->get()->all_to_json());
 	}

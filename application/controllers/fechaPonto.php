@@ -4,11 +4,18 @@ class FechaPonto extends CI_Controller {
 
 	public function index()
 	{
-		
+		//se a pessoa não tiver acesso
+		if($this->session->userdata('logado')!=TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
 		
 	}
 	
 	public function salvaLogout(){
+		//se a pessoa não tiver acesso
+		if($this->session->userdata('logado')!=TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
 		
 		$dados = json_decode($this->input->post('data'));
 		

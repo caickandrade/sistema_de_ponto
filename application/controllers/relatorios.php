@@ -4,18 +4,49 @@ class Relatorios extends CI_Controller {
 	
 	public function index()
 	{
-		//$this->load->view("relatorio");
+		//se a pessoa não tiver acesso
+		if($this->session->userdata('logado')!=TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
+		
 	}
 	
 	public function relatorioGeral(){
-		$this->load->view("relatorioGeral");
+		//se a pessoa tiver acesso
+		if($this->session->userdata('acesso')==2 || $this->session->userdata('acesso')==4 ){
+			$this->load->view("relatorioGeral");
+			
+		}
+		//se a pessoa não tiver acesso
+		else{
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
+		
 	}
 	
 	public function relatorioEspecifico(){
+		//se a pessoa tiver acesso
+		if($this->session->userdata('acesso')==2 || $this->session->userdata('acesso')==4 ){
+			$this->load->view("relatorioGeral");
+			
+		}
+		//se a pessoa não tiver acesso
+		else{
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
 		$this->load->view("relatorioEspecifico");
 	}
 	
 	public function relatorioDia(){
+		//se a pessoa tiver acesso
+		if($this->session->userdata('acesso')==2 || $this->session->userdata('acesso')==4 ){
+			$this->load->view("relatorioGeral");
+			
+		}
+		//se a pessoa não tiver acesso
+		else{
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
 		$this->load->view("relatorioDia");
 	}
 	

@@ -5,12 +5,19 @@ class BatePonto extends CI_Controller {
 	public function index()
 	{
 		
+		//se a pessoa não tiver acesso
+		if($this->session->userdata('logado')!=TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
 		
-		//echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
 		
 	}
 	
 	public function salvaLogin(){
+		//se a pessoa não tiver acesso
+		if($this->session->userdata('logado')!=TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
 		
 		$dados = json_decode($this->input->post('data'));
 		
@@ -31,3 +38,4 @@ class BatePonto extends CI_Controller {
 	}
 	
 }
+

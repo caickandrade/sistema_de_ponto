@@ -19,7 +19,16 @@ class Busca extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('busca');
+		//se a pessoa tiver acesso
+		if($this->session->userdata('acesso')==4 || $this->session->userdata('acesso')==2){
+			$this->load->view('busca');
+		}
+		
+		//se a pessoa não possuir acesso
+		else{
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
+		
 	}
 	
 	public function getUserAutoComplete(){
