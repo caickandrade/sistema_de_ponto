@@ -5,13 +5,13 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		
-		//if($this->session->userdata('acesso')==2){
-			//echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/cadastro'; </script>";
-		//}
-		//else{
+		if($this->session->userdata('logado')!=TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
+		}
+		else{
 			$this->load->view("pagina-inicial");
 			
-		//}
+		}
 	}
 	
 }

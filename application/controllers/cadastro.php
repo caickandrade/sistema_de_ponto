@@ -4,11 +4,16 @@ class Cadastro extends CI_Controller {
 
 	public function index()
 	{
-		//se a pessoa tiver acesso
+		
 		if($this->session->userdata('acesso')==4){
 			$this->load->view("cadastro");
 		}
-		
+			
+			
+		//se a pessoa tiver acesso
+		else if($this->session->userdata('logado')==TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		}
 		
 		//se a pessoa não possuir acesso
 		else{

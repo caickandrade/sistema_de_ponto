@@ -17,6 +17,9 @@ class Relatorios extends CI_Controller {
 			$this->load->view("relatorioGeral");
 			
 		}
+		else if($this->session->userdata('logado')==TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
+		}
 		//se a pessoa não tiver acesso
 		else{
 			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
@@ -27,27 +30,33 @@ class Relatorios extends CI_Controller {
 	public function relatorioEspecifico(){
 		//se a pessoa tiver acesso
 		if($this->session->userdata('acesso')==2 || $this->session->userdata('acesso')==4 ){
-			$this->load->view("relatorioGeral");
+			$this->load->view("relatorioEspecifico");
 			
+		}
+		else if($this->session->userdata('logado')==TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
 		}
 		//se a pessoa não tiver acesso
 		else{
 			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
 		}
-		$this->load->view("relatorioEspecifico");
+		
 	}
 	
 	public function relatorioDia(){
 		//se a pessoa tiver acesso
 		if($this->session->userdata('acesso')==2 || $this->session->userdata('acesso')==4 ){
-			$this->load->view("relatorioGeral");
+			$this->load->view("relatorioDia");
 			
+		}
+		else if($this->session->userdata('logado')==TRUE){
+			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/index.php/home'; </script>";
 		}
 		//se a pessoa não tiver acesso
 		else{
 			echo "<script> parent.location = 'http://localhost/sistema_de_ponto/'; </script>";
 		}
-		$this->load->view("relatorioDia");
+		
 	}
 	
 	public function buscaEntradaData($inicio,$termino){
