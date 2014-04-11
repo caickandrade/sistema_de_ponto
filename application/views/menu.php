@@ -1,12 +1,10 @@
 <html>
 	
-		
-  	</head>
+
 		<div class="navbar">
-			<div class="navbar-inner">
-				<a class="brand" href="http://www.infobitsunimontes.com.br/">Infobits</a>
+			<div class="navbar-inner">				
 				<ul class="nav">
-					<li class="active">
+					<li class="none">
 						<a href="http://localhost/sistema_de_ponto/index.php/home"><i class="icon-home"></i>Início</a>
 					</li>
 					<li class="dropdown">
@@ -134,7 +132,6 @@
   		<div class="modal-footer">
     		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
-<<<<<<< HEAD
 	</div>	
 	
 	<!-- modal de relatorio -->
@@ -165,8 +162,6 @@
   		<div class="modal-footer">
     		<button class='btn' id='btSair' data-dismiss='modal' aria-hidden='true'>Sair</button>
   		</div>
-=======
->>>>>>> cba4d609ebae8f77c6b6fc0336790d4beae63491
 	</div>
 	
 	</body>

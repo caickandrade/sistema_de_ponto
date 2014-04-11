@@ -18,7 +18,7 @@
 				</div>
 			</div>
 
-			<div class="span9">
+			<div class="span9" id = menu >
 				<?php $this->load->view('menu')	?>
 			</div>
 
@@ -57,15 +57,17 @@
 											<td><?php echo $user->position ?></td>
 											<td><?php echo $user->email ?></td>
 											<td><a class="btn btn-info" href="#"><i class="icon-edit"></i></a></td>
-											<td><a class="btn btn-danger" href="#"><i class="icon-trash"></i></a></td>
+											<td><a class="btn btn-danger" href="/sistema_de_ponto/index.php/busca/?excluir=<?php echo $user->id?>"><i class="icon-trash"></i></a></td>
 										</tr>
 										<?php } ?>
 									<?php } ?>
 								</tbody>
 							</table>
 						</div>
-					</div>
-					
+					</div>			
+			</div>
+			<div class="span9" id="footer">
+				<?php $this->load->view('footer')?>
 			</div>
 		</div>
 	</div>

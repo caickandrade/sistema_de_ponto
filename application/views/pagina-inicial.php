@@ -8,9 +8,9 @@
 
 	<?php if($this->session->userdata('acesso')==4){
 	?>
-	<p>
+	<!--<p>
 		Pagina Inicial
-	</p>
+	</p>-->
 	<?php } ?>
 
 	<?php $this->load->view('footer')
