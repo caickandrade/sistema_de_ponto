@@ -2,11 +2,10 @@
 
 	<head>
 		<title>Relatório Geral</title>
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<script src = "<?php echo base_url('/assets/js/relatorioGeral.js')?>" ></script>
 		
-		<script type="text/javascript" src="assets/js/grafico.js"></script>
 				
 		
 	</head>
@@ -19,27 +18,7 @@
 		<div class="container">
 			<div class="row-fluid">
 				<div class="span12">
-										
 					
-					
-					
-					
-					
-					
-					<!--
-					<div id="cadastro">
-					
-										
-							<label class="control-label">Gráfico do Relatório Geral</label>
-							
-							<div class="progress progress-success">
-  								<div class="bar" style="width: 70%"></div>
-							</div>
-							<div id="al">
-								<span class="label label-success"><div id="reducao">..........</div></span><label id="comentario">Horas trabalhadas </label>
-							</div>
-					</div>	
-					-->
 				</div>
 			</div>
 		</div>

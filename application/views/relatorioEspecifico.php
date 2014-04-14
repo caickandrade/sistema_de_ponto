@@ -37,7 +37,6 @@
 							<div class="row-fluid">
 								<div class="span12">
 									<div class="relatorioForm" id="relatorioForm">
-
 										<label for="id">Identificador do Colaborador</label>
 										<input id="id" type="text" />
 										<label for="dInicio">Data de Início</label>

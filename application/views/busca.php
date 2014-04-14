@@ -51,13 +51,14 @@
 									<?php if(isset($resultado)){?>
 										
 										<?php foreach($resultado as $user) { ?>
+											 
 										<tr>
 											<td><?php echo $user->id ?></td>
 											<td><?php echo $user->name ?></td>
 											<td><?php echo $user->position ?></td>
 											<td><?php echo $user->email ?></td>
-											<td><a class="btn btn-info" href="#"><i class="icon-edit"></i></a></td>
-											<td><a class="btn btn-danger" href="#"><i class="icon-trash"></i></a></td>
+											<td><a class="btn btn-info" href="<?php echo $urlEditar = "/sistema_de_ponto/index.php/editarExcluir/editar/".(string)$user->id ?>"><i class="icon-edit"></i></a></td>
+											<td><a class="btn btn-danger" href="<?php echo $urlEditar = "/sistema_de_ponto/index.php/editarExcluir/excluir/".(string)$user->id ?>"><i class="icon-trash"></i></a></td>
 										</tr>
 										<?php } ?>
 									<?php } ?>
