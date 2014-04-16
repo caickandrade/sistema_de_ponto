@@ -12,7 +12,7 @@ body {
 	background: #fafafa;
 	position:absolute;
 	bottom:0;
-	width:100%;	
+		
 }
 .navbar {
 	margin-top: 1%;
@@ -23,9 +23,7 @@ body {
 	padding: 10px 15px;
 	border-radius: 4px;
 }
-#menu{
-	
-}
+
 #tabela{
 	background: #fafafa;
 	margin-top: 4px;

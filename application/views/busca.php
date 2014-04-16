@@ -66,7 +66,7 @@
 						</div>
 					</div>			
 			</div>
-			<div class="span9" id="footer">
+			<div class="span9">
 				<?php $this->load->view('footer')?>
 			</div>
 		</div>

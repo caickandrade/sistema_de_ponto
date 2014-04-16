@@ -11,21 +11,25 @@
 		
 	</head>
 	
-	<div class="container">
-		<?php $this->load->view('menu')?>
-	</div>
 	
 	<body> 
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span12">
-										
-					
-					
-					
-					
-					
-					
+				<div class="span2">
+					<div class="imagem">
+						<img src="<?php echo base_url('/assets/img/teste.jpg')?>" alt="not found" class="img-rounded">
+					</div>
+				</div>
+				<div class="span9">
+					<?php $this->load->view('menu') ?>
+				</div>
+				<div class="span9">
+					<?php $this->load->view('footer')?>
+				</div>
+			</div>
+		</div>
+		
+			
 					<!--
 					<div id="cadastro">
 					
@@ -40,7 +44,7 @@
 							</div>
 					</div>	
 					-->
-				</div>
+				<!--</div>
 			</div>
 		</div>
 		

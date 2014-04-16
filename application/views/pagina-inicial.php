@@ -6,17 +6,33 @@
 </head>
 <body>
 
-	<?php if($this->session->userdata('acesso')==4){
+	<!--<?php if($this->session->userdata('acesso')==4){
 	?>
 	<!--<p>
 		Pagina Inicial
 	</p>-->
-	<?php } ?>
+	<!--<?php } ?>
 
-	<?php $this->load->view('footer')
-	?>
+	<!--<?php $this->load->view('footer')
+	?>-->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<div class="imagem">
+					<img src="<?php echo base_url('/assets/img/teste.jpg')?>" alt="not found" class="img-rounded">
+				</div>
+			</div>
+			<div class="span9">
+				<?php $this->load->view('menu')?>
+			</div>
+			<div class="span9">
+				<?php $this->load->view('footer')?>
+			</div>
+		</div>
+	</div>
+	
 
-	<div class="cotainer-fluid">
+	<!--<div class="cotainer-fluid">
 		<div class="row-fluid">
 			<div class="span2">
 				<div class="imagem">
@@ -50,8 +66,8 @@
 				</div>
 				</div>-->
 
-			</div>
-		</div>
+			<!--</div>
+		</div>-->
 </body>
 
 </html>

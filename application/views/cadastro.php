@@ -249,9 +249,11 @@
 			</div>
 		</div>
 		</div>
+		<div class="span9">
+				<?php $this->load->view('footer')?>
+		</div>
 	</div>
 	</div>
-	<!--<?php $this->load->view('footer') ?> -->
 
 	
 	<!-- Modal -->
