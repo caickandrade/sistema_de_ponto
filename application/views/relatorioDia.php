@@ -22,11 +22,18 @@
 				<div class="span9">
 					<?php $this->load->view('menu') ?>
 				</div>
-				<div class="span9">
-					<?php $this->load->view('footer')?>
-				</div>
 			</div>
 		</div>
+		<div class="container-fluid rodape">
+            <div class="row-fluid">
+                <div class="span2 footer">
+                    
+                </div>
+                <div class="span9 footer">
+                	<?php $this->load->view('footer')?>   
+                </div>
+            </div>
+    </div>
 		
 
 		<!-- modal de relatorio -->

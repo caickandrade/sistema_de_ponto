@@ -9,10 +9,9 @@ body {
 	position: relative;
 }
 #footer{
+	text-align:center;
+	border-radius: 4px;
 	background: #fafafa;
-	position:absolute;
-	bottom:0;
-		
 }
 .navbar {
 	margin-top: 1%;
