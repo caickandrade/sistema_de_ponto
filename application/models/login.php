@@ -19,6 +19,7 @@ class Login extends DataMapper {
 		$ponto->save();
 	}
 	
+	
 	function pesquisaId($usuario,$dia){
 		$this->load->model("login");
 		$ponto = new Login();

@@ -5,7 +5,6 @@
 
 	<title>Busca</title>
 	
-	
 
 </head>
 
@@ -18,7 +17,7 @@
 				</div>
 			</div>
 
-			<div class="span9">
+			<div class="span9" id = menu >
 				<?php $this->load->view('menu')	?>
 			</div>
 
@@ -57,16 +56,22 @@
 											<td><?php echo $user->name ?></td>
 											<td><?php echo $user->position ?></td>
 											<td><?php echo $user->email ?></td>
-											<td><a class="btn btn-info" href="<?php echo $urlEditar = "/sistema_de_ponto/index.php/editarExcluir/editar/".(string)$user->id ?>"><i class="icon-edit"></i></a></td>
-											<td><a class="btn btn-danger" href="<?php echo $urlEditar = "/sistema_de_ponto/index.php/editarExcluir/excluir/".(string)$user->id ?>"><i class="icon-trash"></i></a></td>
+
+											<td><a class="btn btn-info" id="editar" href="<?php echo $urlEditar = "/sistema_de_ponto/index.php/editarExcluir/editar/".(string)$user->id ?>"><i class="icon-edit"></i></a></td>
+											<!--<td><a class="btn btn-info" id="editar" href="#" value="<?php echo (string)$user->id  ?>"><i class="icon-edit"></i></a></td>-->
+											<td><a class="btn btn-danger" id="excluir" href="<?php echo $urlEditar = "/sistema_de_ponto/index.php/editarExcluir/excluir/".(string)$user->id ?>"><i class="icon-trash"></i></a></td>
+											<!--<td><a class="btn btn-danger" id="excluir" href="#"><i class="icon-trash"></i></a></td>-->
+
 										</tr>
 										<?php } ?>
 									<?php } ?>
 								</tbody>
 							</table>
 						</div>
-					</div>
-					
+					</div>			
+			</div>
+			<div class="span9" id="footer">
+				<?php $this->load->view('footer')?>
 			</div>
 		</div>
 	</div>

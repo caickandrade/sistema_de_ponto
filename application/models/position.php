@@ -9,4 +9,20 @@ class Position extends DataMapper {
 		parent::__construct($id);
 	}
 	
+	function getPosition($id){
+		$this->load->model("position");
+		$posicao = new Position();
+		
+		$posicao = $posicao->where("id",$id)->get();
+		
+		return $posicao;
+	}
+	/*
+	function excluiPosition($idPosition){
+		$cargo = new Position();
+		$cargo->where("id",$idPosition);
+		
+		$cargo->delete();
+	}*/
+	
 }

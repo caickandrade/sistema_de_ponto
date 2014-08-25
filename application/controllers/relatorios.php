@@ -119,10 +119,8 @@ class Relatorios extends CI_Controller {
 		$contData = 0;
 		$dados[$contData][0] = $logins[0]->day;
 		
-		//$dados[$contData][1] = 'as';
 		$preenche=2;
 		$somaIntervalos = 0;
-		//echo $contador;
 		
 		for($i=0;$i<$contador;$i++){
 			
@@ -204,7 +202,6 @@ class Relatorios extends CI_Controller {
 		
 		$data = json_decode($this->input->post('data'));
 		
-		
 		$contador = 0;
 		$logins = $this->buscaEntradaData($data->dia, $data->dia);
 		$logouts = $this->buscaSaidaId($logins,$contador);
@@ -214,42 +211,37 @@ class Relatorios extends CI_Controller {
 		
 		$dados[0] = $data->dia;
 		$achou = 0;
-		$vet[0]=0;
+		for($j=0;$j<$contador;$j++){
+			$intervalo[$j]=0;
+		}
+		
 		$c;
 		for($i=0;$i<$contador;$i++){
 				$achou = 0;
 			
 			if($i>=1){
 				for($c=$i;$c>0;$c--){
-					if($usuarios[$i]->id == $vet[$c-1]){
+					if($usuarios[$i]->id == $usuarios[$c-1]->id){
 						$achou = 1;
-						echo "achou";
 					}
 				}
 			}
 			$item = new stdClass;
 			
-			$c=$c-1;
-			//$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
-			$intervalo = (strtotime($logins[$i]->startTime)-strtotime($logouts[$i]->endTime));
-			$item->diferenca = date("H:i",$intervalo);
-			echo $dados[$c].$item->diferenca;
+			$intervalo[$i] = (strtotime($logouts[$i]->endTime)-strtotime($logins[$i]->startTime));
+			$item->diferenca = date("H:i",$intervalo[$i]);
 			$vet[$i]=$usuarios[$i]->id;
 			if($achou==0){
-				
 				$item->nome = $usuarios[$i]->name;
-				
-				//$intervalo = (strtotime($item->saida)-strtotime($item->entrada));
-				$item->diferenca = date("H:i",$intervalo);
+				$item->diferenca = date("H:i",$intervalo[$i]);
 				
 				$dados[$i+1] = $item;
 			}
-			
-			
-			
 			else{
-				
-				$dados[$c].$item->diferenca = date("H:i",(strtotime($dados[$c].$item->diferenca) + $intervalo));  
+				$intervalo[$i] = $intervalo[$i] + $intervalo[$i-1];
+				$item->diferenca = date("H:i",$intervalo[$i]);
+				$item->nome = $usuarios[$i]->name;
+				$dados[$i] = $item;
 			}
 			
 			

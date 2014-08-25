@@ -26,6 +26,30 @@ class Address extends DataMapper {
 		
 		return $newAddress->id;
 	}
+	
+	/*
+	function excluiAddress($id){
+		$endereco = new Address();
+		$endereco->where("id",$id)->get();
+		$endereco->delete();
+	}*/
+	
+	function editarAddress($address)
+	{
+		
+		$endereco = array(
+		'street' => $address->rua,
+		'number' => $address->numero,
+		'neighborhood' => $address->bairro,
+		'city' => $address->cidade,
+		'state' => $address->estado,
+		'complement' => $address->complemento,
+		'zip_code' => $address->cep
+		);
+		$newAddress = new Address();
+		$newAddress->where("id",$address->id)->update($endereco);
+	}
+	
 	//validar enderçeo é um método do objeto endereço
 	function validaCamposAddress($address)
 	{
@@ -38,6 +62,15 @@ class Address extends DataMapper {
 		else 
 			return TRUE;
 	}	
+	
+	function getAddress($id){
+		$this->load->model("address");
+		$end = new Address();
+		
+		$end = $end->where("id",$id)->get();
+		
+		return $end;
+	}
 	
 }
 

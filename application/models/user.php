@@ -24,6 +24,54 @@ class User extends DataMapper {
 			
 	}
 	
+	function emailEditadoExiste($email,$id)
+	{
+			$validate = new User();
+			
+			$validate->where('email', $email);
+			$validate->where('id !=',$id);
+			$validate->get();
+			
+			if($validate->exists())
+				return TRUE;	
+			else 
+				return FALSE;
+			
+	}
+	
+	function desativarUser($usuario){
+		if($usuario->where('id',$usuario->id)->update('ativo',0)){
+			return TRUE;
+		}
+		else{
+			return FALSE;
+		}
+	}
+	
+	function editarUser($user)
+	{
+		
+		$posicao = new Position();
+		echo "cargo ->".$user->id_cargo;
+		$posicao->where('id',$user->id_cargo)->get();
+		echo "cargo 2->".$posicao->codigo;
+		
+		$newUser = array( 
+		'name' => $user->nome,
+		'addresses_id' => $user->endereco,
+		'cpf' => $user->cpf,
+		'id_position'=>$posicao->codigo,
+		'phone1' => $user->tel1,
+		'phone2' => $user->tel2,
+		'email' => $user->email,
+		'password' => $user->senha,
+		'birthday' => $user->datanasc
+		);
+		
+		$usuario = new User();
+		$usuario->where('id',$user->id)->update($newUser); 
+				
+	}
 	
 	function salvarUser($user, $idEnd)
 	{
